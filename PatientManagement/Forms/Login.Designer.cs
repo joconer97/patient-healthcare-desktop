@@ -28,64 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtUsername = new MetroFramework.Controls.MetroTextBox();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(199, 118);
+            // 
+            // 
+            // 
+            this.txtUsername.CustomButton.Image = null;
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtUsername.CustomButton.Name = "";
+            this.txtUsername.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUsername.CustomButton.TabIndex = 1;
+            this.txtUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtUsername.CustomButton.UseSelectable = true;
+            this.txtUsername.CustomButton.Visible = false;
+            this.txtUsername.Lines = new string[] {
+        "Username"};
+            this.txtUsername.Location = new System.Drawing.Point(23, 80);
+            this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(308, 29);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.ShortcutsEnabled = true;
+            this.txtUsername.Size = new System.Drawing.Size(335, 23);
+            this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "Username";
+            this.txtUsername.UseSelectable = true;
+            this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(199, 159);
+            // 
+            // 
+            // 
+            this.txtPassword.CustomButton.Image = null;
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtPassword.CustomButton.Name = "";
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPassword.CustomButton.TabIndex = 1;
+            this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPassword.CustomButton.UseSelectable = true;
+            this.txtPassword.CustomButton.Visible = false;
+            this.txtPassword.Lines = new string[] {
+        "Password"};
+            this.txtPassword.Location = new System.Drawing.Point(23, 110);
+            this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(308, 29);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.ShortcutsEnabled = true;
+            this.txtPassword.Size = new System.Drawing.Size(335, 23);
+            this.txtPassword.TabIndex = 4;
             this.txtPassword.Text = "Password";
+            this.txtPassword.UseSelectable = true;
+            this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(402, 211);
+            this.btnLogin.Location = new System.Drawing.Point(239, 139);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(105, 37);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Size = new System.Drawing.Size(119, 33);
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.UseSelectable = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(594, 447);
+            this.ClientSize = new System.Drawing.Size(377, 334);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnLogin;
+        private MetroFramework.Controls.MetroTextBox txtUsername;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
+        private MetroFramework.Controls.MetroButton btnLogin;
     }
 }

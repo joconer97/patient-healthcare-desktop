@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.DoctorForm
 {
-    public partial class CheckUpList : Form
+    public partial class CheckUpList : MetroFramework.Forms.MetroForm
     {
         public CheckUpList()
         {
@@ -21,14 +21,13 @@ namespace PatientManagement.Forms.DoctorForm
         List<Classes.Checkup> checkups = new List<Classes.Checkup>();
         private void InitializeList()
         {
-            lsvCheckup.Columns.Add("#", 30);
             lsvCheckup.Columns.Add("PIN", 200);
-            lsvCheckup.Columns.Add("Fullname", 200);
-            lsvCheckup.Columns.Add("Sex", 50);
-            lsvCheckup.Columns.Add("Age", 100);
-            lsvCheckup.Columns.Add("Blood Pressure", 200);
-            lsvCheckup.Columns.Add("Temperature °C", 200);
-            lsvCheckup.Columns.Add("Pulse Rate", 200);
+            lsvCheckup.Columns.Add("Fullname", 280);
+            lsvCheckup.Columns.Add("Sex", 30);
+            lsvCheckup.Columns.Add("Age", 50);
+            lsvCheckup.Columns.Add("Blood Pressure", 100);
+            lsvCheckup.Columns.Add("Temperature °C", 100);
+            lsvCheckup.Columns.Add("Pulse Rate", 100);
             lsvCheckup.Columns.Add("Time Arrived", 150);
 
 
@@ -49,8 +48,7 @@ namespace PatientManagement.Forms.DoctorForm
             
             foreach (var c in checkups)
             {
-                item = lsvCheckup.Items.Add((++ctr).ToString());
-                item.SubItems.Add(c.patientID);
+                item = lsvCheckup.Items.Add(c.patientID);
                 item.SubItems.Add(c.patient.firstname + " " + c.patient.lastname);
                 item.SubItems.Add(c.patient.gender.ToString());
                 item.SubItems.Add((DateTime.Now.Year - c.patient.birthdate.Year).ToString());
@@ -62,7 +60,8 @@ namespace PatientManagement.Forms.DoctorForm
             }
         }
 
-        private void lsvCheckup_DoubleClick(object sender, EventArgs e)
+
+        private void lsvCheckup_DoubleClick_1(object sender, EventArgs e)
         {
             int si = 0;
             try
@@ -71,11 +70,11 @@ namespace PatientManagement.Forms.DoctorForm
             }
             catch
             {
-                
+
             }
-            Form form = new DoctorForm.CheckUP();
+            Form form = new DoctorForm.CheckUP(checkups[si]);
+
             form.ShowDialog();
-            MessageBox.Show(checkups[si].patient.firstname);
         }
     }
 }

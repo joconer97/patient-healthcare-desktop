@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.DoctorForm
 {
-    public partial class CheckUP : Form
+    public partial class CheckUP : MetroFramework.Forms.MetroForm
     {
-        public CheckUP()
+        public CheckUP(Classes.Checkup checkup)
         {
             InitializeComponent();
+            txtFullname.Text = checkup.patient.firstname + " " + checkup.patient.lastname;
+            txtGender.Text = checkup.patient.gender.ToString();
+            txtAge.Text = (DateTime.Now.Year - checkup.patient.birthdate.Year).ToString();
+            txtBP.Text = checkup.blood_pressure;
+            txtPR.Text = checkup.pulse_rate;
+            txtTemp.Text = checkup.temperature + "°C";
+        }
+
+        private void CheckUP_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

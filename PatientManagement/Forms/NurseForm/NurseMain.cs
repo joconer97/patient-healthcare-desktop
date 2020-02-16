@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.NurseForm
 {
-    public partial class NurseMain : Form
+    public partial class NurseMain : MetroFramework.Forms.MetroForm
     {
         public NurseMain()
         {

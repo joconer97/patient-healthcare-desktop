@@ -36,12 +36,11 @@ namespace PatientManagement.Forms.PatientForm
 
         private void InitializeListView()
         {
-            lsvView.Columns.Add("#", 200);
             lsvView.Columns.Add("PIN", 200);
-            lsvView.Columns.Add("Firstname", 100);
-            lsvView.Columns.Add("Middlename", 100);
-            lsvView.Columns.Add("Lastname", 100);
-            lsvView.Columns.Add("Gender", 50);
+            lsvView.Columns.Add("Firstname", 200);
+            lsvView.Columns.Add("Middlename", 200);
+            lsvView.Columns.Add("Lastname", 200);
+            lsvView.Columns.Add("Gender", 140);
 
 
 
@@ -60,8 +59,7 @@ namespace PatientManagement.Forms.PatientForm
             ListViewItem item;
             foreach (var patient in patients)
             {
-                item = lsvView.Items.Add((++ctr).ToString());
-                item.SubItems.Add(patient.id);
+                item = lsvView.Items.Add(patient.id);
                 item.SubItems.Add(patient.firstname);
                 item.SubItems.Add(patient.middlename);
                 item.SubItems.Add(patient.lastname);
@@ -70,7 +68,8 @@ namespace PatientManagement.Forms.PatientForm
             }
         }
 
-        private void lsvView_DoubleClick(object sender, EventArgs e)
+    
+        private void lsvView_DoubleClick_1(object sender, EventArgs e)
         {
             int si = 0;
 

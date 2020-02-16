@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms
 {
-    public partial class Login : Form
+    public partial class Login : MetroFramework.Forms.MetroForm
     {
         public Login()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             User user = new User();
 
             user.username = txtUsername.Text;
             user.password = txtPassword.Text;
 
-            if(user.isValid())
+            if (user.isValid())
             {
                 MessageBox.Show("Successfully Login");
                 Form form = new NurseForm.NurseMain();
@@ -38,7 +38,6 @@ namespace PatientManagement.Forms
             }
 
             MessageBox.Show("Failed to Login");
-
         }
     }
 }

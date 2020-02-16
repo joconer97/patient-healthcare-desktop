@@ -28,20 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lsvCheckup = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.lsvCheckup = new MetroFramework.Controls.MetroListView();
             this.SuspendLayout();
-            // 
-            // lsvCheckup
-            // 
-            this.lsvCheckup.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsvCheckup.HideSelection = false;
-            this.lsvCheckup.Location = new System.Drawing.Point(22, 97);
-            this.lsvCheckup.Name = "lsvCheckup";
-            this.lsvCheckup.Size = new System.Drawing.Size(1025, 486);
-            this.lsvCheckup.TabIndex = 0;
-            this.lsvCheckup.UseCompatibleStateImageBehavior = false;
-            this.lsvCheckup.DoubleClick += new System.EventHandler(this.lsvCheckup_DoubleClick);
             // 
             // label1
             // 
@@ -53,13 +42,27 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Patient Check-up List";
             // 
+            // lsvCheckup
+            // 
+            this.lsvCheckup.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lsvCheckup.FullRowSelect = true;
+            this.lsvCheckup.Location = new System.Drawing.Point(22, 103);
+            this.lsvCheckup.Name = "lsvCheckup";
+            this.lsvCheckup.OwnerDraw = true;
+            this.lsvCheckup.Size = new System.Drawing.Size(1020, 482);
+            this.lsvCheckup.Style = MetroFramework.MetroColorStyle.Green;
+            this.lsvCheckup.TabIndex = 2;
+            this.lsvCheckup.UseCompatibleStateImageBehavior = false;
+            this.lsvCheckup.UseSelectable = true;
+            this.lsvCheckup.DoubleClick += new System.EventHandler(this.lsvCheckup_DoubleClick_1);
+            // 
             // CheckUpList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 608);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lsvCheckup);
+            this.Controls.Add(this.label1);
             this.Name = "CheckUpList";
             this.Text = "CheckUpList";
             this.ResumeLayout(false);
@@ -68,8 +71,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lsvCheckup;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroListView lsvCheckup;
     }
 }

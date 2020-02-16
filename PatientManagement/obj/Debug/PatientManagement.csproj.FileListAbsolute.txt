@@ -15,3 +15,7 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.FollowUPSearch.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.CheckUpList.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.CheckUP.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\MetroFramework.Design.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\MetroFramework.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csproj.CopyComplete
