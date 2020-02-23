@@ -16,7 +16,7 @@ namespace PatientManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.DoctorForm.CheckUpList());
+            Application.Run(new Forms.PatientForm.FollowUP());
         }
     }
 }

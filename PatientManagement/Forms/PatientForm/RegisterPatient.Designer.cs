@@ -36,24 +36,28 @@
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.txtEmergencyContact = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtAllergies = new System.Windows.Forms.TextBox();
-            this.cmbAllergies = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.txtCitizenship = new System.Windows.Forms.TextBox();
+            this.txtReligion = new System.Windows.Forms.TextBox();
+            this.txtOccupation = new System.Windows.Forms.TextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.txtStreet = new System.Windows.Forms.TextBox();
+            this.txtBaranggay = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFirstname
@@ -63,7 +67,6 @@
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(365, 29);
             this.txtFirstname.TabIndex = 0;
-            this.txtFirstname.Text = "Firstname";
             // 
             // txtMiddleName
             // 
@@ -72,7 +75,6 @@
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(365, 29);
             this.txtMiddleName.TabIndex = 1;
-            this.txtMiddleName.Text = "Middle Name";
             // 
             // txtLastname
             // 
@@ -81,7 +83,6 @@
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(365, 29);
             this.txtLastname.TabIndex = 2;
-            this.txtLastname.Text = "Lastname";
             // 
             // txtContact
             // 
@@ -90,12 +91,11 @@
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(365, 29);
             this.txtContact.TabIndex = 3;
-            this.txtContact.Text = "Contact#";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(719, 520);
+            this.button1.Location = new System.Drawing.Point(588, 560);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 43);
             this.button1.TabIndex = 4;
@@ -131,70 +131,22 @@
             this.txtEmergencyContact.Name = "txtEmergencyContact";
             this.txtEmergencyContact.Size = new System.Drawing.Size(365, 29);
             this.txtEmergencyContact.TabIndex = 7;
-            this.txtEmergencyContact.Text = "Emergency Contact";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(324, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 37);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Allergies";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtAllergies
-            // 
-            this.txtAllergies.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAllergies.Location = new System.Drawing.Point(5, 28);
-            this.txtAllergies.Name = "txtAllergies";
-            this.txtAllergies.Size = new System.Drawing.Size(303, 33);
-            this.txtAllergies.TabIndex = 9;
-            this.txtAllergies.Text = "Allergies";
-            // 
-            // cmbAllergies
-            // 
-            this.cmbAllergies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAllergies.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAllergies.FormattingEnabled = true;
-            this.cmbAllergies.Location = new System.Drawing.Point(5, 67);
-            this.cmbAllergies.Name = "cmbAllergies";
-            this.cmbAllergies.Size = new System.Drawing.Size(303, 33);
-            this.cmbAllergies.TabIndex = 10;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(5, 165);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(303, 33);
-            this.comboBox3.TabIndex = 13;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(5, 126);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(303, 33);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "Major Diagonoses";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(324, 126);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 37);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Diagnoses";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.metroLabel8);
+            this.panel1.Controls.Add(this.metroLabel9);
+            this.panel1.Controls.Add(this.metroLabel10);
+            this.panel1.Controls.Add(this.txtStreet);
+            this.panel1.Controls.Add(this.txtBaranggay);
+            this.panel1.Controls.Add(this.txtCity);
+            this.panel1.Controls.Add(this.metroLabel11);
+            this.panel1.Controls.Add(this.metroLabel12);
+            this.panel1.Controls.Add(this.metroLabel13);
+            this.panel1.Controls.Add(this.txtCitizenship);
+            this.panel1.Controls.Add(this.txtReligion);
+            this.panel1.Controls.Add(this.txtOccupation);
             this.panel1.Controls.Add(this.metroLabel7);
             this.panel1.Controls.Add(this.metroLabel6);
             this.panel1.Controls.Add(this.metroLabel5);
@@ -210,25 +162,73 @@
             this.panel1.Controls.Add(this.dtpBirthdate);
             this.panel1.Controls.Add(this.txtEmergencyContact);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(31, 87);
+            this.panel1.Location = new System.Drawing.Point(31, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 423);
+            this.panel1.Size = new System.Drawing.Size(798, 475);
             this.panel1.TabIndex = 15;
             // 
-            // panel2
+            // metroLabel7
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtAllergies);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.cmbAllergies);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(444, 87);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(511, 423);
-            this.panel2.TabIndex = 16;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(20, 338);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(123, 19);
+            this.metroLabel7.TabIndex = 14;
+            this.metroLabel7.Text = "Emergency Contact";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(20, 282);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel6.TabIndex = 13;
+            this.metroLabel6.Text = "Birthdate";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(21, 227);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(52, 19);
+            this.metroLabel5.TabIndex = 12;
+            this.metroLabel5.Text = "Gender";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(21, 171);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel4.TabIndex = 11;
+            this.metroLabel4.Text = "Contact";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(20, 116);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(64, 19);
+            this.metroLabel3.TabIndex = 10;
+            this.metroLabel3.Text = "Lastname";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(21, 61);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel2.TabIndex = 9;
+            this.metroLabel2.Text = "Middlename";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(21, 5);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.Text = "Firstname";
             // 
             // label1
             // 
@@ -240,84 +240,119 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Patient Information";
             // 
-            // metroLabel1
+            // metroLabel11
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(21, 5);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel1.TabIndex = 8;
-            this.metroLabel1.Text = "Firstname";
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(410, 116);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel11.TabIndex = 20;
+            this.metroLabel11.Text = "Occupation";
             // 
-            // metroLabel2
+            // metroLabel12
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(21, 61);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel2.TabIndex = 9;
-            this.metroLabel2.Text = "Middlename";
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(411, 61);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel12.TabIndex = 19;
+            this.metroLabel12.Text = "Religion";
             // 
-            // metroLabel3
+            // metroLabel13
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(20, 116);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(64, 19);
-            this.metroLabel3.TabIndex = 10;
-            this.metroLabel3.Text = "Lastname";
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(411, 5);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel13.TabIndex = 18;
+            this.metroLabel13.Text = "Citizenship";
             // 
-            // metroLabel4
+            // txtCitizenship
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(21, 171);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel4.TabIndex = 11;
-            this.metroLabel4.Text = "Contact";
+            this.txtCitizenship.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCitizenship.Location = new System.Drawing.Point(411, 27);
+            this.txtCitizenship.Name = "txtCitizenship";
+            this.txtCitizenship.Size = new System.Drawing.Size(365, 29);
+            this.txtCitizenship.TabIndex = 15;
             // 
-            // metroLabel5
+            // txtReligion
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(21, 227);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(52, 19);
-            this.metroLabel5.TabIndex = 12;
-            this.metroLabel5.Text = "Gender";
+            this.txtReligion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReligion.Location = new System.Drawing.Point(411, 84);
+            this.txtReligion.Name = "txtReligion";
+            this.txtReligion.Size = new System.Drawing.Size(365, 29);
+            this.txtReligion.TabIndex = 16;
             // 
-            // metroLabel6
+            // txtOccupation
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(20, 282);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel6.TabIndex = 13;
-            this.metroLabel6.Text = "Birthdate";
+            this.txtOccupation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOccupation.Location = new System.Drawing.Point(411, 138);
+            this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.Size = new System.Drawing.Size(365, 29);
+            this.txtOccupation.TabIndex = 17;
             // 
-            // metroLabel7
+            // metroLabel8
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(20, 338);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(123, 19);
-            this.metroLabel7.TabIndex = 14;
-            this.metroLabel7.Text = "Emergency Contact";
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(409, 282);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel8.TabIndex = 32;
+            this.metroLabel8.Text = "City";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(410, 227);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel9.TabIndex = 31;
+            this.metroLabel9.Text = "Baranggay";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(410, 171);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel10.TabIndex = 30;
+            this.metroLabel10.Text = "Street";
+            // 
+            // txtStreet
+            // 
+            this.txtStreet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreet.Location = new System.Drawing.Point(410, 193);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(365, 29);
+            this.txtStreet.TabIndex = 27;
+            // 
+            // txtBaranggay
+            // 
+            this.txtBaranggay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaranggay.Location = new System.Drawing.Point(410, 250);
+            this.txtBaranggay.Name = "txtBaranggay";
+            this.txtBaranggay.Size = new System.Drawing.Size(365, 29);
+            this.txtBaranggay.TabIndex = 28;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(410, 304);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(365, 29);
+            this.txtCity.TabIndex = 29;
             // 
             // RegisterPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 586);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(854, 634);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "RegisterPatient";
-            this.Text = "RegisterPatient";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,14 +368,7 @@
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.DateTimePicker dtpBirthdate;
         private System.Windows.Forms.TextBox txtEmergencyContact;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtAllergies;
-        private System.Windows.Forms.ComboBox cmbAllergies;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
@@ -349,5 +377,17 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private System.Windows.Forms.TextBox txtStreet;
+        private System.Windows.Forms.TextBox txtBaranggay;
+        private System.Windows.Forms.TextBox txtCity;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private System.Windows.Forms.TextBox txtCitizenship;
+        private System.Windows.Forms.TextBox txtReligion;
+        private System.Windows.Forms.TextBox txtOccupation;
     }
 }

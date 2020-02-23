@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.PatientForm
 {
-    public partial class CheckUP : Form
+    public partial class CheckUP : MetroFramework.Forms.MetroForm
     {
         Classes.Patient patient;
         public CheckUP(Classes.Patient patient)
@@ -28,7 +28,7 @@ namespace PatientManagement.Forms.PatientForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text))
+            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"",""))
             {
                 MessageBox.Show("Successfully added");
             }

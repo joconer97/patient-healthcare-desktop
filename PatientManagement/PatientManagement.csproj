@@ -42,6 +42,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +65,8 @@
     <Compile Include="Classes\MedicalRecordHelper.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\PatientHelper.cs" />
+    <Compile Include="Classes\Prescription.cs" />
+    <Compile Include="Classes\PrescriptionHelper.cs" />
     <Compile Include="Classes\Sample.cs" />
     <Compile Include="Classes\SampleHelper.cs" />
     <Compile Include="Classes\User.cs" />
@@ -108,6 +113,18 @@
     <Compile Include="Forms\PatientForm\CheckUPSearch.Designer.cs">
       <DependentUpon>CheckUPSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PatientForm\Emergency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientForm\Emergency.Designer.cs">
+      <DependentUpon>Emergency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientForm\FollowUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientForm\FollowUP.Designer.cs">
+      <DependentUpon>FollowUP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PatientForm\FollowUPSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\CheckUPSearch.resx">
       <DependentUpon>CheckUPSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientForm\Emergency.resx">
+      <DependentUpon>Emergency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientForm\FollowUP.resx">
+      <DependentUpon>FollowUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\FollowUPSearch.resx">
       <DependentUpon>FollowUPSearch.cs</DependentUpon>

@@ -41,7 +41,6 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void PopulateList()
         {
-            int ctr = 0;
             checkups = Classes.CheckupHelper.ListCheckup();
             lsvCheckup.Items.Clear();
             ListViewItem item;

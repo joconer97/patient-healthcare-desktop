@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.PatientForm
 {
-    public partial class FollowUPSearch : Form
+    public partial class FollowUPSearch : MetroFramework.Forms.MetroForm
     {
         public FollowUPSearch()
         {

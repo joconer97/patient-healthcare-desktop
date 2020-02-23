@@ -49,7 +49,7 @@
             this.lsvCheckup.Location = new System.Drawing.Point(22, 103);
             this.lsvCheckup.Name = "lsvCheckup";
             this.lsvCheckup.OwnerDraw = true;
-            this.lsvCheckup.Size = new System.Drawing.Size(1020, 482);
+            this.lsvCheckup.Size = new System.Drawing.Size(1335, 544);
             this.lsvCheckup.Style = MetroFramework.MetroColorStyle.Green;
             this.lsvCheckup.TabIndex = 2;
             this.lsvCheckup.UseCompatibleStateImageBehavior = false;
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 608);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.lsvCheckup);
             this.Controls.Add(this.label1);
             this.Name = "CheckUpList";

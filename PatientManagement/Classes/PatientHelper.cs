@@ -22,6 +22,10 @@ namespace PatientManagement.Classes
                     new SqlParameter("@gender",patient.gender),
                     new SqlParameter("@birthyear",patient.birthdate.ToShortDateString()),
                     new SqlParameter("@contact",patient.contact),
+                    new SqlParameter("@address",patient.address),
+                    new SqlParameter("@religion",patient.religion),
+                    new SqlParameter("@occupation",patient.occupation),
+                    new SqlParameter("@citizenship",patient.citizenship),
                     new SqlParameter("@contact_emergency",patient.emergency_contact),
                     new SqlParameter("@isRegistered",patient.isRegistered),
                 };
@@ -73,7 +77,7 @@ namespace PatientManagement.Classes
                     return patients;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;

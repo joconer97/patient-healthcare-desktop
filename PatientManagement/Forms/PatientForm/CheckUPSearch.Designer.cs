@@ -31,6 +31,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lsvView2 = new MetroFramework.Controls.MetroListView();
             this.lblFound = new System.Windows.Forms.Label();
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lsvView);
+            this.panel1.Controls.Add(this.lsvView2);
             this.panel1.Controls.Add(this.lblFound);
             this.panel1.Controls.Add(this.btnSearch2);
             this.panel1.Controls.Add(this.button2);
@@ -75,6 +76,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(974, 526);
             this.panel1.TabIndex = 3;
+            // 
+            // lsvView2
+            // 
+            this.lsvView2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lsvView2.FullRowSelect = true;
+            this.lsvView2.Location = new System.Drawing.Point(22, 232);
+            this.lsvView2.Name = "lsvView2";
+            this.lsvView2.OwnerDraw = true;
+            this.lsvView2.Size = new System.Drawing.Size(930, 281);
+            this.lsvView2.TabIndex = 7;
+            this.lsvView2.UseCompatibleStateImageBehavior = false;
+            this.lsvView2.UseSelectable = true;
+            this.lsvView2.DoubleClick += new System.EventHandler(this.lsvView2_DoubleClick);
             // 
             // lblFound
             // 
@@ -123,7 +137,6 @@
             this.lsvView.TabIndex = 7;
             this.lsvView.UseCompatibleStateImageBehavior = false;
             this.lsvView.UseSelectable = true;
-            this.lsvView.DoubleClick += new System.EventHandler(this.lsvView_DoubleClick_1);
             // 
             // CheckUPSearch
             // 
@@ -148,5 +161,6 @@
         private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.Label lblFound;
         private MetroFramework.Controls.MetroListView lsvView;
+        private MetroFramework.Controls.MetroListView lsvView2;
     }
 }

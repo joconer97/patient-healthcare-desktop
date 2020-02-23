@@ -36,30 +36,29 @@ namespace PatientManagement.Forms.PatientForm
 
         private void InitializeListView()
         {
-            lsvView.Columns.Add("PIN", 200);
-            lsvView.Columns.Add("Firstname", 200);
-            lsvView.Columns.Add("Middlename", 200);
-            lsvView.Columns.Add("Lastname", 200);
-            lsvView.Columns.Add("Gender", 140);
+            lsvView2.Columns.Add("PIN", 200);
+            lsvView2.Columns.Add("Firstname", 200);
+            lsvView2.Columns.Add("Middlename", 200);
+            lsvView2.Columns.Add("Lastname", 200);
+            lsvView2.Columns.Add("Gender", 140);
 
 
 
-            lsvView.View = View.Details;
-            lsvView.GridLines = true;
-            lsvView.FullRowSelect = true;
-            lsvView.HideSelection = false;
-            lsvView.MultiSelect = false;
+            lsvView2.View = View.Details;
+            lsvView2.GridLines = true;
+            lsvView2.FullRowSelect = true;
+            lsvView2.HideSelection = false;
+            lsvView2.MultiSelect = false;
         }
 
         private void PopulateList(List<Classes.Patient> patients)
         {
-            int ctr = 0;
 
-            lsvView.Items.Clear();
+            lsvView2.Items.Clear();
             ListViewItem item;
             foreach (var patient in patients)
             {
-                item = lsvView.Items.Add(patient.id);
+                item = lsvView2.Items.Add(patient.id);
                 item.SubItems.Add(patient.firstname);
                 item.SubItems.Add(patient.middlename);
                 item.SubItems.Add(patient.lastname);
@@ -68,14 +67,13 @@ namespace PatientManagement.Forms.PatientForm
             }
         }
 
-    
-        private void lsvView_DoubleClick_1(object sender, EventArgs e)
+        private void lsvView2_DoubleClick(object sender, EventArgs e)
         {
             int si = 0;
 
             try
             {
-                si = lsvView.SelectedItems[0].Index;
+                si = lsvView2.SelectedItems[0].Index;
             }
             catch (Exception)
             {
