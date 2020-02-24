@@ -71,6 +71,30 @@
     <Compile Include="Classes\SampleHelper.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserHelper.cs" />
+    <Compile Include="Forms\Billing\Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing\Billing.Designer.cs">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Billing\BillingSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing\BillingSummary.Designer.cs">
+      <DependentUpon>BillingSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoctorForm\Admission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorForm\Admission.Designer.cs">
+      <DependentUpon>Admission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoctorForm\AdmissionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorForm\AdmissionList.Designer.cs">
+      <DependentUpon>AdmissionList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DoctorForm\CheckUP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +167,26 @@
     <Compile Include="Forms\PatientForm\SearchPatient.Designer.cs">
       <DependentUpon>SearchPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Pharmacy\Pharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacy\Pharmacy.Designer.cs">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Billing\Billing.resx">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Billing\BillingSummary.resx">
+      <DependentUpon>BillingSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorForm\Admission.resx">
+      <DependentUpon>Admission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorForm\AdmissionList.resx">
+      <DependentUpon>AdmissionList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorForm\CheckUP.resx">
       <DependentUpon>CheckUP.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\RegisterPatient.resx">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacy\Pharmacy.resx">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -22,3 +22,9 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.pdb
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csprojAssemblyReference.cache
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.FollowUP.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.Emergency.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.Admission.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.AdmissionList.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Billing.Billing.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Pharmacy.Pharmacy.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Billing.BillingSummary.resources
