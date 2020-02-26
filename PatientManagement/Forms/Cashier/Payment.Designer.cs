@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lsvPayment = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // lsvPayment
+            // 
+            this.lsvPayment.HideSelection = false;
+            this.lsvPayment.Location = new System.Drawing.Point(4, 13);
+            this.lsvPayment.Name = "lsvPayment";
+            this.lsvPayment.Size = new System.Drawing.Size(794, 425);
+            this.lsvPayment.TabIndex = 0;
+            this.lsvPayment.UseCompatibleStateImageBehavior = false;
+            // 
+            // Payment
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lsvPayment);
+            this.Name = "Payment";
             this.Text = "Payment";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView lsvPayment;
     }
 }

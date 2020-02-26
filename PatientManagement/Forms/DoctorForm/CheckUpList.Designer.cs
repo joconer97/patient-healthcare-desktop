@@ -38,9 +38,9 @@
             this.label1.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 32);
+            this.label1.Size = new System.Drawing.Size(407, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Patient Check-up List";
+            this.label1.Text = "Patient Emegency And Checkup";
             // 
             // lsvCheckup
             // 

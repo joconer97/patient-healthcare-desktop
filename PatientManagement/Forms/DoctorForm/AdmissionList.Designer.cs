@@ -53,6 +53,7 @@
             this.lsvAdmission.TabIndex = 1;
             this.lsvAdmission.UseCompatibleStateImageBehavior = false;
             this.lsvAdmission.UseSelectable = true;
+            this.lsvAdmission.DoubleClick += new System.EventHandler(this.lsvAdmission_DoubleClick);
             // 
             // AdmissionList
             // 

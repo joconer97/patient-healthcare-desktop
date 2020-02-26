@@ -57,7 +57,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(789, 209);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Check-Up";
+            this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -81,7 +81,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 247);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Search Patient";
+            this.button4.Text = "Checkup";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

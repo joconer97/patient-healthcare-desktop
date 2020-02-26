@@ -29,6 +29,7 @@ namespace PatientManagement.Forms.DoctorForm
             lsvCheckup.Columns.Add("Temperature °C", 100);
             lsvCheckup.Columns.Add("Pulse Rate", 100);
             lsvCheckup.Columns.Add("Time Arrived", 150);
+            lsvCheckup.Columns.Add("Type", 150);
 
 
 
@@ -42,6 +43,7 @@ namespace PatientManagement.Forms.DoctorForm
         private void PopulateList()
         {
             checkups = Classes.CheckupHelper.ListCheckup();
+            int ctr = 0;
             lsvCheckup.Items.Clear();
             ListViewItem item;
             
@@ -55,6 +57,8 @@ namespace PatientManagement.Forms.DoctorForm
                 item.SubItems.Add(c.temperature);
                 item.SubItems.Add(c.pulse_rate);
                 item.SubItems.Add(c.time_arrived.ToString());
+                item.SubItems.Add((ctr % 2 == 0)?"Follow-up":"Check-up");
+                ctr++;
 
             }
         }

@@ -16,7 +16,7 @@ namespace PatientManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Billing.BillingSummary());
+            Application.Run(new Forms.Login());
         }
     }
 }

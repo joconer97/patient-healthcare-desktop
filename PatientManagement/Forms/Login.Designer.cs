@@ -31,6 +31,7 @@
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -99,7 +100,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(239, 139);
+            this.btnLogin.Location = new System.Drawing.Point(239, 205);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(119, 33);
             this.btnLogin.TabIndex = 5;
@@ -107,11 +108,29 @@
             this.btnLogin.UseSelectable = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "OUT-PATIENT DOCTOR",
+            "IN-PATIENT DOCTOR",
+            "OUT-PATIENT NURSE",
+            "IN-PATIENT NURSE",
+            "PHARMACY",
+            "BILLING",
+            "CASHIER",
+            "LABORATORY"});
+            this.comboBox1.Location = new System.Drawing.Point(24, 154);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(334, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 334);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -126,5 +145,6 @@
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroButton btnLogin;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
