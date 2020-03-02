@@ -34,6 +34,7 @@ namespace PatientManagement.Forms.PatientForm
                 lastname = txtLastname.Text,
                 gender = char.Parse(cmbGender.SelectedItem.ToString()),
                 birthdate = dtpBirthdate.Value,
+                birthplace = txtBirthplace.Text,
                 contact = txtContact.Text,
                 emergency_contact = txtEmergencyContact.Text,
                 address = txtStreet.Text + " " + txtBaranggay.Text + " " + txtCity.Text,

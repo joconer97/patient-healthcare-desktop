@@ -33,7 +33,7 @@ namespace PatientManagement.Forms
                     //IN-PATIENT DOCTOR
                     break;
                 case 2:
-                    new Forms.NurseForm.NurseMain().ShowDialog();
+                    new Forms.NurseForm.OutNurseMain().ShowDialog();
                     //OUT-PATIENT NURSE
                     break;
                 case 3:
@@ -55,6 +55,9 @@ namespace PatientManagement.Forms
                 case 7:
                     //new Forms
                     //LABORATORY
+                    break;
+                case 8:
+                    new Forms.CentralSupply.CentralSupply().ShowDialog();
                     break;
             }
             //User user = new User();

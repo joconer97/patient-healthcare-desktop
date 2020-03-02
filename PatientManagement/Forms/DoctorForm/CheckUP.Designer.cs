@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdmissionRequest = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -44,6 +44,8 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtManagement = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAssesment = new MetroFramework.Controls.MetroTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,8 +55,7 @@
             this.lsvMedicine = new System.Windows.Forms.ListView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbMedicine = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtManagement = new MetroFramework.Controls.MetroTextBox();
+            this.btnLabRequest = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -65,15 +66,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAdmissionRequest
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 591);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 44);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Admission Request";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdmissionRequest.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmissionRequest.Location = new System.Drawing.Point(26, 591);
+            this.btnAdmissionRequest.Name = "btnAdmissionRequest";
+            this.btnAdmissionRequest.Size = new System.Drawing.Size(247, 44);
+            this.btnAdmissionRequest.TabIndex = 7;
+            this.btnAdmissionRequest.Text = "Admission Request";
+            this.btnAdmissionRequest.UseVisualStyleBackColor = true;
+            this.btnAdmissionRequest.Click += new System.EventHandler(this.btnAdmissionRequest_Click);
             // 
             // button2
             // 
@@ -235,6 +237,47 @@
             this.panel2.Size = new System.Drawing.Size(519, 463);
             this.panel2.TabIndex = 12;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 201);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Management";
+            // 
+            // txtManagement
+            // 
+            // 
+            // 
+            // 
+            this.txtManagement.CustomButton.Image = null;
+            this.txtManagement.CustomButton.Location = new System.Drawing.Point(354, 2);
+            this.txtManagement.CustomButton.Name = "";
+            this.txtManagement.CustomButton.Size = new System.Drawing.Size(107, 107);
+            this.txtManagement.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtManagement.CustomButton.TabIndex = 1;
+            this.txtManagement.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtManagement.CustomButton.UseSelectable = true;
+            this.txtManagement.CustomButton.Visible = false;
+            this.txtManagement.Lines = new string[0];
+            this.txtManagement.Location = new System.Drawing.Point(20, 244);
+            this.txtManagement.MaxLength = 32767;
+            this.txtManagement.Multiline = true;
+            this.txtManagement.Name = "txtManagement";
+            this.txtManagement.PasswordChar = '\0';
+            this.txtManagement.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtManagement.SelectedText = "";
+            this.txtManagement.SelectionLength = 0;
+            this.txtManagement.SelectionStart = 0;
+            this.txtManagement.ShortcutsEnabled = true;
+            this.txtManagement.Size = new System.Drawing.Size(464, 112);
+            this.txtManagement.TabIndex = 2;
+            this.txtManagement.UseSelectable = true;
+            this.txtManagement.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtManagement.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -372,55 +415,26 @@
             this.cmbMedicine.TabIndex = 10;
             this.cmbMedicine.Text = "Drugs";
             // 
-            // label4
+            // btnLabRequest
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Management";
-            // 
-            // txtManagement
-            // 
-            // 
-            // 
-            // 
-            this.txtManagement.CustomButton.Image = null;
-            this.txtManagement.CustomButton.Location = new System.Drawing.Point(354, 2);
-            this.txtManagement.CustomButton.Name = "";
-            this.txtManagement.CustomButton.Size = new System.Drawing.Size(107, 107);
-            this.txtManagement.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtManagement.CustomButton.TabIndex = 1;
-            this.txtManagement.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtManagement.CustomButton.UseSelectable = true;
-            this.txtManagement.CustomButton.Visible = false;
-            this.txtManagement.Lines = new string[0];
-            this.txtManagement.Location = new System.Drawing.Point(20, 244);
-            this.txtManagement.MaxLength = 32767;
-            this.txtManagement.Multiline = true;
-            this.txtManagement.Name = "txtManagement";
-            this.txtManagement.PasswordChar = '\0';
-            this.txtManagement.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtManagement.SelectedText = "";
-            this.txtManagement.SelectionLength = 0;
-            this.txtManagement.SelectionStart = 0;
-            this.txtManagement.ShortcutsEnabled = true;
-            this.txtManagement.Size = new System.Drawing.Size(464, 112);
-            this.txtManagement.TabIndex = 2;
-            this.txtManagement.UseSelectable = true;
-            this.txtManagement.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtManagement.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.btnLabRequest.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLabRequest.Location = new System.Drawing.Point(279, 591);
+            this.btnLabRequest.Name = "btnLabRequest";
+            this.btnLabRequest.Size = new System.Drawing.Size(247, 44);
+            this.btnLabRequest.TabIndex = 10;
+            this.btnLabRequest.Text = "Laboratory Request";
+            this.btnLabRequest.UseVisualStyleBackColor = true;
+            this.btnLabRequest.Click += new System.EventHandler(this.btnLabRequest_Click);
             // 
             // CheckUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 647);
+            this.Controls.Add(this.btnLabRequest);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdmissionRequest);
             this.Name = "CheckUP";
             this.Text = "CheckUP";
             this.Load += new System.EventHandler(this.CheckUP_Load);
@@ -441,7 +455,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdmissionRequest;
         private System.Windows.Forms.Button button2;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -468,5 +482,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroTextBox txtManagement;
+        private System.Windows.Forms.Button btnLabRequest;
     }
 }

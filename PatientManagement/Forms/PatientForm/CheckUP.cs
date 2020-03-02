@@ -28,7 +28,7 @@ namespace PatientManagement.Forms.PatientForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"",""))
+            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"","",0,txtGCS.Text, txtRR.Text, txtO2Sat.Text))
             {
                 MessageBox.Show("Successfully added");
             }

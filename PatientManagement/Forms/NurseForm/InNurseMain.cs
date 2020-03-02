@@ -21,5 +21,10 @@ namespace PatientManagement.Forms.NurseForm
         {
             new Forms.PatientForm.Admission().ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Forms.PatientForm.AdmissionRequestList().ShowDialog();
+        }
     }
 }

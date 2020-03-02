@@ -21,6 +21,7 @@ namespace PatientManagement.Classes
                     new SqlParameter("@lastname",patient.lastname),
                     new SqlParameter("@gender",patient.gender),
                     new SqlParameter("@birthyear",patient.birthdate.ToShortDateString()),
+                    new SqlParameter("@birthplace",patient.birthplace),
                     new SqlParameter("@contact",patient.contact),
                     new SqlParameter("@address",patient.address),
                     new SqlParameter("@religion",patient.religion),

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -45,8 +48,11 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,17 +64,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Admission.cs" />
+    <Compile Include="Classes\AdmissionHelper.cs" />
     <Compile Include="Classes\Checkup.cs" />
     <Compile Include="Classes\CheckupHelper.cs" />
     <Compile Include="Classes\DAL.cs" />
+    <Compile Include="Classes\Laboratory.cs" />
     <Compile Include="Classes\MedicalRecord.cs" />
     <Compile Include="Classes\MedicalRecordHelper.cs" />
+    <Compile Include="Classes\MedicalSupply.cs" />
+    <Compile Include="Classes\MedicalSupplyHelper.cs" />
+    <Compile Include="Classes\Medicine.cs" />
+    <Compile Include="Classes\MedicineHelper.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\PatientHelper.cs" />
     <Compile Include="Classes\Prescription.cs" />
     <Compile Include="Classes\PrescriptionHelper.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Request.cs" />
+    <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\Sample.cs" />
     <Compile Include="Classes\SampleHelper.cs" />
     <Compile Include="Classes\User.cs" />
@@ -109,6 +123,12 @@
     <Compile Include="Forms\Cashier\POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CentralSupply\CentralSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CentralSupply\CentralSupply.Designer.cs">
+      <DependentUpon>CentralSupply.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DoctorForm\Admission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +165,12 @@
     <Compile Include="Forms\DoctorForm\SampleForm.Designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryRequest.Designer.cs">
+      <DependentUpon>LaboratoryRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,17 +183,29 @@
     <Compile Include="Forms\NurseForm\InNurseMain.Designer.cs">
       <DependentUpon>InNurseMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\NurseForm\NurseMain.cs">
+    <Compile Include="Forms\NurseForm\OutNurseMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NurseForm\NurseMain.Designer.cs">
-      <DependentUpon>NurseMain.cs</DependentUpon>
+    <Compile Include="Forms\NurseForm\OutNurseMain.Designer.cs">
+      <DependentUpon>OutNurseMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PatientForm\Admission.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PatientForm\Admission.Designer.cs">
       <DependentUpon>Admission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientForm\AdmissionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientForm\AdmissionRequest.Designer.cs">
+      <DependentUpon>AdmissionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientForm\AdmissionRequestList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientForm\AdmissionRequestList.Designer.cs">
+      <DependentUpon>AdmissionRequestList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PatientForm\CheckUP.cs">
       <SubType>Form</SubType>
@@ -237,6 +275,9 @@
     <EmbeddedResource Include="Forms\Cashier\POS.resx">
       <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CentralSupply\CentralSupply.resx">
+      <DependentUpon>CentralSupply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorForm\Admission.resx">
       <DependentUpon>Admission.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,17 +293,26 @@
     <EmbeddedResource Include="Forms\DoctorForm\OutPatientMain.resx">
       <DependentUpon>OutPatientMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laboratory\LaboratoryRequest.resx">
+      <DependentUpon>LaboratoryRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NurseForm\InNurseMain.resx">
       <DependentUpon>InNurseMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NurseForm\NurseMain.resx">
-      <DependentUpon>NurseMain.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\NurseForm\OutNurseMain.resx">
+      <DependentUpon>OutNurseMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\Admission.resx">
       <DependentUpon>Admission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientForm\AdmissionRequest.resx">
+      <DependentUpon>AdmissionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientForm\AdmissionRequestList.resx">
+      <DependentUpon>AdmissionRequestList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\CheckUP.resx">
       <DependentUpon>CheckUP.cs</DependentUpon>

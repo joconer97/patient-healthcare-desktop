@@ -17,10 +17,12 @@ namespace PatientManagement.Forms.DoctorForm
         List<string> medicines = new List<string>();
         List<Classes.Prescription> prescriptions = new List<Classes.Prescription>();
         int id = 0;
+        Classes.Patient currentPatient;
         public CheckUP(Classes.Checkup checkup)
         {
             InitializeComponent();
             id = checkup.id;
+            currentPatient = checkup.patient;
             txtFullname.Text = checkup.patient.firstname + " " + checkup.patient.lastname;
             txtGender.Text = checkup.patient.gender.ToString();
             txtAge.Text = (DateTime.Now.Year - checkup.patient.birthdate.Year).ToString();
@@ -96,13 +98,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void PopulateList(string patientID)
         {
-            List<Classes.MedicalRecord> medicalRecords = Classes.MedicalRecordHelper.medicalRecords(patientID);
-            lsvRecord.Items.Clear();
-            ListViewItem item;
-            foreach (var r in medicalRecords)
-            {
-                item = lsvRecord.Items.Add(r.details);
-            }
+          
         }
 
         private void PopulateList2()
@@ -146,6 +142,30 @@ namespace PatientManagement.Forms.DoctorForm
             {
                 Classes.PrescriptionHelper.savePrescription(prescription, id, "checkup");
             }
+        }
+
+        private void btnAdmissionRequest_Click(object sender, EventArgs e)
+        {
+            Classes.AdmissionHelper.SaveAdmission(new Classes.Admission()
+            {
+                patient = currentPatient,
+            });
+
+            if (Classes.CheckupHelper.SaveCheckUP("", "", "", "", "", "", id, txtAssesment.Text, txtManagement.Text, 1))
+            {
+                MessageBox.Show("Successfully updated");
+            }
+            else
+            {
+                MessageBox.Show("Error added");
+            }
+
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+
+        private void btnLabRequest_Click(object sender, EventArgs e)
+        {
+            new Forms.Laboratory.LaboratoryRequest().ShowDialog();
         }
     }
 }

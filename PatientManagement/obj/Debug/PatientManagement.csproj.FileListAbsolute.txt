@@ -9,7 +9,6 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\Newton
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.CheckUP.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.CheckUpList.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Login.resources
-C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.NurseForm.NurseMain.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.CheckUP.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.CheckUPSearch.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.FollowUPSearch.resources
@@ -35,3 +34,10 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Cashier.POS.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.NurseForm.InNurseMain.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.Admission.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Laboratory.LaboratoryRequest.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.AdmissionRequestList.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.AdmissionRequest.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.NurseForm.OutNurseMain.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\EPPlus.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\EPPlus.xml
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.CentralSupply.CentralSupply.resources

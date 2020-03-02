@@ -38,6 +38,7 @@ namespace PatientManagement.Forms.DoctorForm
             lsvCheckup.FullRowSelect = true;
             lsvCheckup.HideSelection = false;
             lsvCheckup.MultiSelect = false;
+            lsvCheckup.BackColor = Color.AliceBlue;
         }
 
         private void PopulateList()
@@ -77,7 +78,10 @@ namespace PatientManagement.Forms.DoctorForm
             }
             Form form = new DoctorForm.CheckUP(checkups[si]);
 
-            form.ShowDialog();
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                PopulateList();
+            }
         }
     }
 }

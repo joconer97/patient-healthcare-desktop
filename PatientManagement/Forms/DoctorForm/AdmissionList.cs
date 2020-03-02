@@ -27,7 +27,7 @@ namespace PatientManagement.Forms.DoctorForm
             lsvAdmission.Columns.Add("Sex", 30);
             lsvAdmission.Columns.Add("Illness", 200);
             lsvAdmission.Columns.Add("Admission Date", 200);
-            lsvAdmission.Columns.Add("Discharge Date", 200);
+            lsvAdmission.Columns.Add("Admission Time", 200);
 
 
             lsvAdmission.View = View.Details;
@@ -39,16 +39,25 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void PopulateListView()
         {
+            List<Classes.Admission> admissions = Classes.AdmissionHelper.Admissions();
             ListViewItem item;
 
-            item = lsvAdmission.Items.Add("1");
-            item.SubItems.Add("10563623");
-            item.SubItems.Add("Arnel Joshua Payongayong");
-            item.SubItems.Add("M");
-            item.SubItems.Add("Dengue");
-            item.SubItems.Add("02/20/2020");
-            item.SubItems.Add("02/30/2020");
+            foreach(Classes.Admission admission in admissions)
+            {
+                if (admission.isAdmitted == 0) continue;
+
+                item = lsvAdmission.Items.Add(admission.bedNo.ToString());
+                item.SubItems.Add(admission.patient.id);
+                item.SubItems.Add(admission.patient.firstname + " " + admission.patient.middlename + " " + admission.patient.lastname);
+                item.SubItems.Add(admission.patient.gender.ToString());
+                item.SubItems.Add("Dengue");
+                item.SubItems.Add(admission.admittedDate.ToShortDateString());
+                item.SubItems.Add(admission.admittedTime.ToString());
+            }
+
         }
+
+        
 
         private void lsvAdmission_DoubleClick(object sender, EventArgs e)
         {

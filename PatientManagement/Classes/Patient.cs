@@ -13,6 +13,7 @@ namespace PatientManagement.Classes
         public string middlename { get; set; }
         public string lastname { get; set; }
         public DateTime birthdate { get; set; }
+        public string birthplace { get; set; }
         public char gender { get; set; }
         public string religion { get; set; }
         public string citizenship { get; set; }

@@ -40,7 +40,7 @@
             // 
             // 
             this.txtUsername.CustomButton.Image = null;
-            this.txtUsername.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(400, 1);
             this.txtUsername.CustomButton.Name = "";
             this.txtUsername.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -50,7 +50,7 @@
             this.txtUsername.CustomButton.Visible = false;
             this.txtUsername.Lines = new string[] {
         "Username"};
-            this.txtUsername.Location = new System.Drawing.Point(23, 80);
+            this.txtUsername.Location = new System.Drawing.Point(22, 82);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -59,7 +59,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(335, 23);
+            this.txtUsername.Size = new System.Drawing.Size(422, 23);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "Username";
             this.txtUsername.UseSelectable = true;
@@ -72,7 +72,7 @@
             // 
             // 
             this.txtPassword.CustomButton.Image = null;
-            this.txtPassword.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(400, 1);
             this.txtPassword.CustomButton.Name = "";
             this.txtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -82,7 +82,7 @@
             this.txtPassword.CustomButton.Visible = false;
             this.txtPassword.Lines = new string[] {
         "Password"};
-            this.txtPassword.Location = new System.Drawing.Point(23, 110);
+            this.txtPassword.Location = new System.Drawing.Point(22, 119);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -91,7 +91,7 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(335, 23);
+            this.txtPassword.Size = new System.Drawing.Size(422, 23);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSelectable = true;
@@ -100,9 +100,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(239, 205);
+            this.btnLogin.Location = new System.Drawing.Point(309, 157);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(119, 33);
+            this.btnLogin.Size = new System.Drawing.Size(136, 41);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseSelectable = true;
@@ -119,23 +119,25 @@
             "PHARMACY",
             "BILLING",
             "CASHIER",
-            "LABORATORY"});
-            this.comboBox1.Location = new System.Drawing.Point(24, 154);
+            "LABORATORY",
+            "CENTRAL SUPPLY"});
+            this.comboBox1.Location = new System.Drawing.Point(23, 50);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(334, 21);
+            this.comboBox1.Size = new System.Drawing.Size(421, 21);
             this.comboBox1.TabIndex = 6;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 334);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(491, 319);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Login";
-            this.Text = "Login";
+            this.TransparencyKey = System.Drawing.Color.LightSkyBlue;
             this.ResumeLayout(false);
 
         }

@@ -37,6 +37,18 @@
             this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.txtEmergencyContact = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.txtStreet = new System.Windows.Forms.TextBox();
+            this.txtBaranggay = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.txtCitizenship = new System.Windows.Forms.TextBox();
+            this.txtReligion = new System.Windows.Forms.TextBox();
+            this.txtOccupation = new System.Windows.Forms.TextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -45,18 +57,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.txtCitizenship = new System.Windows.Forms.TextBox();
-            this.txtReligion = new System.Windows.Forms.TextBox();
-            this.txtOccupation = new System.Windows.Forms.TextBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.txtStreet = new System.Windows.Forms.TextBox();
-            this.txtBaranggay = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.txtBirthplace = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +129,7 @@
             // txtEmergencyContact
             // 
             this.txtEmergencyContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmergencyContact.Location = new System.Drawing.Point(21, 362);
+            this.txtEmergencyContact.Location = new System.Drawing.Point(409, 363);
             this.txtEmergencyContact.Name = "txtEmergencyContact";
             this.txtEmergencyContact.Size = new System.Drawing.Size(365, 29);
             this.txtEmergencyContact.TabIndex = 7;
@@ -135,6 +137,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.metroLabel14);
+            this.panel1.Controls.Add(this.txtBirthplace);
             this.panel1.Controls.Add(this.metroLabel8);
             this.panel1.Controls.Add(this.metroLabel9);
             this.panel1.Controls.Add(this.metroLabel10);
@@ -167,10 +171,112 @@
             this.panel1.Size = new System.Drawing.Size(798, 475);
             this.panel1.TabIndex = 15;
             // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(409, 282);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel8.TabIndex = 32;
+            this.metroLabel8.Text = "City";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(410, 227);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel9.TabIndex = 31;
+            this.metroLabel9.Text = "Baranggay";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(410, 171);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel10.TabIndex = 30;
+            this.metroLabel10.Text = "Street";
+            // 
+            // txtStreet
+            // 
+            this.txtStreet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreet.Location = new System.Drawing.Point(410, 193);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(365, 29);
+            this.txtStreet.TabIndex = 27;
+            // 
+            // txtBaranggay
+            // 
+            this.txtBaranggay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaranggay.Location = new System.Drawing.Point(410, 250);
+            this.txtBaranggay.Name = "txtBaranggay";
+            this.txtBaranggay.Size = new System.Drawing.Size(365, 29);
+            this.txtBaranggay.TabIndex = 28;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(410, 304);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(365, 29);
+            this.txtCity.TabIndex = 29;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(410, 116);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel11.TabIndex = 20;
+            this.metroLabel11.Text = "Occupation";
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(411, 61);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel12.TabIndex = 19;
+            this.metroLabel12.Text = "Religion";
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(411, 5);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel13.TabIndex = 18;
+            this.metroLabel13.Text = "Citizenship";
+            // 
+            // txtCitizenship
+            // 
+            this.txtCitizenship.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCitizenship.Location = new System.Drawing.Point(411, 27);
+            this.txtCitizenship.Name = "txtCitizenship";
+            this.txtCitizenship.Size = new System.Drawing.Size(365, 29);
+            this.txtCitizenship.TabIndex = 15;
+            // 
+            // txtReligion
+            // 
+            this.txtReligion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReligion.Location = new System.Drawing.Point(411, 84);
+            this.txtReligion.Name = "txtReligion";
+            this.txtReligion.Size = new System.Drawing.Size(365, 29);
+            this.txtReligion.TabIndex = 16;
+            // 
+            // txtOccupation
+            // 
+            this.txtOccupation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOccupation.Location = new System.Drawing.Point(411, 138);
+            this.txtOccupation.Name = "txtOccupation";
+            this.txtOccupation.Size = new System.Drawing.Size(365, 29);
+            this.txtOccupation.TabIndex = 17;
+            // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(20, 338);
+            this.metroLabel7.Location = new System.Drawing.Point(409, 341);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(123, 19);
             this.metroLabel7.TabIndex = 14;
@@ -240,107 +346,22 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Patient Information";
             // 
-            // metroLabel11
+            // metroLabel14
             // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(410, 116);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel11.TabIndex = 20;
-            this.metroLabel11.Text = "Occupation";
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(20, 341);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel14.TabIndex = 34;
+            this.metroLabel14.Text = "Birthplace";
             // 
-            // metroLabel12
+            // txtBirthplace
             // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(411, 61);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(56, 19);
-            this.metroLabel12.TabIndex = 19;
-            this.metroLabel12.Text = "Religion";
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(411, 5);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel13.TabIndex = 18;
-            this.metroLabel13.Text = "Citizenship";
-            // 
-            // txtCitizenship
-            // 
-            this.txtCitizenship.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCitizenship.Location = new System.Drawing.Point(411, 27);
-            this.txtCitizenship.Name = "txtCitizenship";
-            this.txtCitizenship.Size = new System.Drawing.Size(365, 29);
-            this.txtCitizenship.TabIndex = 15;
-            // 
-            // txtReligion
-            // 
-            this.txtReligion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReligion.Location = new System.Drawing.Point(411, 84);
-            this.txtReligion.Name = "txtReligion";
-            this.txtReligion.Size = new System.Drawing.Size(365, 29);
-            this.txtReligion.TabIndex = 16;
-            // 
-            // txtOccupation
-            // 
-            this.txtOccupation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOccupation.Location = new System.Drawing.Point(411, 138);
-            this.txtOccupation.Name = "txtOccupation";
-            this.txtOccupation.Size = new System.Drawing.Size(365, 29);
-            this.txtOccupation.TabIndex = 17;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(409, 282);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(31, 19);
-            this.metroLabel8.TabIndex = 32;
-            this.metroLabel8.Text = "City";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(410, 227);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel9.TabIndex = 31;
-            this.metroLabel9.Text = "Baranggay";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(410, 171);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(43, 19);
-            this.metroLabel10.TabIndex = 30;
-            this.metroLabel10.Text = "Street";
-            // 
-            // txtStreet
-            // 
-            this.txtStreet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStreet.Location = new System.Drawing.Point(410, 193);
-            this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(365, 29);
-            this.txtStreet.TabIndex = 27;
-            // 
-            // txtBaranggay
-            // 
-            this.txtBaranggay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBaranggay.Location = new System.Drawing.Point(410, 250);
-            this.txtBaranggay.Name = "txtBaranggay";
-            this.txtBaranggay.Size = new System.Drawing.Size(365, 29);
-            this.txtBaranggay.TabIndex = 28;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(410, 304);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(365, 29);
-            this.txtCity.TabIndex = 29;
+            this.txtBirthplace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthplace.Location = new System.Drawing.Point(20, 363);
+            this.txtBirthplace.Name = "txtBirthplace";
+            this.txtBirthplace.Size = new System.Drawing.Size(365, 29);
+            this.txtBirthplace.TabIndex = 33;
             // 
             // RegisterPatient
             // 
@@ -389,5 +410,7 @@
         private System.Windows.Forms.TextBox txtCitizenship;
         private System.Windows.Forms.TextBox txtReligion;
         private System.Windows.Forms.TextBox txtOccupation;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private System.Windows.Forms.TextBox txtBirthplace;
     }
 }

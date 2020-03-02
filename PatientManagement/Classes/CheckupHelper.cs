@@ -10,7 +10,7 @@ namespace PatientManagement.Classes
 {
     public class CheckupHelper
     {
-        public static bool SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,int isTreated = 0)
+        public static bool SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,int isTreated = 0,string rr = "",string gcs = "",string o2sat = "")
         {
             using (DAL dal = new DAL())
             {
@@ -26,6 +26,9 @@ namespace PatientManagement.Classes
                     new SqlParameter("@management", management),
                     new SqlParameter("@isTreated", isTreated),
                     new SqlParameter("@date", DateTime.Now.ToShortDateString()),
+                    new SqlParameter("@rr", rr),
+                    new SqlParameter("@gcs", gcs),
+                    new SqlParameter("@o2sat", o2sat),
 
                 };
                 try
@@ -66,11 +69,16 @@ namespace PatientManagement.Classes
                             isTreated = dr.Field<int>(6),
                             patient = new Patient()
                             {
+                                id = dr.Field<string>("patientID"),
                                 firstname = dr.Field<string>("firstname"),
                                 middlename = dr.Field<string>("middlename"),
                                 lastname = dr.Field<string>("lastname"),
                                 gender = char.Parse(dr.Field<string>("gender")),
-                                birthdate = dr.Field<DateTime>("birthyear")
+                                birthdate = dr.Field<DateTime>("birthyear"),
+                                address = dr.Field<string>("address"),
+                                religion = dr.Field<string>("religion"),
+                                citizenship = dr.Field<string>("citizenship"),
+                                occupation = dr.Field<string>("occupation"),
 
                             }
 

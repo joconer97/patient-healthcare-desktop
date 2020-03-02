@@ -1,6 +1,6 @@
 ﻿namespace PatientManagement.Forms.NurseForm
 {
-    partial class NurseMain
+    partial class OutNurseMain
     {
         /// <summary>
         /// Required designer variable.

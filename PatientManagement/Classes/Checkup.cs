@@ -13,6 +13,9 @@ namespace PatientManagement.Classes
         public string temperature { get; set; }
         public string blood_pressure { get; set; }
         public string pulse_rate { get; set; }
+        public string respiratory_rate { get; set; }
+        public string gcs { get; set; }
+        public string o2sat { get; set; }
         public TimeSpan time_arrived { get; set; }
         public DateTime date { get; set; }
         public string cc { get; set; }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.NurseForm
 {
-    public partial class NurseMain : MetroFramework.Forms.MetroForm
+    public partial class OutNurseMain : MetroFramework.Forms.MetroForm
     {
-        public NurseMain()
+        public OutNurseMain()
         {
             InitializeComponent();
         }
