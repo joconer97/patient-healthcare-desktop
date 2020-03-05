@@ -45,15 +45,10 @@
             this.label40 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
+            this.txtRName = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtROrg = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -61,11 +56,11 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtDateOfBirth = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.panel15.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -232,15 +227,10 @@
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.label41);
-            this.panel19.Controls.Add(this.textBox22);
-            this.panel19.Controls.Add(this.label42);
-            this.panel19.Controls.Add(this.textBox23);
-            this.panel19.Controls.Add(this.label43);
+            this.panel19.Controls.Add(this.txtRName);
             this.panel19.Controls.Add(this.label44);
-            this.panel19.Controls.Add(this.textBox24);
+            this.panel19.Controls.Add(this.txtROrg);
             this.panel19.Controls.Add(this.label45);
-            this.panel19.Controls.Add(this.textBox25);
-            this.panel19.Controls.Add(this.textBox26);
             this.panel19.Location = new System.Drawing.Point(452, 12);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(417, 198);
@@ -256,37 +246,12 @@
             this.label41.TabIndex = 15;
             this.label41.Text = "Requester Details";
             // 
-            // textBox22
+            // txtRName
             // 
-            this.textBox22.Location = new System.Drawing.Point(108, 38);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(282, 20);
-            this.textBox22.TabIndex = 0;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(18, 123);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(81, 13);
-            this.label42.TabIndex = 14;
-            this.label42.Text = "Telephone No.:";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(108, 142);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(282, 20);
-            this.textBox23.TabIndex = 4;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(18, 93);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(51, 13);
-            this.label43.TabIndex = 13;
-            this.label43.Text = "Address :";
+            this.txtRName.Location = new System.Drawing.Point(108, 38);
+            this.txtRName.Name = "txtRName";
+            this.txtRName.Size = new System.Drawing.Size(282, 20);
+            this.txtRName.TabIndex = 0;
             // 
             // label44
             // 
@@ -297,12 +262,12 @@
             this.label44.TabIndex = 12;
             this.label44.Text = "Organization:";
             // 
-            // textBox24
+            // txtROrg
             // 
-            this.textBox24.Location = new System.Drawing.Point(108, 64);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(282, 20);
-            this.textBox24.TabIndex = 1;
+            this.txtROrg.Location = new System.Drawing.Point(108, 64);
+            this.txtROrg.Name = "txtROrg";
+            this.txtROrg.Size = new System.Drawing.Size(282, 20);
+            this.txtROrg.TabIndex = 1;
             // 
             // label45
             // 
@@ -313,20 +278,6 @@
             this.label45.TabIndex = 11;
             this.label45.Text = "Name:";
             // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(108, 116);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(282, 20);
-            this.textBox25.TabIndex = 3;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(108, 90);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(282, 20);
-            this.textBox26.TabIndex = 2;
-            // 
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -336,11 +287,11 @@
             this.panel20.Controls.Add(this.label49);
             this.panel20.Controls.Add(this.label50);
             this.panel20.Controls.Add(this.label51);
-            this.panel20.Controls.Add(this.textBox27);
-            this.panel20.Controls.Add(this.textBox28);
-            this.panel20.Controls.Add(this.textBox29);
-            this.panel20.Controls.Add(this.textBox30);
-            this.panel20.Controls.Add(this.textBox31);
+            this.panel20.Controls.Add(this.txtName);
+            this.panel20.Controls.Add(this.txtGender);
+            this.panel20.Controls.Add(this.txtAddress);
+            this.panel20.Controls.Add(this.txtDateOfBirth);
+            this.panel20.Controls.Add(this.txtContact);
             this.panel20.Location = new System.Drawing.Point(40, 12);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(404, 198);
@@ -401,40 +352,40 @@
             this.label51.TabIndex = 5;
             this.label51.Text = "Name:";
             // 
-            // textBox27
+            // txtName
             // 
-            this.textBox27.Location = new System.Drawing.Point(103, 38);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(273, 20);
-            this.textBox27.TabIndex = 0;
+            this.txtName.Location = new System.Drawing.Point(103, 38);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(273, 20);
+            this.txtName.TabIndex = 0;
             // 
-            // textBox28
+            // txtGender
             // 
-            this.textBox28.Location = new System.Drawing.Point(103, 142);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(273, 20);
-            this.textBox28.TabIndex = 4;
+            this.txtGender.Location = new System.Drawing.Point(103, 142);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(273, 20);
+            this.txtGender.TabIndex = 4;
             // 
-            // textBox29
+            // txtAddress
             // 
-            this.textBox29.Location = new System.Drawing.Point(103, 64);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(273, 20);
-            this.textBox29.TabIndex = 1;
+            this.txtAddress.Location = new System.Drawing.Point(103, 64);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(273, 20);
+            this.txtAddress.TabIndex = 1;
             // 
-            // textBox30
+            // txtDateOfBirth
             // 
-            this.textBox30.Location = new System.Drawing.Point(103, 116);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(273, 20);
-            this.textBox30.TabIndex = 3;
+            this.txtDateOfBirth.Location = new System.Drawing.Point(103, 116);
+            this.txtDateOfBirth.Name = "txtDateOfBirth";
+            this.txtDateOfBirth.Size = new System.Drawing.Size(273, 20);
+            this.txtDateOfBirth.TabIndex = 3;
             // 
-            // textBox31
+            // txtContact
             // 
-            this.textBox31.Location = new System.Drawing.Point(103, 90);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(273, 20);
-            this.textBox31.TabIndex = 2;
+            this.txtContact.Location = new System.Drawing.Point(103, 90);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(273, 20);
+            this.txtContact.TabIndex = 2;
             // 
             // metroButton1
             // 
@@ -488,15 +439,10 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox txtRName;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtROrg;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
@@ -504,11 +450,11 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtDateOfBirth;
+        private System.Windows.Forms.TextBox txtContact;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

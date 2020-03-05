@@ -49,6 +49,13 @@ namespace PatientManagement.Classes
                     new SqlParameter("@isDischarged",admission.isDischarged),
                     new SqlParameter("@isTransferred ",admission.isTransferred),
                     new SqlParameter("@employeeID ",admission.employeeID),
+                    new SqlParameter("@bp", admission.blood_pressure),
+                    new SqlParameter("@temperature", admission.temperature),
+                    new SqlParameter("@pr",admission.pulse_rate),
+                    new SqlParameter("@cc", admission.cc),
+                    new SqlParameter("@rr", admission.respiratory_rate),
+                    new SqlParameter("@gcs", admission.gcs),
+                    new SqlParameter("@o2sat", admission.o2sat),
 
 
 
@@ -129,8 +136,16 @@ namespace PatientManagement.Classes
                             contact = dr.Field<string>("contact"),
                             isAdmitted = dr.Field<int>("isAdmitted"),
                             isDischarged = dr.Field<int>("isDischarged"),
-                            dischargedDate = (dr.Field<int>("isDischarged") == 1)?dr.Field<DateTime>("dischargeDate"):DateTime.Now,
-                            dischargedTime = (dr.Field<int>("isDischarged") == 1) ? dr.Field<TimeSpan>("dischargeDate") : new TimeSpan(0,0,0),
+                            dischargedDate = (dr.Field<int>("isDischarged") == 1) ? dr.Field<DateTime>("dischargeDate") : DateTime.Now,
+                            dischargedTime = (dr.Field<int>("isDischarged") == 1) ? dr.Field<TimeSpan>("dischargeTime") : new TimeSpan(0, 0, 0),
+                            blood_pressure = dr.Field<string>("bp"),
+                            cc = dr.Field<string>("cc"),
+                            pulse_rate = dr.Field<string>("pr"),
+                            respiratory_rate = dr.Field<string>("rr"),
+                            temperature = dr.Field<string>("temperature"),
+                            o2sat = dr.Field<string>("o2sat"),
+                            gcs = dr.Field<string>("gcs"),
+
                         });
 
 

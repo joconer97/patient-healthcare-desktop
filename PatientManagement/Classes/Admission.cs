@@ -85,5 +85,27 @@ namespace PatientManagement.Classes
 
         public TimeSpan dischargedTime { get; set; }
 
+        public string temperature { get; set; }
+        public string blood_pressure { get; set; }
+        public string pulse_rate { get; set; }
+        public string respiratory_rate { get; set; }
+        public string gcs { get; set; }
+        public string o2sat { get; set; }
+
+        public string cc { get; set; }
+
+
+        public static List<Admission> AdmissionRequest(List<Admission> admissions,int type)
+        {
+            List<Admission> tempAdmissions = new List<Admission>();
+
+            foreach(var a in admissions)
+            {
+                if (a.isAdmitted == type)
+                    tempAdmissions.Add(a);
+            }
+
+            return tempAdmissions;
+        }
     }
 }

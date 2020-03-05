@@ -41,3 +41,4 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\EPPlus.dll
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\EPPlus.xml
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.CentralSupply.CentralSupply.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.ExportUser.resources

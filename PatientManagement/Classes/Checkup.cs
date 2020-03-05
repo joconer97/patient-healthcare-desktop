@@ -25,5 +25,7 @@ namespace PatientManagement.Classes
 
         public Patient patient { get; set; }
 
+        public User user { get; set; }
+
     }
 }

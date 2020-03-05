@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.PatientForm
 {
-    public partial class CheckUPSearch : Form
+    public partial class CheckUPSearch : MetroFramework.Forms.MetroForm
     {
         public CheckUPSearch()
         {

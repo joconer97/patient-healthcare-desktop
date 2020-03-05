@@ -31,11 +31,11 @@
             this.lsvProduct = new MetroFramework.Controls.MetroListView();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.btnMedicine = new MetroFramework.Controls.MetroButton();
+            this.btnMedicalSupply = new MetroFramework.Controls.MetroButton();
+            this.btnLab = new MetroFramework.Controls.MetroButton();
+            this.lsvTransaction = new System.Windows.Forms.ListView();
+            this.txtTotal = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
@@ -52,6 +52,7 @@
             this.lsvProduct.TabIndex = 0;
             this.lsvProduct.UseCompatibleStateImageBehavior = false;
             this.lsvProduct.UseSelectable = true;
+            this.lsvProduct.DoubleClick += new System.EventHandler(this.lsvProduct_DoubleClick);
             // 
             // metroTextBox1
             // 
@@ -94,73 +95,75 @@
             this.metroButton1.Text = "Search";
             this.metroButton1.UseSelectable = true;
             // 
-            // metroButton2
+            // btnMedicine
             // 
-            this.metroButton2.Location = new System.Drawing.Point(3, 61);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 3;
-            this.metroButton2.Text = "Medicine";
-            this.metroButton2.UseSelectable = true;
+            this.btnMedicine.Location = new System.Drawing.Point(3, 61);
+            this.btnMedicine.Name = "btnMedicine";
+            this.btnMedicine.Size = new System.Drawing.Size(75, 23);
+            this.btnMedicine.TabIndex = 3;
+            this.btnMedicine.Text = "Medicine";
+            this.btnMedicine.UseSelectable = true;
+            this.btnMedicine.Click += new System.EventHandler(this.btnMedicine_Click);
             // 
-            // metroButton3
+            // btnMedicalSupply
             // 
-            this.metroButton3.Location = new System.Drawing.Point(84, 61);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(124, 23);
-            this.metroButton3.TabIndex = 4;
-            this.metroButton3.Text = "Medical Supply";
-            this.metroButton3.UseSelectable = true;
+            this.btnMedicalSupply.Location = new System.Drawing.Point(84, 61);
+            this.btnMedicalSupply.Name = "btnMedicalSupply";
+            this.btnMedicalSupply.Size = new System.Drawing.Size(124, 23);
+            this.btnMedicalSupply.TabIndex = 4;
+            this.btnMedicalSupply.Text = "Medical Supply";
+            this.btnMedicalSupply.UseSelectable = true;
+            this.btnMedicalSupply.Click += new System.EventHandler(this.btnMedicalSupply_Click);
             // 
-            // metroButton4
+            // btnLab
             // 
-            this.metroButton4.Location = new System.Drawing.Point(214, 61);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(124, 23);
-            this.metroButton4.TabIndex = 5;
-            this.metroButton4.Text = "Laboratory";
-            this.metroButton4.UseSelectable = true;
+            this.btnLab.Location = new System.Drawing.Point(214, 61);
+            this.btnLab.Name = "btnLab";
+            this.btnLab.Size = new System.Drawing.Size(124, 23);
+            this.btnLab.TabIndex = 5;
+            this.btnLab.Text = "Laboratory";
+            this.btnLab.UseSelectable = true;
             // 
-            // listView1
+            // lsvTransaction
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(716, 90);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(353, 341);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lsvTransaction.HideSelection = false;
+            this.lsvTransaction.Location = new System.Drawing.Point(716, 90);
+            this.lsvTransaction.Name = "lsvTransaction";
+            this.lsvTransaction.Size = new System.Drawing.Size(353, 259);
+            this.lsvTransaction.TabIndex = 6;
+            this.lsvTransaction.UseCompatibleStateImageBehavior = false;
             // 
-            // metroTextBox2
-            // 
-            // 
+            // txtTotal
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(331, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[] {
+            // 
+            // 
+            this.txtTotal.CustomButton.Image = null;
+            this.txtTotal.CustomButton.Location = new System.Drawing.Point(331, 1);
+            this.txtTotal.CustomButton.Name = "";
+            this.txtTotal.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTotal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTotal.CustomButton.TabIndex = 1;
+            this.txtTotal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTotal.CustomButton.UseSelectable = true;
+            this.txtTotal.CustomButton.Visible = false;
+            this.txtTotal.Lines = new string[] {
         "Total"};
-            this.metroTextBox2.Location = new System.Drawing.Point(716, 437);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(353, 23);
-            this.metroTextBox2.TabIndex = 7;
-            this.metroTextBox2.Text = "Total";
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTotal.Location = new System.Drawing.Point(716, 355);
+            this.txtTotal.MaxLength = 32767;
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.PasswordChar = '\0';
+            this.txtTotal.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTotal.SelectedText = "";
+            this.txtTotal.SelectionLength = 0;
+            this.txtTotal.SelectionStart = 0;
+            this.txtTotal.ShortcutsEnabled = true;
+            this.txtTotal.Size = new System.Drawing.Size(353, 23);
+            this.txtTotal.TabIndex = 7;
+            this.txtTotal.Text = "Total";
+            this.txtTotal.UseSelectable = true;
+            this.txtTotal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTotal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroTextBox3
             // 
@@ -178,7 +181,7 @@
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[] {
         "Payment"};
-            this.metroTextBox3.Location = new System.Drawing.Point(716, 466);
+            this.metroTextBox3.Location = new System.Drawing.Point(716, 384);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -210,7 +213,7 @@
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[] {
         "Change"};
-            this.metroTextBox4.Location = new System.Drawing.Point(716, 495);
+            this.metroTextBox4.Location = new System.Drawing.Point(716, 413);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -243,11 +246,11 @@
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroTextBox3);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.lsvTransaction);
+            this.Controls.Add(this.btnLab);
+            this.Controls.Add(this.btnMedicalSupply);
+            this.Controls.Add(this.btnMedicine);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.lsvProduct);
@@ -262,11 +265,11 @@
         private MetroFramework.Controls.MetroListView lsvProduct;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private System.Windows.Forms.ListView listView1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroButton btnMedicine;
+        private MetroFramework.Controls.MetroButton btnMedicalSupply;
+        private MetroFramework.Controls.MetroButton btnLab;
+        private System.Windows.Forms.ListView lsvTransaction;
+        private MetroFramework.Controls.MetroTextBox txtTotal;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroButton metroButton5;

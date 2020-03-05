@@ -28,9 +28,13 @@ namespace PatientManagement.Forms.PatientForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"","",0,txtGCS.Text, txtRR.Text, txtO2Sat.Text))
+           
+            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"","",0,txtRespiratoryRate.Text, txtGCS.Text, txtO2Sat.Text))
             {
                 MessageBox.Show("Successfully added");
+
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+
             }
             else
             {
@@ -40,10 +44,10 @@ namespace PatientManagement.Forms.PatientForm
 
         private void Initialize()
         {
-            txtFirstname.Text = patient.firstname;
-            txtMiddlename.Text = patient.middlename;
-            txtLastname.Text = patient.lastname;
+            txtFirstname.Text = patient.firstname + " " + patient.middlename + " " + patient.lastname;
             txtContact.Text = patient.contact;
+            txtGender.Text = patient.gender.ToString();
+            txtAge.Text = (DateTime.Now.Year - patient.birthdate.Year).ToString();
             txtEmergency.Text = patient.emergency_contact;
             txtBirthdate.Text = patient.birthdate.ToShortDateString();
             txtPatientID.Text = patient.id;

@@ -17,17 +17,24 @@ namespace PatientManagement.Forms.DoctorForm
         List<string> medicines = new List<string>();
         List<Classes.Prescription> prescriptions = new List<Classes.Prescription>();
         int id = 0;
+        string cc = "";
+        int doctorID = 0;
         Classes.Patient currentPatient;
         public CheckUP(Classes.Checkup checkup)
         {
             InitializeComponent();
             id = checkup.id;
+            doctorID = checkup.user.id;
             currentPatient = checkup.patient;
             txtFullname.Text = checkup.patient.firstname + " " + checkup.patient.lastname;
             txtGender.Text = checkup.patient.gender.ToString();
             txtAge.Text = (DateTime.Now.Year - checkup.patient.birthdate.Year).ToString();
             txtBP.Text = checkup.blood_pressure;
             txtPR.Text = checkup.pulse_rate;
+            txto2sat.Text = checkup.o2sat;
+            txtrr.Text = checkup.respiratory_rate;
+            txtGCS.Text = checkup.gcs;
+            cc = checkup.cc;
             txtTemp.Text = checkup.temperature + "°C";
             InitListView();
             InitListView2();
@@ -129,7 +136,7 @@ namespace PatientManagement.Forms.DoctorForm
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (Classes.CheckupHelper.SaveCheckUP("", "", "", "", "", "", id, txtAssesment.Text, txtManagement.Text,1))
+            if (Classes.CheckupHelper.SaveCheckUP("", "", "", "", "", "", id, txtAssesment.Text, txtManagement.Text,1,"","","",doctorID))
             {
                 MessageBox.Show("Successfully updated");
             }
@@ -141,7 +148,10 @@ namespace PatientManagement.Forms.DoctorForm
             foreach (Classes.Prescription prescription in prescriptions)
             {
                 Classes.PrescriptionHelper.savePrescription(prescription, id, "checkup");
+
             }
+
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
         private void btnAdmissionRequest_Click(object sender, EventArgs e)
@@ -149,6 +159,14 @@ namespace PatientManagement.Forms.DoctorForm
             Classes.AdmissionHelper.SaveAdmission(new Classes.Admission()
             {
                 patient = currentPatient,
+                respiratory_rate = txtrr.Text,
+                blood_pressure = txtBP.Text,
+                pulse_rate = txtPR.Text,
+                gcs = txtGCS.Text,
+                o2sat = txto2sat.Text,
+                temperature = txtTemp.Text,
+                cc = this.cc
+
             });
 
             if (Classes.CheckupHelper.SaveCheckUP("", "", "", "", "", "", id, txtAssesment.Text, txtManagement.Text, 1))
@@ -165,7 +183,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void btnLabRequest_Click(object sender, EventArgs e)
         {
-            new Forms.Laboratory.LaboratoryRequest().ShowDialog();
+            //new Forms.Laboratory.LaboratoryRequest().ShowDialog();
         }
     }
 }

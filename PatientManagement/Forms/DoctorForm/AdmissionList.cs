@@ -18,10 +18,10 @@ namespace PatientManagement.Forms.DoctorForm
             InitListView();
             PopulateListView();
         }
-
+        List<Classes.Admission> admissions = null;
         private void InitListView()
         {
-            lsvAdmission.Columns.Add("BED #", 200);
+            lsvAdmission.Columns.Add("ROOM # & BED #", 200);
             lsvAdmission.Columns.Add("PIN", 200);
             lsvAdmission.Columns.Add("Fullname", 280);
             lsvAdmission.Columns.Add("Sex", 30);
@@ -39,14 +39,14 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void PopulateListView()
         {
-            List<Classes.Admission> admissions = Classes.AdmissionHelper.Admissions();
+            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(),1);
             ListViewItem item;
 
             foreach(Classes.Admission admission in admissions)
             {
                 if (admission.isAdmitted == 0) continue;
 
-                item = lsvAdmission.Items.Add(admission.bedNo.ToString());
+                item = lsvAdmission.Items.Add("Room " + admission.roomNo.ToString() + " Bed " +admission.bedNo.ToString());
                 item.SubItems.Add(admission.patient.id);
                 item.SubItems.Add(admission.patient.firstname + " " + admission.patient.middlename + " " + admission.patient.lastname);
                 item.SubItems.Add(admission.patient.gender.ToString());
@@ -73,7 +73,7 @@ namespace PatientManagement.Forms.DoctorForm
                 throw;
             }
 
-            new Forms.DoctorForm.Admission().ShowDialog();
+            new Forms.DoctorForm.Admission(admissions[si]).ShowDialog();
         }
     }
 }

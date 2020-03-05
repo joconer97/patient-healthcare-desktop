@@ -17,15 +17,43 @@ namespace PatientManagement.Forms
         {
             InitializeComponent();
         }
+        User currentUser = null;
 
         private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            if(isValidUser())
+            {
+                SuccessfulLogin();
+                return;
+            }
+
+            MessageBox.Show("Incorrect Credentials");
+        }
+
+        private bool isValidUser()
+        {
+            User user = new User();
+
+            user.username = txtUsername.Text;
+            user.password = txtPassword.Text;
+
+            currentUser = UserHelper.login(user.username, user.password);
+            if (currentUser != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void SuccessfulLogin()
         {
             int department = comboBox1.SelectedIndex;
 
             switch (department)
             {
                 case 0:
-                    new Forms.DoctorForm.CheckUpList().ShowDialog();
+                    new Forms.DoctorForm.CheckUpList(currentUser).ShowDialog();
                     //OUT-PATIENT DOCTOR
                     break;
                 case 1:
@@ -33,7 +61,7 @@ namespace PatientManagement.Forms
                     //IN-PATIENT DOCTOR
                     break;
                 case 2:
-                    new Forms.NurseForm.OutNurseMain().ShowDialog();
+                    new Forms.NurseForm.OutNurseMain(currentUser).ShowDialog();
                     //OUT-PATIENT NURSE
                     break;
                 case 3:
@@ -60,24 +88,6 @@ namespace PatientManagement.Forms
                     new Forms.CentralSupply.CentralSupply().ShowDialog();
                     break;
             }
-            //User user = new User();
-
-            //user.username = txtUsername.Text;
-            //user.password = txtPassword.Text;
-
-            //if (user.isValid())
-            //{
-            //    MessageBox.Show("Successfully Login");
-            //    Form form = new NurseForm.NurseMain();
-
-            //    this.Hide();
-            //    form.ShowDialog();
-            //    this.Close();
-
-            //    return;
-            //}
-
-            //MessageBox.Show("Failed to Login");
         }
     }
 }

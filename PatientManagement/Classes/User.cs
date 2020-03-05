@@ -8,6 +8,7 @@ namespace PatientManagement.Classes
 {
     public class User
     {
+        public int id { get; set; }
         public string username {get;set;}
         public string password { get; set; }
         
@@ -15,15 +16,5 @@ namespace PatientManagement.Classes
         public string lastname { get; set; }
         public string position { get; set; }
 
-        public bool isValid()
-        {
-            if(UserHelper.login(username, password) == 1)
-            {
-                return true;
-            }
-
-            return false;
-        }
-        
     }
 }

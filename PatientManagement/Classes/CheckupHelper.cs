@@ -10,7 +10,7 @@ namespace PatientManagement.Classes
 {
     public class CheckupHelper
     {
-        public static bool SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,int isTreated = 0,string rr = "",string gcs = "",string o2sat = "")
+        public static bool SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,int isTreated = 0,string rr = "",string gcs = "",string o2sat = "",int doctorID = 0)
         {
             using (DAL dal = new DAL())
             {
@@ -29,6 +29,7 @@ namespace PatientManagement.Classes
                     new SqlParameter("@rr", rr),
                     new SqlParameter("@gcs", gcs),
                     new SqlParameter("@o2sat", o2sat),
+                    new SqlParameter("doctorID",doctorID)
 
                 };
                 try
@@ -65,6 +66,10 @@ namespace PatientManagement.Classes
                             blood_pressure = dr.Field<string>(2),
                             temperature = dr.Field<string>(3),
                             pulse_rate = dr.Field<string>(4),
+                            respiratory_rate = dr.Field<string>("rr"),
+                            gcs = dr.Field<string>("gcs"),
+                            o2sat = dr.Field<string>("o2sat"),
+                            cc = dr.Field<string>("cc"),
                             time_arrived = dr.Field<TimeSpan>(5),
                             isTreated = dr.Field<int>(6),
                             patient = new Patient()

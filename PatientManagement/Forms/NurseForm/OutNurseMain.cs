@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PatientManagement.Classes;
 
 namespace PatientManagement.Forms.NurseForm
 {
     public partial class OutNurseMain : MetroFramework.Forms.MetroForm
     {
-        public OutNurseMain()
+        User currentUser = null;
+        public OutNurseMain(User user)
         {
             InitializeComponent();
+            currentUser = user;
+            label2.Text = "Nurse " + user.firstname + " " + user.lastname; 
         }
 
         private void button1_Click(object sender, EventArgs e)

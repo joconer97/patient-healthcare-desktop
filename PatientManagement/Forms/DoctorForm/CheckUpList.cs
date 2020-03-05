@@ -12,11 +12,14 @@ namespace PatientManagement.Forms.DoctorForm
 {
     public partial class CheckUpList : MetroFramework.Forms.MetroForm
     {
-        public CheckUpList()
+        Classes.User currentUser = null;
+        public CheckUpList(Classes.User user)
         {
             InitializeComponent();
             InitializeList();
             PopulateList();
+            currentUser = user;
+            label2.Text = "Dr. " + user.firstname + " " + user.lastname;
         }
         List<Classes.Checkup> checkups = new List<Classes.Checkup>();
         private void InitializeList()
@@ -76,6 +79,7 @@ namespace PatientManagement.Forms.DoctorForm
             {
 
             }
+            checkups[si].user = currentUser;
             Form form = new DoctorForm.CheckUP(checkups[si]);
 
             if(form.ShowDialog() == DialogResult.OK)

@@ -47,6 +47,9 @@ namespace PatientManagement.Forms.PatientForm
 
             Classes.PatientHelper.register(patient);
 
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+
+
         }
 
     }

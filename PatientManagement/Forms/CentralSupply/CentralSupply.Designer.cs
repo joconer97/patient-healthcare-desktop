@@ -63,7 +63,7 @@
             this.lsvMedical.HideSelection = false;
             this.lsvMedical.Location = new System.Drawing.Point(15, 46);
             this.lsvMedical.Name = "lsvMedical";
-            this.lsvMedical.Size = new System.Drawing.Size(959, 383);
+            this.lsvMedical.Size = new System.Drawing.Size(1242, 429);
             this.lsvMedical.TabIndex = 1;
             this.lsvMedical.UseCompatibleStateImageBehavior = false;
             // 

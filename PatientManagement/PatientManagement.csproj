@@ -70,6 +70,7 @@
     <Compile Include="Classes\CheckupHelper.cs" />
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\Laboratory.cs" />
+    <Compile Include="Classes\LaboratoryRequest.cs" />
     <Compile Include="Classes\MedicalRecord.cs" />
     <Compile Include="Classes\MedicalRecordHelper.cs" />
     <Compile Include="Classes\MedicalSupply.cs" />
@@ -80,11 +81,14 @@
     <Compile Include="Classes\PatientHelper.cs" />
     <Compile Include="Classes\Prescription.cs" />
     <Compile Include="Classes\PrescriptionHelper.cs" />
+    <Compile Include="Classes\Procedure.cs" />
+    <Compile Include="Classes\ProcedureHelper.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Request.cs" />
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\Sample.cs" />
-    <Compile Include="Classes\SampleHelper.cs" />
+    <Compile Include="Classes\TestType.cs" />
+    <Compile Include="Classes\Transaction.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserHelper.cs" />
     <Compile Include="Forms\Billing\Billing.cs">
@@ -164,6 +168,12 @@
     </Compile>
     <Compile Include="Forms\DoctorForm\SampleForm.Designer.cs">
       <DependentUpon>SampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportUser.Designer.cs">
+      <DependentUpon>ExportUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Laboratory\LaboratoryRequest.cs">
       <SubType>Form</SubType>
@@ -292,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorForm\OutPatientMain.resx">
       <DependentUpon>OutPatientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportUser.resx">
+      <DependentUpon>ExportUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laboratory\LaboratoryRequest.resx">
       <DependentUpon>LaboratoryRequest.cs</DependentUpon>

@@ -40,7 +40,7 @@ namespace PatientManagement.Forms.PatientForm
 
         private void PopulateListView()
         {
-            admissions = Classes.AdmissionHelper.Admissions();
+            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(),0);
             ListViewItem item;
 
             AvailableRoom(admissions);

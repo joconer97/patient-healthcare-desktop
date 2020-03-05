@@ -26,17 +26,17 @@ namespace PatientManagement.Forms.PatientForm
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            DateTime dt = new DateTime();
-
+          
+            
             Classes.Admission admission = new Classes.Admission()
             {
                 id = this.admission.id,
                 patient = this.admission.patient,
                 admittedDate = dtpDateAdmitted.Value,
-                admittedTime = new TimeSpan(dt.Hour,dt.Minute,dt.Second),
+                admittedTime = new TimeSpan(DateTime.Now.Hour,DateTime.Now.Minute,DateTime.Now.Second),
                 timesAdmitted = Int32.Parse(txtTImesAdmitted.Text),
                 ward = txtWard.Text,
-                roomNo = Int32.Parse(cmbBedNo.SelectedItem.ToString()),
+                roomNo = Int32.Parse(cmbRoomNo.SelectedItem.ToString()),
                 bedNo = Int32.Parse(cmbBedNo.SelectedItem.ToString()),
                 fatherName = txtFName.Text,
                 fAddress = txtFAddress.Text,
@@ -61,10 +61,20 @@ namespace PatientManagement.Forms.PatientForm
                 isAdmitted = 1,
                 isDischarged = 0,
                 employeeID = 1,
+                blood_pressure = this.admission.blood_pressure,
+                cc = this.admission.cc,
+                pulse_rate = this.admission.pulse_rate,
+                respiratory_rate = this.admission.respiratory_rate,
+                o2sat = this.admission.o2sat,
+                gcs = this.admission.gcs,
+                temperature = this.admission.temperature
+
             };
 
 
             Classes.AdmissionHelper.SaveAdmission(admission);
+
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
 
 
         }

@@ -56,6 +56,15 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbMedicine = new System.Windows.Forms.ComboBox();
             this.btnLabRequest = new System.Windows.Forms.Button();
+            this.txtGCS = new System.Windows.Forms.TextBox();
+            this.txto2sat = new System.Windows.Forms.TextBox();
+            this.txtrr = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,7 +103,7 @@
             this.metroTabControl1.Controls.Add(this.tabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1143, 522);
             this.metroTabControl1.TabIndex = 9;
             this.metroTabControl1.UseSelectable = true;
@@ -114,9 +123,9 @@
             // 
             this.groupBox3.Controls.Add(this.lsvRecord);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(61, 191);
+            this.groupBox3.Location = new System.Drawing.Point(61, 236);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1071, 286);
+            this.groupBox3.Size = new System.Drawing.Size(1071, 241);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Medical Records";
@@ -132,13 +141,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtGCS);
+            this.groupBox2.Controls.Add(this.txto2sat);
+            this.groupBox2.Controls.Add(this.txtrr);
             this.groupBox2.Controls.Add(this.txtBP);
             this.groupBox2.Controls.Add(this.txtPR);
             this.groupBox2.Controls.Add(this.txtTemp);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(598, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(533, 194);
+            this.groupBox2.Size = new System.Drawing.Size(533, 223);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vital Sign";
@@ -147,7 +165,7 @@
             // 
             this.txtBP.Enabled = false;
             this.txtBP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBP.Location = new System.Drawing.Point(6, 31);
+            this.txtBP.Location = new System.Drawing.Point(5, 52);
             this.txtBP.Name = "txtBP";
             this.txtBP.Size = new System.Drawing.Size(253, 29);
             this.txtBP.TabIndex = 0;
@@ -157,7 +175,7 @@
             // 
             this.txtPR.Enabled = false;
             this.txtPR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPR.Location = new System.Drawing.Point(5, 63);
+            this.txtPR.Location = new System.Drawing.Point(6, 121);
             this.txtPR.Name = "txtPR";
             this.txtPR.Size = new System.Drawing.Size(253, 29);
             this.txtPR.TabIndex = 1;
@@ -167,7 +185,7 @@
             // 
             this.txtTemp.Enabled = false;
             this.txtTemp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTemp.Location = new System.Drawing.Point(5, 95);
+            this.txtTemp.Location = new System.Drawing.Point(5, 176);
             this.txtTemp.Name = "txtTemp";
             this.txtTemp.Size = new System.Drawing.Size(253, 29);
             this.txtTemp.TabIndex = 2;
@@ -181,7 +199,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(61, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(531, 176);
+            this.groupBox1.Size = new System.Drawing.Size(531, 213);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Information";
@@ -241,7 +259,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 201);
+            this.label4.Location = new System.Drawing.Point(15, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 25);
             this.label4.TabIndex = 3;
@@ -253,16 +271,16 @@
             // 
             // 
             this.txtManagement.CustomButton.Image = null;
-            this.txtManagement.CustomButton.Location = new System.Drawing.Point(354, 2);
+            this.txtManagement.CustomButton.Location = new System.Drawing.Point(325, 2);
             this.txtManagement.CustomButton.Name = "";
-            this.txtManagement.CustomButton.Size = new System.Drawing.Size(107, 107);
+            this.txtManagement.CustomButton.Size = new System.Drawing.Size(149, 149);
             this.txtManagement.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtManagement.CustomButton.TabIndex = 1;
             this.txtManagement.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtManagement.CustomButton.UseSelectable = true;
             this.txtManagement.CustomButton.Visible = false;
             this.txtManagement.Lines = new string[0];
-            this.txtManagement.Location = new System.Drawing.Point(20, 244);
+            this.txtManagement.Location = new System.Drawing.Point(20, 285);
             this.txtManagement.MaxLength = 32767;
             this.txtManagement.Multiline = true;
             this.txtManagement.Name = "txtManagement";
@@ -272,7 +290,7 @@
             this.txtManagement.SelectionLength = 0;
             this.txtManagement.SelectionStart = 0;
             this.txtManagement.ShortcutsEnabled = true;
-            this.txtManagement.Size = new System.Drawing.Size(464, 112);
+            this.txtManagement.Size = new System.Drawing.Size(477, 154);
             this.txtManagement.TabIndex = 2;
             this.txtManagement.UseSelectable = true;
             this.txtManagement.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -282,7 +300,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 21);
+            this.label1.Location = new System.Drawing.Point(15, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 25);
             this.label1.TabIndex = 1;
@@ -294,9 +312,9 @@
             // 
             // 
             this.txtAssesment.CustomButton.Image = null;
-            this.txtAssesment.CustomButton.Location = new System.Drawing.Point(354, 2);
+            this.txtAssesment.CustomButton.Location = new System.Drawing.Point(321, 1);
             this.txtAssesment.CustomButton.Name = "";
-            this.txtAssesment.CustomButton.Size = new System.Drawing.Size(107, 107);
+            this.txtAssesment.CustomButton.Size = new System.Drawing.Size(155, 155);
             this.txtAssesment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAssesment.CustomButton.TabIndex = 1;
             this.txtAssesment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -313,7 +331,7 @@
             this.txtAssesment.SelectionLength = 0;
             this.txtAssesment.SelectionStart = 0;
             this.txtAssesment.ShortcutsEnabled = true;
-            this.txtAssesment.Size = new System.Drawing.Size(464, 112);
+            this.txtAssesment.Size = new System.Drawing.Size(477, 157);
             this.txtAssesment.TabIndex = 0;
             this.txtAssesment.UseSelectable = true;
             this.txtAssesment.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -426,6 +444,93 @@
             this.btnLabRequest.UseVisualStyleBackColor = true;
             this.btnLabRequest.Click += new System.EventHandler(this.btnLabRequest_Click);
             // 
+            // txtGCS
+            // 
+            this.txtGCS.Enabled = false;
+            this.txtGCS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGCS.Location = new System.Drawing.Point(274, 52);
+            this.txtGCS.Name = "txtGCS";
+            this.txtGCS.Size = new System.Drawing.Size(253, 29);
+            this.txtGCS.TabIndex = 51;
+            // 
+            // txto2sat
+            // 
+            this.txto2sat.Enabled = false;
+            this.txto2sat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txto2sat.Location = new System.Drawing.Point(273, 121);
+            this.txto2sat.Name = "txto2sat";
+            this.txto2sat.Size = new System.Drawing.Size(253, 29);
+            this.txto2sat.TabIndex = 52;
+            // 
+            // txtrr
+            // 
+            this.txtrr.Enabled = false;
+            this.txtrr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrr.Location = new System.Drawing.Point(273, 176);
+            this.txtrr.Name = "txtrr";
+            this.txtrr.Size = new System.Drawing.Size(253, 29);
+            this.txtrr.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(270, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 20);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "GCS";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(279, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "O2SAT";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(270, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 20);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "Respiratory Rate";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 20);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Temperature";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 98);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 20);
+            this.label9.TabIndex = 58;
+            this.label9.Text = "Pulse Rate";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 20);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "Blood Pressure";
+            // 
             // CheckUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,5 +588,14 @@
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroTextBox txtManagement;
         private System.Windows.Forms.Button btnLabRequest;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtGCS;
+        private System.Windows.Forms.TextBox txto2sat;
+        private System.Windows.Forms.TextBox txtrr;
     }
 }

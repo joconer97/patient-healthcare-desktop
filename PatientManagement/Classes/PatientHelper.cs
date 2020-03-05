@@ -36,7 +36,7 @@ namespace PatientManagement.Classes
                     dal.ExecuteQuery("spRegisterPatient", spParams);
                     return 1;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
 
                     return 0;
