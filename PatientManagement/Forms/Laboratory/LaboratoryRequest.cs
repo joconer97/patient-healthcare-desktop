@@ -20,6 +20,7 @@ namespace PatientManagement.Forms.Laboratory
             InitializeComponent();
             currentCheckup = checkup;
             currentUser = user;
+            SettingUp();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,11 +33,23 @@ namespace PatientManagement.Forms.Laboratory
             txtName.Text = currentCheckup.patient.firstname + " " + currentCheckup.patient.middlename + " " + currentCheckup.patient.lastname;
             txtAddress.Text = currentCheckup.patient.address;
             txtGender.Text = currentCheckup.patient.gender.ToString();
-            txtContact.Text = currentCheckup.patient.contact;
             txtDateOfBirth.Text = currentCheckup.patient.birthdate.ToShortDateString();
-
+            txtContact.Text = currentCheckup.patient.contact;
             txtRName.Text = "Dr. " + currentUser.firstname + " " + " " + currentUser.lastname;
             txtROrg.Text = "Out Patient Department";
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Classes.LaboratoryRequest request = new Classes.LaboratoryRequest()
+            {
+                doctorID = currentUser.id,
+                type = "checkup",
+                typeID = currentCheckup.id,
+                status = "Pending"
+            };
+
+            MessageBox.Show(Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request).ToString());
         }
     }
 }

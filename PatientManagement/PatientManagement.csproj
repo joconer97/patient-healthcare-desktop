@@ -71,6 +71,7 @@
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\Laboratory.cs" />
     <Compile Include="Classes\LaboratoryRequest.cs" />
+    <Compile Include="Classes\LaboratoryRequestHelper.cs" />
     <Compile Include="Classes\MedicalRecord.cs" />
     <Compile Include="Classes\MedicalRecordHelper.cs" />
     <Compile Include="Classes\MedicalSupply.cs" />
@@ -193,6 +194,12 @@
     <Compile Include="Forms\NurseForm\InNurseMain.Designer.cs">
       <DependentUpon>InNurseMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NurseForm\InpatientAdmissionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NurseForm\InpatientAdmissionList.Designer.cs">
+      <DependentUpon>InpatientAdmissionList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NurseForm\OutNurseMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NurseForm\InNurseMain.resx">
       <DependentUpon>InNurseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NurseForm\InpatientAdmissionList.resx">
+      <DependentUpon>InpatientAdmissionList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NurseForm\OutNurseMain.resx">
       <DependentUpon>OutNurseMain.cs</DependentUpon>

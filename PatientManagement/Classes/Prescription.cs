@@ -9,6 +9,6 @@ namespace PatientManagement.Classes
     public class Prescription
     {
         public string medicine { get; set; }
-        public string hrs { get; set; }
+        public int hrs { get; set; }
     }
 }

@@ -69,7 +69,7 @@ namespace PatientManagement.Forms.DoctorForm
             foreach (var r in prescriptions)
             {
                 item = lsvMedicine.Items.Add(r.medicine);
-                item.SubItems.Add(r.hrs);
+                item.SubItems.Add(r.hrs.ToString());
             }
         }
         private void PopulateList3()
@@ -140,7 +140,7 @@ namespace PatientManagement.Forms.DoctorForm
                 prescriptions.Add(new Classes.Prescription()
                 {
                     medicine = cmbMedicine.SelectedItem.ToString(),
-                    hrs = txtHrs.Text
+                    hrs = Int32.Parse(txtHrs.Text)
                 });
             PopulateList2();
         }

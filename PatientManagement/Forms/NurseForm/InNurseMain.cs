@@ -19,7 +19,7 @@ namespace PatientManagement.Forms.NurseForm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Forms.PatientForm.Admission().ShowDialog();
+            new Forms.NurseForm.InpatientAdmissionList().ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

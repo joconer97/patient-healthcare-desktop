@@ -20,11 +20,13 @@ namespace PatientManagement.Forms.DoctorForm
         string cc = "";
         int doctorID = 0;
         Classes.Patient currentPatient;
+        Classes.Checkup checkup = null;
         public CheckUP(Classes.Checkup checkup)
         {
             InitializeComponent();
             id = checkup.id;
             doctorID = checkup.user.id;
+            this.checkup = checkup;
             currentPatient = checkup.patient;
             txtFullname.Text = checkup.patient.firstname + " " + checkup.patient.lastname;
             txtGender.Text = checkup.patient.gender.ToString();
@@ -65,7 +67,7 @@ namespace PatientManagement.Forms.DoctorForm
             prescriptions.Add(new Classes.Prescription()
             {
                 medicine = cmbMedicine.SelectedItem.ToString(),
-                hrs = txtHrs.Text
+                hrs = Int32.Parse(txtHrs.Text)
             });
             PopulateList2();
 
@@ -115,7 +117,7 @@ namespace PatientManagement.Forms.DoctorForm
             foreach (var r in prescriptions)
             {
                 item = lsvMedicine.Items.Add(r.medicine);
-                item.SubItems.Add(r.hrs);
+                item.SubItems.Add(r.hrs.ToString());
             }
         }
 
@@ -183,7 +185,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void btnLabRequest_Click(object sender, EventArgs e)
         {
-            //new Forms.Laboratory.LaboratoryRequest().ShowDialog();
+            new Forms.Laboratory.LaboratoryRequest(checkup.user,checkup).ShowDialog();
         }
     }
 }

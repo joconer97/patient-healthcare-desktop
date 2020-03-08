@@ -84,6 +84,7 @@ namespace PatientManagement.Classes
                                 religion = dr.Field<string>("religion"),
                                 citizenship = dr.Field<string>("citizenship"),
                                 occupation = dr.Field<string>("occupation"),
+                                contact = dr.Field<string>("contact")
 
                             }
 
