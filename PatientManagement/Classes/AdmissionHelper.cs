@@ -161,5 +161,29 @@ namespace PatientManagement.Classes
                 }
             }
         }
+
+        public static Admission SearchAdmission(string patientID)
+        {
+            Admission admission = null;
+
+            using (DAL dal = new DAL())
+            {
+                SqlParameter[] spParams = {
+                    new SqlParameter("@patientID",patientID),
+                };
+
+                var data = dal.ExecuteQuery("spSearchAdmittedPatient", spParams).Tables[0];
+
+                foreach (DataRow dr in data.AsEnumerable())
+                {
+                    admission = new Admission()
+                    {
+                        id = dr.Field<int>("id")
+                    };
+                }
+                return admission;
+            }
+
+        }
     }
 }

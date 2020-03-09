@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panel15 = new System.Windows.Forms.Panel();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.checkBox42 = new System.Windows.Forms.CheckBox();
-            this.checkBox55 = new System.Windows.Forms.CheckBox();
-            this.checkBox58 = new System.Windows.Forms.CheckBox();
-            this.checkBox59 = new System.Windows.Forms.CheckBox();
-            this.checkBox60 = new System.Windows.Forms.CheckBox();
-            this.checkBox62 = new System.Windows.Forms.CheckBox();
-            this.checkBox63 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.radUrgent = new System.Windows.Forms.RadioButton();
+            this.radNormal = new System.Windows.Forms.RadioButton();
             this.label40 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label41 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.txtDateOfBirth = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel15.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
@@ -69,109 +69,131 @@
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.checkBox28);
-            this.panel15.Controls.Add(this.checkBox42);
-            this.panel15.Controls.Add(this.checkBox55);
-            this.panel15.Controls.Add(this.checkBox58);
-            this.panel15.Controls.Add(this.checkBox59);
-            this.panel15.Controls.Add(this.checkBox60);
-            this.panel15.Controls.Add(this.checkBox62);
-            this.panel15.Controls.Add(this.checkBox63);
+            this.panel15.Controls.Add(this.checkBox3);
+            this.panel15.Controls.Add(this.checkBox8);
+            this.panel15.Controls.Add(this.checkBox7);
+            this.panel15.Controls.Add(this.checkBox6);
+            this.panel15.Controls.Add(this.checkBox5);
+            this.panel15.Controls.Add(this.checkBox4);
+            this.panel15.Controls.Add(this.checkBox2);
+            this.panel15.Controls.Add(this.checkBox1);
             this.panel15.Location = new System.Drawing.Point(44, 306);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(825, 78);
             this.panel15.TabIndex = 24;
             // 
-            // checkBox28
+            // checkBox3
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(207, 3);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(51, 17);
-            this.checkBox28.TabIndex = 9;
-            this.checkBox28.Text = "Urine";
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(207, 3);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(51, 17);
+            this.checkBox3.TabIndex = 9;
+            this.checkBox3.Text = "Urine";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // checkBox42
+            // checkBox8
             // 
-            this.checkBox42.AutoSize = true;
-            this.checkBox42.Location = new System.Drawing.Point(503, 26);
-            this.checkBox42.Name = "checkBox42";
-            this.checkBox42.Size = new System.Drawing.Size(66, 17);
-            this.checkBox42.TabIndex = 8;
-            this.checkBox42.Text = "Cytology";
-            this.checkBox42.UseVisualStyleBackColor = true;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(503, 26);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(66, 17);
+            this.checkBox8.TabIndex = 8;
+            this.checkBox8.Text = "Cytology";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // checkBox55
+            // checkBox7
             // 
-            this.checkBox55.AutoSize = true;
-            this.checkBox55.Location = new System.Drawing.Point(503, 3);
-            this.checkBox55.Name = "checkBox55";
-            this.checkBox55.Size = new System.Drawing.Size(57, 17);
-            this.checkBox55.TabIndex = 7;
-            this.checkBox55.Text = "Tissue";
-            this.checkBox55.UseVisualStyleBackColor = true;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(503, 3);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(57, 17);
+            this.checkBox7.TabIndex = 7;
+            this.checkBox7.Text = "Tissue";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // checkBox58
+            // checkBox6
             // 
-            this.checkBox58.AutoSize = true;
-            this.checkBox58.Location = new System.Drawing.Point(350, 26);
-            this.checkBox58.Name = "checkBox58";
-            this.checkBox58.Size = new System.Drawing.Size(53, 17);
-            this.checkBox58.TabIndex = 6;
-            this.checkBox58.Text = "Fluids";
-            this.checkBox58.UseVisualStyleBackColor = true;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(350, 26);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(53, 17);
+            this.checkBox6.TabIndex = 6;
+            this.checkBox6.Text = "Fluids";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // checkBox59
+            // checkBox5
             // 
-            this.checkBox59.AutoSize = true;
-            this.checkBox59.Location = new System.Drawing.Point(350, 3);
-            this.checkBox59.Name = "checkBox59";
-            this.checkBox59.Size = new System.Drawing.Size(53, 17);
-            this.checkBox59.TabIndex = 5;
-            this.checkBox59.Text = "Swab";
-            this.checkBox59.UseVisualStyleBackColor = true;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(350, 3);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(53, 17);
+            this.checkBox5.TabIndex = 5;
+            this.checkBox5.Text = "Swab";
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // checkBox60
+            // checkBox4
             // 
-            this.checkBox60.AutoSize = true;
-            this.checkBox60.Location = new System.Drawing.Point(207, 26);
-            this.checkBox60.Name = "checkBox60";
-            this.checkBox60.Size = new System.Drawing.Size(65, 17);
-            this.checkBox60.TabIndex = 4;
-            this.checkBox60.Text = "Sputrum";
-            this.checkBox60.UseVisualStyleBackColor = true;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(207, 26);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(65, 17);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.Text = "Sputrum";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // checkBox62
+            // checkBox2
             // 
-            this.checkBox62.AutoSize = true;
-            this.checkBox62.Location = new System.Drawing.Point(19, 26);
-            this.checkBox62.Name = "checkBox62";
-            this.checkBox62.Size = new System.Drawing.Size(61, 17);
-            this.checkBox62.TabIndex = 1;
-            this.checkBox62.Text = "Faeces";
-            this.checkBox62.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(19, 26);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(61, 17);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Faeces";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox63
+            // checkBox1
             // 
-            this.checkBox63.AutoSize = true;
-            this.checkBox63.Location = new System.Drawing.Point(19, 3);
-            this.checkBox63.Name = "checkBox63";
-            this.checkBox63.Size = new System.Drawing.Size(53, 17);
-            this.checkBox63.TabIndex = 0;
-            this.checkBox63.Text = "Blood";
-            this.checkBox63.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(19, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(53, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Blood";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // panel18
             // 
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.radioButton2);
-            this.panel18.Controls.Add(this.radioButton1);
+            this.panel18.Controls.Add(this.radUrgent);
+            this.panel18.Controls.Add(this.radNormal);
             this.panel18.Controls.Add(this.label40);
             this.panel18.Location = new System.Drawing.Point(40, 231);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(829, 58);
             this.panel18.TabIndex = 21;
+            // 
+            // radUrgent
+            // 
+            this.radUrgent.AutoSize = true;
+            this.radUrgent.Location = new System.Drawing.Point(103, 36);
+            this.radUrgent.Name = "radUrgent";
+            this.radUrgent.Size = new System.Drawing.Size(57, 17);
+            this.radUrgent.TabIndex = 4;
+            this.radUrgent.TabStop = true;
+            this.radUrgent.Text = "Urgent";
+            this.radUrgent.UseVisualStyleBackColor = true;
+            // 
+            // radNormal
+            // 
+            this.radNormal.AutoSize = true;
+            this.radNormal.Location = new System.Drawing.Point(103, 8);
+            this.radNormal.Name = "radNormal";
+            this.radNormal.Size = new System.Drawing.Size(58, 17);
+            this.radNormal.TabIndex = 3;
+            this.radNormal.TabStop = true;
+            this.radNormal.Text = "Normal";
+            this.radNormal.UseVisualStyleBackColor = true;
             // 
             // label40
             // 
@@ -356,28 +378,6 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(103, 8);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Normal";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(103, 36);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(57, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Urgent";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // LaboratoryRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,14 +405,14 @@
 
         #endregion
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.CheckBox checkBox28;
-        private System.Windows.Forms.CheckBox checkBox42;
-        private System.Windows.Forms.CheckBox checkBox55;
-        private System.Windows.Forms.CheckBox checkBox58;
-        private System.Windows.Forms.CheckBox checkBox59;
-        private System.Windows.Forms.CheckBox checkBox60;
-        private System.Windows.Forms.CheckBox checkBox62;
-        private System.Windows.Forms.CheckBox checkBox63;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel19;
@@ -434,7 +434,7 @@
         private System.Windows.Forms.TextBox txtDateOfBirth;
         private System.Windows.Forms.TextBox txtContact;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radUrgent;
+        private System.Windows.Forms.RadioButton radNormal;
     }
 }

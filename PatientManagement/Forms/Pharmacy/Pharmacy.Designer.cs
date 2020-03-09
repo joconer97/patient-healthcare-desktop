@@ -33,8 +33,10 @@
             this.lsvMedicine = new System.Windows.Forms.ListView();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lsvMedicineRequest = new System.Windows.Forms.ListView();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -43,7 +45,7 @@
             this.metroTabControl1.Controls.Add(this.tabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(24, 82);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1287, 579);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -79,11 +81,22 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lsvMedicineRequest);
             this.tabPage2.Location = new System.Drawing.Point(4, 38);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(1279, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Medicine Request";
+            // 
+            // lsvMedicineRequest
+            // 
+            this.lsvMedicineRequest.HideSelection = false;
+            this.lsvMedicineRequest.Location = new System.Drawing.Point(3, 3);
+            this.lsvMedicineRequest.Name = "lsvMedicineRequest";
+            this.lsvMedicineRequest.Size = new System.Drawing.Size(1273, 531);
+            this.lsvMedicineRequest.TabIndex = 0;
+            this.lsvMedicineRequest.UseCompatibleStateImageBehavior = false;
+            this.lsvMedicineRequest.DoubleClick += new System.EventHandler(this.lsvMedicineRequest_DoubleClick);
             // 
             // Pharmacy
             // 
@@ -95,6 +108,7 @@
             this.Text = "Pharmacy";
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -106,5 +120,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.ListView lsvMedicine;
+        private System.Windows.Forms.ListView lsvMedicineRequest;
     }
 }

@@ -43,13 +43,58 @@ namespace PatientManagement.Forms.Laboratory
         {
             Classes.LaboratoryRequest request = new Classes.LaboratoryRequest()
             {
+                id = 0,
+                result = "",
                 doctorID = currentUser.id,
                 type = "checkup",
                 typeID = currentCheckup.id,
-                status = "Pending"
+                status = "Pending",
+                urgency = GetUrgency(),
+                patient = new Patient()
+                {
+                    id = currentCheckup.patient.id
+                }
+
             };
 
-            MessageBox.Show(Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request).ToString());
+           int labID = Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);
+
+
+            SaveLaboratoryTypes(labID);
+        }
+        private string GetUrgency()
+        {
+            if (radNormal.Checked) return radNormal.Text;
+            else return radUrgent.Text;
+        }
+        private void SaveLaboratoryTypes(int labID)
+        {
+            List<string> types = new List<string>();
+            CheckBox[] checkBox = new CheckBox[8];
+            checkBox[0] = checkBox1;
+            checkBox[1] = checkBox2;
+            checkBox[2] = checkBox3;
+            checkBox[3] = checkBox4;
+            checkBox[4] = checkBox5;
+            checkBox[5] = checkBox5;
+            checkBox[6] = checkBox6;
+            checkBox[7] = checkBox7;
+
+
+            foreach(var c in checkBox)
+            {
+                if(c.Checked == true)
+                {
+                    Classes.LaboratoryRequestHelper.SaveLaboratoryType(new Classes.TestType()
+                    {
+                        labRequestID = labID,
+                        name = c.Text
+                    });
+                }
+            }
+
+            
+
         }
     }
 }

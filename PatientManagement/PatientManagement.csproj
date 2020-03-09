@@ -66,6 +66,8 @@
   <ItemGroup>
     <Compile Include="Classes\Admission.cs" />
     <Compile Include="Classes\AdmissionHelper.cs" />
+    <Compile Include="Classes\Bill.cs" />
+    <Compile Include="Classes\BillHelper.cs" />
     <Compile Include="Classes\Checkup.cs" />
     <Compile Include="Classes\CheckupHelper.cs" />
     <Compile Include="Classes\DAL.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Classes\MedicalSupplyHelper.cs" />
     <Compile Include="Classes\Medicine.cs" />
     <Compile Include="Classes\MedicineHelper.cs" />
+    <Compile Include="Classes\MedicineRequest.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\PatientHelper.cs" />
     <Compile Include="Classes\Prescription.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="Classes\Sample.cs" />
     <Compile Include="Classes\TestType.cs" />
     <Compile Include="Classes\Transaction.cs" />
+    <Compile Include="Classes\TransactionHelper.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserHelper.cs" />
     <Compile Include="Forms\Billing\Billing.cs">
@@ -176,11 +180,23 @@
     <Compile Include="Forms\ExportUser.Designer.cs">
       <DependentUpon>ExportUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryList.Designer.cs">
+      <DependentUpon>LaboratoryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Laboratory\LaboratoryRequest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Laboratory\LaboratoryRequest.Designer.cs">
       <DependentUpon>LaboratoryRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Laboratory\PendingLaboratoryRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laboratory\PendingLaboratoryRequest.Designer.cs">
+      <DependentUpon>PendingLaboratoryRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -266,6 +282,12 @@
     <Compile Include="Forms\PatientForm\SearchPatient.Designer.cs">
       <DependentUpon>SearchPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Pharmacy\MedicineRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacy\MedicineRequest.Designer.cs">
+      <DependentUpon>MedicineRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pharmacy\Pharmacy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,8 +335,14 @@
     <EmbeddedResource Include="Forms\ExportUser.resx">
       <DependentUpon>ExportUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laboratory\LaboratoryList.resx">
+      <DependentUpon>LaboratoryList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laboratory\LaboratoryRequest.resx">
       <DependentUpon>LaboratoryRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laboratory\PendingLaboratoryRequest.resx">
+      <DependentUpon>PendingLaboratoryRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -354,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientForm\RegisterPatient.resx">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacy\MedicineRequest.resx">
+      <DependentUpon>MedicineRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pharmacy\Pharmacy.resx">
       <DependentUpon>Pharmacy.cs</DependentUpon>

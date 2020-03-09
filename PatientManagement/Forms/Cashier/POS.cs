@@ -168,6 +168,7 @@ namespace PatientManagement.Forms.Cashier
                 case "Medicine":
                     transaction.medicines.Add(new Classes.Medicine()
                     {
+                        id = medicines[index].id,
                         name = medicines[index].name,
                         price = medicines[index].price,
                         quantity = 1
@@ -177,6 +178,7 @@ namespace PatientManagement.Forms.Cashier
                 case "MedicalSupply":
                     transaction.medicalSupplies.Add(new Classes.MedicalSupply()
                     {
+                        id = medicalSupply[index].id,
                         name = medicalSupply[index].name,
                         price = medicalSupply[index].price,
                         quantity = 1
@@ -190,6 +192,69 @@ namespace PatientManagement.Forms.Cashier
             txtTotal.Text = totalPrice.ToString();
         }
 
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            foreach(var m in transaction.medicines)
+            {
+                Classes.TransactionHelper.SaveTransaction(new Classes.Transaction()
+                {
+                    type = "Medicine",
+                    typeID = m.id,
+                    status = "Cash",
+                    date = DateTime.Now
+                });
+            }
 
+            foreach (var m in transaction.medicalSupplies)
+            {
+                Classes.TransactionHelper.SaveTransaction(new Classes.Transaction()
+                {
+                    type = "Medical Supply",
+                    typeID = m.id,
+                    status = "Cash",
+                    date = DateTime.Now
+                });
+            }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            int transactionID = 0;
+            Classes.Admission admission = Classes.AdmissionHelper.SearchAdmission(txtPatientID.Text);
+
+            foreach (var m in transaction.medicines)
+            {
+                transactionID = Classes.TransactionHelper.SaveTransaction(new Classes.Transaction()
+                {
+                    type = "Medicine",
+                    typeID = m.id,
+                    status = "Bill",
+                    date = DateTime.Now
+                });
+
+                Classes.BillHelper.SaveBill(new Classes.Bill()
+                {
+                    admittedID = admission.id,
+                    transactionID = transactionID
+                });
+            }
+
+            foreach (var m in transaction.medicalSupplies)
+            {
+                transactionID = Classes.TransactionHelper.SaveTransaction(new Classes.Transaction()
+                {
+                    type = "Medical Supply",
+                    typeID = m.id,
+                    status = "Bill",
+                    date = DateTime.Now
+                });
+
+                Classes.BillHelper.SaveBill(new Classes.Bill()
+                {
+                    admittedID = admission.id,
+                    transactionID = transactionID,
+                });
+            }
+        }
     }
 }

@@ -10,9 +10,13 @@ namespace PatientManagement.Classes
     {
         public int id { get; set; }
         public int doctorID { get; set; }
+        public User user { get; set; }
+        public Patient patient { get; set; }
         public int typeID { get; set; }
         public string type { get; set; }
         public string status { get; set; }
+        public string urgency { get; set; }
+        public string result { get; set; }
 
         public List<TestType> testTypes { get; set; }
     }

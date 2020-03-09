@@ -11,7 +11,11 @@ namespace PatientManagement.Classes
         public List<Medicine> medicines;
         public List<MedicalSupply> medicalSupplies;
         public List<Laboratory> laboratories;
+        public int typeID { get; set; }
+        public string type { get; set; }
         public string status { get; set; }
+
+        public DateTime date { get; set; }
         public Transaction()
         {
             medicines = new List<Medicine>();

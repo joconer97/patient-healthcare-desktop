@@ -39,6 +39,8 @@
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.txtPatientID = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // lsvProduct
@@ -127,7 +129,7 @@
             // lsvTransaction
             // 
             this.lsvTransaction.HideSelection = false;
-            this.lsvTransaction.Location = new System.Drawing.Point(716, 90);
+            this.lsvTransaction.Location = new System.Drawing.Point(707, 12);
             this.lsvTransaction.Name = "lsvTransaction";
             this.lsvTransaction.Size = new System.Drawing.Size(353, 259);
             this.lsvTransaction.TabIndex = 6;
@@ -149,7 +151,7 @@
             this.txtTotal.CustomButton.Visible = false;
             this.txtTotal.Lines = new string[] {
         "Total"};
-            this.txtTotal.Location = new System.Drawing.Point(716, 355);
+            this.txtTotal.Location = new System.Drawing.Point(707, 277);
             this.txtTotal.MaxLength = 32767;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.PasswordChar = '\0';
@@ -181,7 +183,7 @@
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[] {
         "Payment"};
-            this.metroTextBox3.Location = new System.Drawing.Point(716, 384);
+            this.metroTextBox3.Location = new System.Drawing.Point(707, 306);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -213,7 +215,7 @@
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[] {
         "Change"};
-            this.metroTextBox4.Location = new System.Drawing.Point(716, 413);
+            this.metroTextBox4.Location = new System.Drawing.Point(707, 335);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -231,18 +233,63 @@
             // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(716, 525);
+            this.metroButton5.Location = new System.Drawing.Point(707, 364);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(353, 23);
             this.metroButton5.TabIndex = 10;
             this.metroButton5.Text = "Pay";
             this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(707, 442);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(353, 23);
+            this.metroButton2.TabIndex = 14;
+            this.metroButton2.Text = "Charge Bill";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // txtPatientID
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientID.CustomButton.Image = null;
+            this.txtPatientID.CustomButton.Location = new System.Drawing.Point(331, 1);
+            this.txtPatientID.CustomButton.Name = "";
+            this.txtPatientID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPatientID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPatientID.CustomButton.TabIndex = 1;
+            this.txtPatientID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPatientID.CustomButton.UseSelectable = true;
+            this.txtPatientID.CustomButton.Visible = false;
+            this.txtPatientID.Lines = new string[] {
+        "Patient ID"};
+            this.txtPatientID.Location = new System.Drawing.Point(707, 404);
+            this.txtPatientID.MaxLength = 32767;
+            this.txtPatientID.Name = "txtPatientID";
+            this.txtPatientID.PasswordChar = '\0';
+            this.txtPatientID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPatientID.SelectedText = "";
+            this.txtPatientID.SelectionLength = 0;
+            this.txtPatientID.SelectionStart = 0;
+            this.txtPatientID.ShortcutsEnabled = true;
+            this.txtPatientID.Size = new System.Drawing.Size(353, 23);
+            this.txtPatientID.TabIndex = 13;
+            this.txtPatientID.Text = "Patient ID";
+            this.txtPatientID.UseSelectable = true;
+            this.txtPatientID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPatientID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 563);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.txtPatientID);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroTextBox3);
@@ -273,5 +320,7 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroTextBox txtPatientID;
     }
 }
