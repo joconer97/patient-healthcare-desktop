@@ -19,7 +19,6 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csproj.CopyComplete
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.exe
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.pdb
-C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csprojAssemblyReference.cache
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.FollowUP.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.PatientForm.Emergency.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.DoctorForm.Admission.resources
@@ -46,3 +45,11 @@ C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Patien
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Laboratory.LaboratoryList.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Laboratory.PendingLaboratoryRequest.resources
 C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Pharmacy.MedicineRequest.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csproj.ResolveComReference.cache
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.csprojAssemblyReference.cache
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Laboratory.LaboratoryResult.resources
+C:\Users\63947\source\repos\PatientManagement\PatientManagement\obj\Debug\PatientManagement.Forms.Laboratory.LaboratoryResultList.resources

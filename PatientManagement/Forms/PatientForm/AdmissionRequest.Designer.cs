@@ -97,8 +97,8 @@
             this.label35 = new System.Windows.Forms.Label();
             this.dtpDateAdmitted = new MetroFramework.Controls.MetroDateTime();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cmbRoomNo = new MetroFramework.Controls.MetroComboBox();
             this.cmbBedNo = new MetroFramework.Controls.MetroComboBox();
+            this.cmbRoomNo = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
             // 
             // txtPName
@@ -713,20 +713,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cmbRoomNo
-            // 
-            this.cmbRoomNo.FormattingEnabled = true;
-            this.cmbRoomNo.ItemHeight = 23;
-            this.cmbRoomNo.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cmbRoomNo.Location = new System.Drawing.Point(271, 280);
-            this.cmbRoomNo.Name = "cmbRoomNo";
-            this.cmbRoomNo.Size = new System.Drawing.Size(214, 29);
-            this.cmbRoomNo.TabIndex = 81;
-            this.cmbRoomNo.UseSelectable = true;
-            this.cmbRoomNo.SelectedValueChanged += new System.EventHandler(this.cmbRoomNo_SelectedValueChanged);
-            // 
             // cmbBedNo
             // 
             this.cmbBedNo.FormattingEnabled = true;
@@ -737,14 +723,28 @@
             this.cmbBedNo.TabIndex = 82;
             this.cmbBedNo.UseSelectable = true;
             // 
+            // cmbRoomNo
+            // 
+            this.cmbRoomNo.FormattingEnabled = true;
+            this.cmbRoomNo.ItemHeight = 23;
+            this.cmbRoomNo.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cmbRoomNo.Location = new System.Drawing.Point(260, 279);
+            this.cmbRoomNo.Name = "cmbRoomNo";
+            this.cmbRoomNo.Size = new System.Drawing.Size(243, 29);
+            this.cmbRoomNo.TabIndex = 83;
+            this.cmbRoomNo.UseSelectable = true;
+            this.cmbRoomNo.SelectedIndexChanged += new System.EventHandler(this.cmbRoomNo_SelectedIndexChanged);
+            // 
             // AdmissionRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(822, 727);
-            this.Controls.Add(this.cmbBedNo);
             this.Controls.Add(this.cmbRoomNo);
+            this.Controls.Add(this.cmbBedNo);
             this.Controls.Add(this.dtpDateAdmitted);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.metroButton1);
@@ -889,7 +889,7 @@
         private System.Windows.Forms.Label label35;
         private MetroFramework.Controls.MetroDateTime dtpDateAdmitted;
         private System.Windows.Forms.Timer timer1;
-        private MetroFramework.Controls.MetroComboBox cmbRoomNo;
         private MetroFramework.Controls.MetroComboBox cmbBedNo;
+        private MetroFramework.Controls.MetroComboBox cmbRoomNo;
     }
 }

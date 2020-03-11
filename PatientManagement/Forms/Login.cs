@@ -58,7 +58,7 @@ namespace PatientManagement.Forms
                     //OUT-PATIENT DOCTOR
                     break;
                 case 1:
-                    new Forms.DoctorForm.AdmissionList().ShowDialog();
+                    new Forms.DoctorForm.AdmissionList(currentUser).ShowDialog();
                     //IN-PATIENT DOCTOR
                     break;
                 case 2:
@@ -66,7 +66,7 @@ namespace PatientManagement.Forms
                     //OUT-PATIENT NURSE
                     break;
                 case 3:
-                    new Forms.NurseForm.InNurseMain().ShowDialog();
+                    new Forms.NurseForm.InNurseMain(currentUser).ShowDialog();
                     //IN-PATIENT NURSE
                     break;
                 case 4:

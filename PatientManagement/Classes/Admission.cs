@@ -42,15 +42,19 @@ namespace PatientManagement.Classes
             isAdmitted = 0;
             isDischarged = 0;
             isTransferred = 0;
-            employeeID = 0;
+            doctorID = 0;
+            nurseID = 0;
             dischargedDate = DateTime.Now;
             dischargedTime = new TimeSpan(0, 0, 0);
             
 
         }
         public int id { get; set; }
-        public int employeeID { get; set; }
+        public int doctorID { get; set; }
+        public int nurseID { get; set; }
         public Patient patient { get; set; }
+        public User doctor { get; set; }
+        public User nurse { get; set; }
         public DateTime admittedDate { get; set ; }
         public TimeSpan admittedTime { get; set; }
         public int timesAdmitted { get; set; }

@@ -12,9 +12,11 @@ namespace PatientManagement.Forms.NurseForm
 {
     public partial class InNurseMain : Form
     {
-        public InNurseMain()
+        Classes.User currentUser = null;
+        public InNurseMain(Classes.User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace PatientManagement.Forms.NurseForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Forms.PatientForm.AdmissionRequestList().ShowDialog();
+            new Forms.PatientForm.AdmissionRequestList(currentUser).ShowDialog();
         }
     }
 }

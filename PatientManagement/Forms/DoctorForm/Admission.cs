@@ -49,6 +49,8 @@ namespace PatientManagement.Forms.DoctorForm
             txtO2Sat.Text = admission.o2sat;
             txtOccupation.Text = admission.patient.occupation;
             txtCitizenship.Text = admission.patient.citizenship;
+            txtDoctorName.Text = "Dr. " + admission.doctor.firstname + " " + admission.doctor.lastname;
+            txtNurseName.Text = "Nurse " + admission.nurse.firstname + " " + admission.nurse.lastname;
 
         }
 

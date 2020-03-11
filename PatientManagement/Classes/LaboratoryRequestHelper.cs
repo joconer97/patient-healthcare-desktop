@@ -66,6 +66,7 @@ namespace PatientManagement.Classes
                             typeID = dr.Field<int>("typeID"),
                             status = dr.Field<string>("status"),
                             urgency = dr.Field<string>("urgency"),
+                            result = dr.Field<string>("result"),
                             patient = new Patient()
                             {
                                 id = dr.Field<string>(14),

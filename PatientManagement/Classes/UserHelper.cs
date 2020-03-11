@@ -74,5 +74,39 @@ namespace PatientManagement.Classes
                 }
             }
         }
+
+        public static List<User> GetInPatientDoctors()
+        {
+            List<User> doctors = null;
+
+            using (DAL dal = new DAL())
+            {
+                try
+                {
+                    var data = dal.ExecuteQuery("spGetInPatientDoctor").Tables[0];
+                    doctors = new List<User>();
+
+                    foreach (DataRow dr in data.AsEnumerable())
+                    {
+                        doctors.Add(new User()
+                        {
+                            id = dr.Field<int>("id"),
+                            firstname = dr.Field<string>("firstname"),
+                            lastname = dr.Field<string>("lastname"),
+                            position = dr.Field<string>("position")
+
+                        });
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
+
+                return doctors;
+            }
+        }
     }
 }

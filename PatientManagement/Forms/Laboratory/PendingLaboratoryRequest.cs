@@ -87,6 +87,7 @@ namespace PatientManagement.Forms.Laboratory
                     request.status = "Completed";
 
                     Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);
+                    File.Delete(path);
                     File.Copy(file.FileName, path);
                 }
             }

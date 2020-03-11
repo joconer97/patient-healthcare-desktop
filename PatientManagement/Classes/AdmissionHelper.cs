@@ -48,7 +48,7 @@ namespace PatientManagement.Classes
                     new SqlParameter("@isAdmitted",admission.isAdmitted),
                     new SqlParameter("@isDischarged",admission.isDischarged),
                     new SqlParameter("@isTransferred ",admission.isTransferred),
-                    new SqlParameter("@employeeID ",admission.employeeID),
+                    new SqlParameter("@employeeID ",admission.doctorID),
                     new SqlParameter("@bp", admission.blood_pressure),
                     new SqlParameter("@temperature", admission.temperature),
                     new SqlParameter("@pr",admission.pulse_rate),
@@ -56,7 +56,7 @@ namespace PatientManagement.Classes
                     new SqlParameter("@rr", admission.respiratory_rate),
                     new SqlParameter("@gcs", admission.gcs),
                     new SqlParameter("@o2sat", admission.o2sat),
-
+                    new SqlParameter("@nurseID", admission.nurseID),
 
 
                 };
@@ -107,6 +107,16 @@ namespace PatientManagement.Classes
                                 address = dr.Field<string>("address"),
                                 birthplace = dr.Field<string>("birthplace"),
                             },
+                            doctor = new User()
+                            {
+                                firstname = dr.Field<string>(59),
+                                lastname = dr.Field<string>(60)
+                            },
+                            nurse = new User()
+                            {
+                                firstname = dr.Field<string>(65),
+                                lastname = dr.Field<string>(66)
+                            },
                             id = dr.Field<int>("id"),
                             admittedDate = dr.Field<DateTime>("admittedDate"),
                             admittedTime = dr.Field<TimeSpan>("admittedTime"),
@@ -145,6 +155,7 @@ namespace PatientManagement.Classes
                             temperature = dr.Field<string>("temperature"),
                             o2sat = dr.Field<string>("o2sat"),
                             gcs = dr.Field<string>("gcs"),
+                            nurseID = dr.Field<int>("nurseID")
 
                         });
 

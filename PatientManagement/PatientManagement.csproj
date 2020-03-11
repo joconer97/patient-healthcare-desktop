@@ -192,6 +192,18 @@
     <Compile Include="Forms\Laboratory\LaboratoryRequest.Designer.cs">
       <DependentUpon>LaboratoryRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryResult.Designer.cs">
+      <DependentUpon>LaboratoryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryResultList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Laboratory\LaboratoryResultList.Designer.cs">
+      <DependentUpon>LaboratoryResultList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Laboratory\PendingLaboratoryRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +353,12 @@
     <EmbeddedResource Include="Forms\Laboratory\LaboratoryRequest.resx">
       <DependentUpon>LaboratoryRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laboratory\LaboratoryResult.resx">
+      <DependentUpon>LaboratoryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Laboratory\LaboratoryResultList.resx">
+      <DependentUpon>LaboratoryResultList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Laboratory\PendingLaboratoryRequest.resx">
       <DependentUpon>PendingLaboratoryRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -412,6 +430,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

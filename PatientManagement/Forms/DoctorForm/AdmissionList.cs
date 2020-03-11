@@ -12,11 +12,14 @@ namespace PatientManagement.Forms.DoctorForm
 {
     public partial class AdmissionList : MetroFramework.Forms.MetroForm
     {
-        public AdmissionList()
+        Classes.User currentUser = null;
+        public AdmissionList(Classes.User user)
         {
             InitializeComponent();
+            currentUser = user;
             InitListView();
             PopulateListView();
+            label1.Text = "Dr. " + currentUser.firstname + " " + currentUser.lastname;
         }
         List<Classes.Admission> admissions = null;
         private void InitListView()
@@ -73,6 +76,8 @@ namespace PatientManagement.Forms.DoctorForm
                 throw;
             }
 
+            admissions[si].doctorID = currentUser.id;
+            Classes.AdmissionHelper.SaveAdmission(admissions[si]);
             new Forms.DoctorForm.Admission(admissions[si]).ShowDialog();
         }
     }

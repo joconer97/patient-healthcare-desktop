@@ -13,11 +13,13 @@ namespace PatientManagement.Forms.PatientForm
     public partial class AdmissionRequestList : Form
     {
         List<Classes.Admission> admissions = null;
-        public AdmissionRequestList()
+        Classes.User currentUser = null;
+        public AdmissionRequestList(Classes.User user)
         {
             InitializeComponent();
             InitListView();
             PopulateListView();
+            currentUser = user;
         }
 
         private void InitListView()
@@ -43,7 +45,6 @@ namespace PatientManagement.Forms.PatientForm
             admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(),0);
             ListViewItem item;
 
-            AvailableRoom(admissions);
 
             foreach (Classes.Admission admission in admissions)
             {
@@ -61,37 +62,7 @@ namespace PatientManagement.Forms.PatientForm
             }
 
         }
-
-        private void AvailableRoom(List<Classes.Admission> admissions)
-        {
-            List<Classes.Room> usedRooms = new List<Classes.Room>();
-
-            foreach (var admission in admissions)
-            {
-                if(admission.isAdmitted == 1)
-                {
-                    usedRooms.Add(new Classes.Room()
-                    {
-                        roomNo = admission.roomNo,
-                        bedNo = admission.bedNo
-                    });
-                }
-            }
-
-            for (int i = 1; i <= 2; i++)
-            {
-                for (int j = 1; j <= 20; j++)
-                {
-                    foreach(var room in usedRooms)
-                    {
-                        if(room.bedNo == j && room.roomNo == i)
-                        {
-                            Console.WriteLine("USED " + room.roomNo.ToString() + " " + room.bedNo.ToString());
-                        }
-                    }
-                }
-            }
-        }
+       
 
         private void lsvAdmission_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -106,7 +77,7 @@ namespace PatientManagement.Forms.PatientForm
 
             }
 
-            new Forms.PatientForm.AdmissionRequest(admissions[si]).ShowDialog();
+            new Forms.PatientForm.AdmissionRequest(admissions[si],currentUser).ShowDialog();
         }
     }
 }

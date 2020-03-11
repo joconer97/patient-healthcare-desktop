@@ -15,13 +15,15 @@ namespace PatientManagement.Forms.PatientForm
         Classes.Admission admission;
         List<Classes.Room> usedRooms = new List<Classes.Room>();
         List<Classes.Room> availableRooms = new List<Classes.Room>();
-        public AdmissionRequest(Classes.Admission admission)
+        Classes.User currentUser = null;
+        public AdmissionRequest(Classes.Admission admission,Classes.User user)
         {
             InitializeComponent();
             this.admission = admission;
             timer1.Start();
             Init();
             AvailableRoom();
+            currentUser = user;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -60,14 +62,15 @@ namespace PatientManagement.Forms.PatientForm
                 contact = txtEContact.Text,
                 isAdmitted = 1,
                 isDischarged = 0,
-                employeeID = 1,
+                doctorID = RandomDoctors(),
                 blood_pressure = this.admission.blood_pressure,
                 cc = this.admission.cc,
                 pulse_rate = this.admission.pulse_rate,
                 respiratory_rate = this.admission.respiratory_rate,
                 o2sat = this.admission.o2sat,
                 gcs = this.admission.gcs,
-                temperature = this.admission.temperature
+                temperature = this.admission.temperature,
+                nurseID = currentUser.id
 
             };
 
@@ -79,13 +82,28 @@ namespace PatientManagement.Forms.PatientForm
 
         }
 
+        private List<Classes.User> GetDoctors()
+        {
+            return Classes.UserHelper.GetInPatientDoctors();
+        }
+
+        private int RandomDoctors()
+        {
+            List<Classes.User> doctors = GetDoctors();
+
+            int index = new Random().Next(0, doctors.Count - 1);
+
+            return doctors[index].id;
+
+        }
+
         private void AvailableRoom()
         {
             List<Classes.Admission> admissions = Classes.AdmissionHelper.Admissions();
 
             foreach (var admission in admissions)
             {
-                if (admission.isAdmitted == 1)
+                if (admission.isAdmitted == 1 && admission.isDischarged == 0)
                 {
                     usedRooms.Add(new Classes.Room()
                     {
@@ -99,29 +117,24 @@ namespace PatientManagement.Forms.PatientForm
             {
                 for (int j = 1; j <= 20; j++)
                 {
-                    if(usedRooms.Count == 0)
+                    bool isUsed = false;
+                    foreach(var r in usedRooms)
                     {
-                        availableRooms.Add(new Classes.Room()
+                        if(r.roomNo == i && r.bedNo == j)
                         {
-                            roomNo = i,
-                            bedNo = j
-                        });
-                        continue;
-                    }
-                    foreach (var room in usedRooms)
-                    {
-                        if (room.bedNo == j && room.roomNo == i)
-                        {
-                            Console.WriteLine("USED " + room.roomNo.ToString() + " " + room.bedNo.ToString());
-                            continue;
+                            isUsed = true;
                         }
+                    }
+
+                    if(!isUsed)
+                    {
                         availableRooms.Add(new Classes.Room()
                         {
                             roomNo = i,
                             bedNo = j
                         });
-
-                    }
+                    }   
+                    
                 }
             }
         }
@@ -144,7 +157,7 @@ namespace PatientManagement.Forms.PatientForm
             txtAdmittedTime.Text = dt.ToLocalTime().ToShortTimeString();
         }
 
-        private void cmbRoomNo_SelectedValueChanged(object sender, EventArgs e)
+        private void cmbRoomNo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbRoomNo.SelectedItem.ToString() == "1")
             {

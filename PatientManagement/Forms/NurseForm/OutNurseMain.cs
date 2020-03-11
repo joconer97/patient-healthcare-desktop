@@ -35,5 +35,10 @@ namespace PatientManagement.Forms.NurseForm
 
             checkup.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Forms.Laboratory.LaboratoryResultList().ShowDialog();
+        }
     }
 }

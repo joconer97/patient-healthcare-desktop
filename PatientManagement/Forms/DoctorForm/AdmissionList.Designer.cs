@@ -30,6 +30,7 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lsvAdmission = new MetroFramework.Controls.MetroListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -55,11 +56,21 @@
             this.lsvAdmission.UseSelectable = true;
             this.lsvAdmission.DoubleClick += new System.EventHandler(this.lsvAdmission_DoubleClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1090, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
             // AdmissionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lsvAdmission);
             this.Controls.Add(this.metroLabel1);
             this.Name = "AdmissionList";
@@ -73,5 +84,6 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroListView lsvAdmission;
+        private System.Windows.Forms.Label label1;
     }
 }
