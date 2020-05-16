@@ -12,9 +12,22 @@ namespace PatientManagement.Forms.DoctorForm
 {
     public partial class OutPatientMain : MetroFramework.Forms.MetroForm
     {
-        public OutPatientMain()
+        Classes.User currentUser = null;
+        public OutPatientMain(Classes.User user)
         {
             InitializeComponent();
+            currentUser = user;
+            label1.Text = "Dr. " + currentUser.firstname + " " + currentUser.lastname;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Forms.DoctorForm.CheckUpList(currentUser).ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Forms.Laboratory.LaboratoryResultList().ShowDialog();
         }
     }
 }

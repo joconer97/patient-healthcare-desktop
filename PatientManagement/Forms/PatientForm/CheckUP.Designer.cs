@@ -69,125 +69,130 @@
             // txtFirstname
             // 
             this.txtFirstname.Enabled = false;
-            this.txtFirstname.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstname.Location = new System.Drawing.Point(16, 197);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(229, 30);
+            this.txtFirstname.Size = new System.Drawing.Size(229, 27);
             this.txtFirstname.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 22);
+            this.label1.Size = new System.Drawing.Size(83, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Firstname";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(791, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 22);
+            this.label4.Size = new System.Drawing.Size(151, 19);
             this.label4.TabIndex = 12;
             this.label4.Text = "Emergency Contact";
             // 
             // txtEmergency
             // 
             this.txtEmergency.Enabled = false;
-            this.txtEmergency.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmergency.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmergency.Location = new System.Drawing.Point(795, 200);
             this.txtEmergency.Name = "txtEmergency";
-            this.txtEmergency.Size = new System.Drawing.Size(229, 30);
+            this.txtEmergency.Size = new System.Drawing.Size(229, 27);
             this.txtEmergency.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(791, 113);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 22);
+            this.label5.Size = new System.Drawing.Size(64, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Contact";
             // 
             // txtContact
             // 
             this.txtContact.Enabled = false;
-            this.txtContact.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(795, 138);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(229, 30);
+            this.txtContact.Size = new System.Drawing.Size(229, 27);
             this.txtContact.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 22);
+            this.label6.Size = new System.Drawing.Size(79, 19);
             this.label6.TabIndex = 8;
             this.label6.Text = "Patient ID";
             // 
             // txtPatientID
             // 
             this.txtPatientID.Enabled = false;
-            this.txtPatientID.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatientID.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatientID.Location = new System.Drawing.Point(16, 138);
             this.txtPatientID.Name = "txtPatientID";
-            this.txtPatientID.Size = new System.Drawing.Size(229, 30);
+            this.txtPatientID.Size = new System.Drawing.Size(229, 27);
             this.txtPatientID.TabIndex = 7;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(949, 462);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(864, 462);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(160, 31);
             this.btnAdd.TabIndex = 13;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Text = "Save";
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(295, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 22);
+            this.label8.Size = new System.Drawing.Size(76, 19);
             this.label8.TabIndex = 16;
             this.label8.Text = "Birthdate";
             // 
             // txtBirthdate
             // 
             this.txtBirthdate.Enabled = false;
-            this.txtBirthdate.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthdate.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthdate.Location = new System.Drawing.Point(295, 138);
             this.txtBirthdate.Name = "txtBirthdate";
-            this.txtBirthdate.Size = new System.Drawing.Size(229, 30);
+            this.txtBirthdate.Size = new System.Drawing.Size(229, 27);
             this.txtBirthdate.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(546, 171);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 22);
+            this.label9.Size = new System.Drawing.Size(102, 19);
             this.label9.TabIndex = 18;
             this.label9.Text = "Time Arrived";
             // 
             // txtTimeArrived
             // 
             this.txtTimeArrived.Enabled = false;
-            this.txtTimeArrived.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeArrived.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimeArrived.Location = new System.Drawing.Point(546, 201);
             this.txtTimeArrived.Name = "txtTimeArrived";
-            this.txtTimeArrived.Size = new System.Drawing.Size(229, 30);
+            this.txtTimeArrived.Size = new System.Drawing.Size(229, 27);
             this.txtTimeArrived.TabIndex = 17;
             // 
             // timer1
@@ -197,7 +202,7 @@
             // 
             // txtCC
             // 
-            this.txtCC.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCC.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCC.Location = new System.Drawing.Point(16, 279);
             this.txtCC.Multiline = true;
             this.txtCC.Name = "txtCC";
@@ -485,45 +490,45 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(295, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 22);
+            this.label2.Size = new System.Drawing.Size(37, 19);
             this.label2.TabIndex = 29;
             this.label2.Text = "Age";
             // 
             // txtAge
             // 
             this.txtAge.Enabled = false;
-            this.txtAge.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.Location = new System.Drawing.Point(295, 196);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(229, 30);
+            this.txtAge.Size = new System.Drawing.Size(229, 27);
             this.txtAge.TabIndex = 28;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(550, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 22);
+            this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 31;
             this.label3.Text = "Gender";
             // 
             // txtGender
             // 
             this.txtGender.Enabled = false;
-            this.txtGender.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Location = new System.Drawing.Point(550, 138);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(229, 30);
+            this.txtGender.Size = new System.Drawing.Size(229, 27);
             this.txtGender.TabIndex = 30;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(16, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 19);

@@ -42,7 +42,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void PopulateListView()
         {
-            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(),1);
+            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.GetAdmittedList(),1);
             ListViewItem item;
 
             foreach(Classes.Admission admission in admissions)
@@ -64,6 +64,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void lsvAdmission_DoubleClick(object sender, EventArgs e)
         {
+            Firebase.Firebase firebase = new Firebase.Firebase();
             int si = 0;
 
             try
@@ -78,6 +79,7 @@ namespace PatientManagement.Forms.DoctorForm
 
             admissions[si].doctorID = currentUser.id;
             Classes.AdmissionHelper.SaveAdmission(admissions[si]);
+            firebase.UpdateAdmission(admissions[si]);
             new Forms.DoctorForm.Admission(admissions[si]).ShowDialog();
         }
     }

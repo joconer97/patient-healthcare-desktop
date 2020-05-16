@@ -13,9 +13,11 @@ namespace PatientManagement.Forms.PatientForm
     public partial class Admission : MetroFramework.Forms.MetroForm
     {
         Classes.Admission admission = null;
-        public Admission(Classes.Admission admission)
+        Classes.User currentUser = null;
+        public Admission(Classes.Admission admission,Classes.User user)
         {
             InitializeComponent();
+            currentUser = user;
             this.admission = admission;
             SettingUp();
             InitListView2();
@@ -96,6 +98,14 @@ namespace PatientManagement.Forms.PatientForm
             {
                 item = lsvProcedure.Items.Add(p.procedureNo.ToString());
                 item.SubItems.Add(p.procedureName);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(new Forms.PatientForm.AdmissionReport(this.admission,this.currentUser).ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Successfully Saved Report");
             }
         }
     }

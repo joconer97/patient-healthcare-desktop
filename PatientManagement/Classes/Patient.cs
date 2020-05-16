@@ -24,7 +24,10 @@ namespace PatientManagement.Classes
         public int isRegistered { get; set; }
 
 
-        
+        public Patient()
+        {
+            birthdate = DateTime.Now;
+        }
 
     }
 }

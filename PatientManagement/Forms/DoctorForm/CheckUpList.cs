@@ -61,7 +61,7 @@ namespace PatientManagement.Forms.DoctorForm
                 item.SubItems.Add(c.temperature);
                 item.SubItems.Add(c.pulse_rate);
                 item.SubItems.Add(c.time_arrived.ToString());
-                item.SubItems.Add((ctr % 2 == 0)?"Follow-up":"Check-up");
+                item.SubItems.Add("Check-up");
                 ctr++;
 
             }

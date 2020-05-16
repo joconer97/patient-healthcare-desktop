@@ -41,6 +41,12 @@ namespace PatientManagement.Forms.Laboratory
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            if(!ValidateLaboratoryTypes())
+            {
+                MessageBox.Show("Please fill up laboratory types");
+                return;
+            }
+
             Classes.LaboratoryRequest request = new Classes.LaboratoryRequest()
             {
                 id = 0,
@@ -50,6 +56,7 @@ namespace PatientManagement.Forms.Laboratory
                 typeID = currentCheckup.id,
                 status = "Pending",
                 urgency = GetUrgency(),
+                isPaid = "Pending",
                 patient = new Patient()
                 {
                     id = currentCheckup.patient.id
@@ -60,7 +67,9 @@ namespace PatientManagement.Forms.Laboratory
            int labID = Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);
 
 
-            SaveLaboratoryTypes(labID);
+           SaveLaboratoryTypes(labID);
+           MessageBox.Show("Request have been sent");
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
         private string GetUrgency()
         {
@@ -80,8 +89,7 @@ namespace PatientManagement.Forms.Laboratory
             checkBox[6] = checkBox6;
             checkBox[7] = checkBox7;
 
-
-            foreach(var c in checkBox)
+            foreach (var c in checkBox)
             {
                 if(c.Checked == true)
                 {
@@ -93,8 +101,29 @@ namespace PatientManagement.Forms.Laboratory
                 }
             }
 
-            
+        }
 
+        private bool ValidateLaboratoryTypes()
+        {
+            CheckBox[] checkBox = new CheckBox[8];
+            checkBox[0] = checkBox1;
+            checkBox[1] = checkBox2;
+            checkBox[2] = checkBox3;
+            checkBox[3] = checkBox4;
+            checkBox[4] = checkBox5;
+            checkBox[5] = checkBox5;
+            checkBox[6] = checkBox6;
+            checkBox[7] = checkBox7;
+
+            foreach (var c in checkBox)
+            {
+                if (c.Checked == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

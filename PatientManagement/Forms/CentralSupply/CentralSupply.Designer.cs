@@ -41,7 +41,7 @@
             // 
             this.metroTabControl1.Controls.Add(this.tabPage1);
             this.metroTabControl1.Controls.Add(this.tabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(19, 38);
+            this.metroTabControl1.Location = new System.Drawing.Point(19, 87);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1287, 579);
@@ -92,7 +92,7 @@
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "CentralSupply";
-            this.Text = "CentralSupply";
+            this.Text = "Central Supply Department";
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);

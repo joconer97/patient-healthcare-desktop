@@ -10,16 +10,19 @@ namespace PatientManagement.Classes
 {
     public class BillHelper
     {
-        public static void SaveBill(Bill bill)
+        public static int SaveBill(Bill bill)
         {
             using (DAL dal = new DAL())
             {
                 SqlParameter[] spParams = {
+                    new SqlParameter("@id",bill.id),
                     new SqlParameter("@transactionID",bill.transactionID),
                     new SqlParameter("@admissionID",bill.admittedID),
+                    new SqlParameter("@isPaid",bill.isPaid)
                 };
 
-                dal.ExecuteQuery("spSaveBill", spParams);
+
+                return (int)dal.ExecuteQueryScalar("spSaveBill", spParams);
             }
         }
 
@@ -47,6 +50,46 @@ namespace PatientManagement.Classes
                             lastname = dr.Field<string>("lastname"),
                         }
                     });
+                }
+
+                return bills;
+            }
+        }
+
+        public static List<Bill> GetSummaryBills(int id)
+        {
+            List<Bill> bills = null; ;
+
+            using (DAL dal = new DAL())
+            {
+                try
+                {
+                    SqlParameter[] spParams = {
+                        new SqlParameter("@admissionID",id),
+                    };
+
+                    var data = dal.ExecuteQuery("spGetBills", spParams).Tables[0];
+
+                    bills = new List<Bill>();
+
+                    foreach (DataRow dr in data.AsEnumerable())
+                    {
+                        bills.Add(new Bill()
+                        {
+                            id = dr.Field<int>(0),
+                            transactionID = dr.Field<int>(1),
+                            admittedID = dr.Field<int>(2),
+                            date = dr.Field<DateTime>("date"),
+                            total = dr.Field<decimal>("total"),
+                            status = dr.Field<string>("status"),
+                            type = dr.Field<string>("type")
+                        });
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    return null;
                 }
 
                 return bills;

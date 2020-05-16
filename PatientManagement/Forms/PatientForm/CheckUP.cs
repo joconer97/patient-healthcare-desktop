@@ -28,9 +28,30 @@ namespace PatientManagement.Forms.PatientForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
-            if (Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text,txtCC.Text,0,"","",0,txtRespiratoryRate.Text, txtGCS.Text, txtO2Sat.Text))
+            int currentID = Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text, txtCC.Text, 0, "", "","Pending for Checkup", 0, txtRespiratoryRate.Text, txtGCS.Text, txtO2Sat.Text);
+            if (currentID != 0)
             {
+
+                Firebase.Firebase firebase = new Firebase.Firebase();
+                Classes.Checkup checkup = new Classes.Checkup()
+                {
+                    id =  currentID,
+                    patientID = patient.id,
+                    temperature = txtTemperature.Text,
+                    blood_pressure = txtBP.Text,
+                    pulse_rate = txtPulseRate.Text,
+                    respiratory_rate = txtRespiratoryRate.Text,
+                    gcs = txtGCS.Text,
+                    o2sat = txtO2Sat.Text,
+                    date = DateTime.Now,
+                    cc = txtCC.Text,
+                    assesment = "",
+                    management = "",
+                    isTreated = 0,
+                    status = "Pending of Checkup"
+                };
+
+                firebase.InsertCheckUp(checkup);
                 MessageBox.Show("Successfully added");
 
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;

@@ -26,6 +26,12 @@ namespace PatientManagement.Forms.PatientForm
 
         private void registerPatient()
         {
+            if(!IsValidInput())
+            {
+                MessageBox.Show("Please fill-up all input");
+                return;
+            }
+
             Classes.Patient patient = new Classes.Patient
             {
                 id = DateTime.Now.ToString("ssmmMMddyyyy"),
@@ -37,7 +43,7 @@ namespace PatientManagement.Forms.PatientForm
                 birthplace = txtBirthplace.Text,
                 contact = txtContact.Text,
                 emergency_contact = txtEmergencyContact.Text,
-                address = txtStreet.Text + " " + txtBaranggay.Text + " " + txtCity.Text,
+                address = txtStreet.Text + "/" + txtBaranggay.Text + "/" + txtCity.Text,
                 occupation = txtOccupation.Text,
                 citizenship = txtCitizenship.Text,
                 religion = txtReligion.Text,
@@ -45,11 +51,21 @@ namespace PatientManagement.Forms.PatientForm
 
             };
 
+            Firebase.Firebase firebase = new Firebase.Firebase();
+            firebase.InsertPatientMember(patient);
             Classes.PatientHelper.register(patient);
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
 
+        private bool IsValidInput()
+        {
+            if (txtFirstname.Text == "" || txtMiddleName.Text == "" || txtLastname.Text == "" || cmbGender.SelectedItem == null || txtBirthplace.Text == "" || txtContact.Text == "" || txtEmergencyContact.Text == "" || txtStreet.Text == "" || txtBaranggay.Text == "" || txtCity.Text == "" || txtOccupation.Text == "" || txtCitizenship.Text == "" || txtReligion.Text == "")
+            {
+                return false;
+            }
 
+            return true;
         }
 
     }

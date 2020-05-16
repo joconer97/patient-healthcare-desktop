@@ -31,8 +31,6 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.txtDischargeDate = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.txtIllness = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.txtO2Sat = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
@@ -52,6 +50,7 @@
             this.lsvMedicine = new System.Windows.Forms.ListView();
             this.lsvProcedure = new MetroFramework.Controls.MetroListView();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.txtAdmissionTime = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
@@ -86,7 +85,7 @@
             this.txtRR = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.txtBP = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.metroPanel4.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -98,9 +97,9 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Location = new System.Drawing.Point(237, 191);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(113, 19);
             this.metroLabel14.TabIndex = 19;
-            this.metroLabel14.Text = "Nurse Name";
+            this.metroLabel14.Text = "Admission Officer";
             // 
             // metroLabel16
             // 
@@ -127,6 +126,7 @@
             this.txtDischargeDate.CustomButton.Visible = false;
             this.txtDischargeDate.Enabled = false;
             this.txtDischargeDate.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDischargeDate.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtDischargeDate.Lines = new string[0];
             this.txtDischargeDate.Location = new System.Drawing.Point(237, 73);
             this.txtDischargeDate.MaxLength = 32767;
@@ -142,47 +142,6 @@
             this.txtDischargeDate.UseSelectable = true;
             this.txtDischargeDate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDischargeDate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(22, 261);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(42, 19);
-            this.metroLabel18.TabIndex = 11;
-            this.metroLabel18.Text = "Illness";
-            // 
-            // txtIllness
-            // 
-            // 
-            // 
-            // 
-            this.txtIllness.CustomButton.Image = null;
-            this.txtIllness.CustomButton.Location = new System.Drawing.Point(149, 1);
-            this.txtIllness.CustomButton.Name = "";
-            this.txtIllness.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtIllness.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtIllness.CustomButton.TabIndex = 1;
-            this.txtIllness.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtIllness.CustomButton.UseSelectable = true;
-            this.txtIllness.CustomButton.Visible = false;
-            this.txtIllness.Enabled = false;
-            this.txtIllness.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtIllness.Lines = new string[0];
-            this.txtIllness.Location = new System.Drawing.Point(22, 286);
-            this.txtIllness.MaxLength = 32767;
-            this.txtIllness.Name = "txtIllness";
-            this.txtIllness.PasswordChar = '\0';
-            this.txtIllness.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtIllness.SelectedText = "";
-            this.txtIllness.SelectionLength = 0;
-            this.txtIllness.SelectionStart = 0;
-            this.txtIllness.ShortcutsEnabled = true;
-            this.txtIllness.Size = new System.Drawing.Size(171, 23);
-            this.txtIllness.TabIndex = 10;
-            this.txtIllness.UseSelectable = true;
-            this.txtIllness.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtIllness.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel27
             // 
@@ -239,9 +198,9 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(22, 191);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(89, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(49, 19);
             this.metroLabel19.TabIndex = 9;
-            this.metroLabel19.Text = "Doctor Name";
+            this.metroLabel19.Text = "Doctor";
             // 
             // txtGCS
             // 
@@ -374,6 +333,7 @@
             this.txtNurseName.CustomButton.Visible = false;
             this.txtNurseName.Enabled = false;
             this.txtNurseName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtNurseName.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtNurseName.Lines = new string[0];
             this.txtNurseName.Location = new System.Drawing.Point(237, 216);
             this.txtNurseName.MaxLength = 32767;
@@ -415,6 +375,7 @@
             this.txtDischargeTime.CustomButton.Visible = false;
             this.txtDischargeTime.Enabled = false;
             this.txtDischargeTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDischargeTime.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtDischargeTime.Lines = new string[0];
             this.txtDischargeTime.Location = new System.Drawing.Point(237, 142);
             this.txtDischargeTime.MaxLength = 32767;
@@ -456,6 +417,7 @@
             this.txtCC.CustomButton.Visible = false;
             this.txtCC.Enabled = false;
             this.txtCC.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtCC.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtCC.Lines = new string[0];
             this.txtCC.Location = new System.Drawing.Point(443, 31);
             this.txtCC.MaxLength = 32767;
@@ -489,6 +451,7 @@
             this.txtDoctorName.CustomButton.Visible = false;
             this.txtDoctorName.Enabled = false;
             this.txtDoctorName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDoctorName.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtDoctorName.Lines = new string[0];
             this.txtDoctorName.Location = new System.Drawing.Point(22, 216);
             this.txtDoctorName.MaxLength = 32767;
@@ -508,10 +471,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(457, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 19);
+            this.label3.Size = new System.Drawing.Size(53, 19);
             this.label3.TabIndex = 22;
             this.label3.Text = "Drugs";
             // 
@@ -539,6 +502,7 @@
             // metroPanel4
             // 
             this.metroPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel4.Controls.Add(this.btnAdd);
             this.metroPanel4.Controls.Add(this.label3);
             this.metroPanel4.Controls.Add(this.lsvMedicine);
             this.metroPanel4.Controls.Add(this.lsvProcedure);
@@ -553,6 +517,16 @@
             this.metroPanel4.VerticalScrollbarBarColor = true;
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel29
+            // 
+            this.metroLabel29.AutoSize = true;
+            this.metroLabel29.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroLabel29.Location = new System.Drawing.Point(11, 13);
+            this.metroLabel29.Name = "metroLabel29";
+            this.metroLabel29.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel29.TabIndex = 4;
+            this.metroLabel29.Text = "Procedure";
             // 
             // metroLabel20
             // 
@@ -579,6 +553,7 @@
             this.txtAdmissionTime.CustomButton.Visible = false;
             this.txtAdmissionTime.Enabled = false;
             this.txtAdmissionTime.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtAdmissionTime.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtAdmissionTime.Lines = new string[0];
             this.txtAdmissionTime.Location = new System.Drawing.Point(22, 142);
             this.txtAdmissionTime.MaxLength = 32767;
@@ -620,6 +595,7 @@
             this.txtAdmissionDate.CustomButton.Visible = false;
             this.txtAdmissionDate.Enabled = false;
             this.txtAdmissionDate.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtAdmissionDate.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtAdmissionDate.Lines = new string[0];
             this.txtAdmissionDate.Location = new System.Drawing.Point(22, 73);
             this.txtAdmissionDate.MaxLength = 32767;
@@ -716,6 +692,7 @@
             this.txtContact.CustomButton.Visible = false;
             this.txtContact.Enabled = false;
             this.txtContact.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtContact.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtContact.Lines = new string[0];
             this.txtContact.Location = new System.Drawing.Point(237, 362);
             this.txtContact.MaxLength = 32767;
@@ -757,6 +734,7 @@
             this.txtGender.CustomButton.Visible = false;
             this.txtGender.Enabled = false;
             this.txtGender.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtGender.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtGender.Lines = new string[0];
             this.txtGender.Location = new System.Drawing.Point(232, 286);
             this.txtGender.MaxLength = 32767;
@@ -798,6 +776,7 @@
             this.txtAge.CustomButton.Visible = false;
             this.txtAge.Enabled = false;
             this.txtAge.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtAge.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtAge.Lines = new string[0];
             this.txtAge.Location = new System.Drawing.Point(237, 216);
             this.txtAge.MaxLength = 32767;
@@ -839,6 +818,7 @@
             this.txtBirthdate.CustomButton.Visible = false;
             this.txtBirthdate.Enabled = false;
             this.txtBirthdate.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBirthdate.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtBirthdate.Lines = new string[0];
             this.txtBirthdate.Location = new System.Drawing.Point(237, 142);
             this.txtBirthdate.MaxLength = 32767;
@@ -880,6 +860,7 @@
             this.txtOccupation.CustomButton.Visible = false;
             this.txtOccupation.Enabled = false;
             this.txtOccupation.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtOccupation.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtOccupation.Lines = new string[0];
             this.txtOccupation.Location = new System.Drawing.Point(237, 73);
             this.txtOccupation.MaxLength = 32767;
@@ -921,6 +902,7 @@
             this.txtCitizenship.CustomButton.Visible = false;
             this.txtCitizenship.Enabled = false;
             this.txtCitizenship.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtCitizenship.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtCitizenship.Lines = new string[0];
             this.txtCitizenship.Location = new System.Drawing.Point(22, 362);
             this.txtCitizenship.MaxLength = 32767;
@@ -962,6 +944,7 @@
             this.txtReligion.CustomButton.Visible = false;
             this.txtReligion.Enabled = false;
             this.txtReligion.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtReligion.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtReligion.Lines = new string[0];
             this.txtReligion.Location = new System.Drawing.Point(22, 286);
             this.txtReligion.MaxLength = 32767;
@@ -1003,6 +986,7 @@
             this.txtLname.CustomButton.Visible = false;
             this.txtLname.Enabled = false;
             this.txtLname.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtLname.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtLname.Lines = new string[0];
             this.txtLname.Location = new System.Drawing.Point(22, 216);
             this.txtLname.MaxLength = 32767;
@@ -1044,6 +1028,7 @@
             this.txtMname.CustomButton.Visible = false;
             this.txtMname.Enabled = false;
             this.txtMname.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtMname.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtMname.Lines = new string[0];
             this.txtMname.Location = new System.Drawing.Point(22, 142);
             this.txtMname.MaxLength = 32767;
@@ -1085,6 +1070,7 @@
             this.txtFname.CustomButton.Visible = false;
             this.txtFname.Enabled = false;
             this.txtFname.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtFname.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txtFname.Lines = new string[0];
             this.txtFname.Location = new System.Drawing.Point(22, 73);
             this.txtFname.MaxLength = 32767;
@@ -1133,8 +1119,6 @@
             this.metroPanel2.Controls.Add(this.txtDischargeTime);
             this.metroPanel2.Controls.Add(this.metroLabel16);
             this.metroPanel2.Controls.Add(this.txtDischargeDate);
-            this.metroPanel2.Controls.Add(this.metroLabel18);
-            this.metroPanel2.Controls.Add(this.txtIllness);
             this.metroPanel2.Controls.Add(this.metroLabel19);
             this.metroPanel2.Controls.Add(this.txtDoctorName);
             this.metroPanel2.Controls.Add(this.metroLabel20);
@@ -1253,15 +1237,20 @@
             this.txtBP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBP.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel29
+            // btnAdd
             // 
-            this.metroLabel29.AutoSize = true;
-            this.metroLabel29.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroLabel29.Location = new System.Drawing.Point(11, 13);
-            this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(70, 19);
-            this.metroLabel29.TabIndex = 4;
-            this.metroLabel29.Text = "Procedure";
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(1059, 134);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(160, 31);
+            this.btnAdd.TabIndex = 23;
+            this.btnAdd.Text = "ADD DAILY REPORT";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Admission
             // 
@@ -1290,8 +1279,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroTextBox txtDischargeDate;
-        private MetroFramework.Controls.MetroLabel metroLabel18;
-        private MetroFramework.Controls.MetroTextBox txtIllness;
         private MetroFramework.Controls.MetroLabel metroLabel27;
         private MetroFramework.Controls.MetroTextBox txtO2Sat;
         private MetroFramework.Controls.MetroLabel metroLabel26;
@@ -1346,5 +1333,6 @@
         private MetroFramework.Controls.MetroTextBox txtRR;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroTextBox txtBP;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

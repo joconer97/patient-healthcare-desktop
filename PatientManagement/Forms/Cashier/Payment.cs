@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PatientManagement.Classes;
 
 namespace PatientManagement.Forms.Cashier
 {
-    public partial class Payment : Form
+    public partial class Payment : MetroFramework.Forms.MetroForm
     {
+        List<Classes.DischargeRequest> requests = null;
         public Payment()
         {
             InitializeComponent();
@@ -23,8 +25,8 @@ namespace PatientManagement.Forms.Cashier
         {
             lsvPayment.Columns.Add("PIN", 200);
             lsvPayment.Columns.Add("Fullname", 280);
-            lsvPayment.Columns.Add("Price", 100);
-            lsvPayment.Columns.Add("Type", 100);
+            lsvPayment.Columns.Add("Romm / Bed Rate", 100);
+            lsvPayment.Columns.Add("Status", 100);
 
 
 
@@ -38,68 +40,61 @@ namespace PatientManagement.Forms.Cashier
 
         private void PopulatListView()
         {
-            List<Classes.Request> requests = new List<Classes.Request>()
-            {
-                new Classes.Request()
-                {
-                    patient = new Classes.Patient()
-                    {
-                        id = "100523523",
-                        firstname = "Arnel",
-                        lastname = "Payongayong"
-                    },
-                    type = "Discharge Bill",
-                    price = 350
-                },
 
-                new Classes.Request()
-                {
-                    patient = new Classes.Patient()
-                    {
-                        id = "100523524",
-                        firstname = "Laurence",
-                        lastname = "Rubis"
-                    },
-                    type = "Discharge Bill",
-                    price = 500
-                },
-
-                new Classes.Request()
-                {
-                    patient = new Classes.Patient()
-                    {
-                        id = "100523525",
-                        firstname = "Adrian",
-                        lastname = "Espano"
-                    },
-                    type = "Discharge Bill",
-                    price = 150
-                },
-
-                new Classes.Request()
-                {
-                    patient = new Classes.Patient()
-                    {
-                        id = "100523527",
-                        firstname = "Jeff",
-                        lastname = "Sarte"
-                    },
-                    type = "Discharge Bill",
-                    price = 500
-                },
-
-            };
+            requests = GetValidatedDischarge();
 
             ListViewItem item;
 
             foreach (var c in requests)
             {
-                item = lsvPayment.Items.Add(c.patient.id);
-                item.SubItems.Add(c.patient.firstname + " " + c.patient.lastname);
-                item.SubItems.Add(c.type);
-                item.SubItems.Add(c.price.ToString());
+                item = lsvPayment.Items.Add(c.admission.patient.id);
+                item.SubItems.Add(c.admission.patient.firstname + " " + c.admission.patient.lastname);
+                item.SubItems.Add(c.rate.ToString());
+                item.SubItems.Add(c.status);
 
             }
+        }
+
+        private List<DischargeRequest> GetValidatedDischarge()
+        {
+            List<Classes.DischargeRequest> requests = Classes.RequestHelper.GetDischargeRequests();
+
+            var data = from r in requests
+                       where r.status == "Validated"
+                       select r;
+
+            List<Classes.DischargeRequest> temp = new List<Classes.DischargeRequest>();
+
+            foreach(var d in data.AsEnumerable())
+            {
+                temp.Add(new DischargeRequest()
+                {
+                    id = d.id,
+                    admission = d.admission,
+                    isPaid = d.isPaid,
+                    philhealthCode = d.philhealthCode,
+                    philhealthCover = d.philhealthCover,
+                    rate = d.rate,
+                    status = d.status
+                });
+            }
+
+            return temp;
+        }
+
+        private void lsvPayment_DoubleClick(object sender, EventArgs e)
+        {
+            int index = 0;
+
+            try
+            {
+                index = lsvPayment.SelectedItems[0].Index;
+            }
+            catch (Exception)
+            {
+            }
+
+            new DischargeModal(requests[index]).ShowDialog();
         }
     }
 }

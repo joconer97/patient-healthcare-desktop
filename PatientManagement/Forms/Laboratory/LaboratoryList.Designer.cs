@@ -34,9 +34,9 @@
             // lsvLaboratory
             // 
             this.lsvLaboratory.HideSelection = false;
-            this.lsvLaboratory.Location = new System.Drawing.Point(13, 28);
+            this.lsvLaboratory.Location = new System.Drawing.Point(13, 100);
             this.lsvLaboratory.Name = "lsvLaboratory";
-            this.lsvLaboratory.Size = new System.Drawing.Size(1096, 551);
+            this.lsvLaboratory.Size = new System.Drawing.Size(1096, 479);
             this.lsvLaboratory.TabIndex = 0;
             this.lsvLaboratory.UseCompatibleStateImageBehavior = false;
             this.lsvLaboratory.DoubleClick += new System.EventHandler(this.lsvLaboratory_DoubleClick);
@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(1121, 605);
             this.Controls.Add(this.lsvLaboratory);
             this.Name = "LaboratoryList";
-            this.Text = "LaboratoryList";
+            this.Text = "Laboratory";
             this.ResumeLayout(false);
 
         }

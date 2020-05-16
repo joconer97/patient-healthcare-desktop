@@ -46,12 +46,15 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(571, 413);
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.metroButton1.Location = new System.Drawing.Point(563, 413);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(206, 23);
+            this.metroButton1.Size = new System.Drawing.Size(214, 25);
             this.metroButton1.TabIndex = 1;
             this.metroButton1.Text = "Discharge Request";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // BillingSummary
             // 
@@ -61,7 +64,8 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.lsvSummary);
             this.Name = "BillingSummary";
-            this.Text = "BillingSummary";
+            this.Text = "Patient Bill";
+            this.Load += new System.EventHandler(this.BillingSummary_Load);
             this.ResumeLayout(false);
 
         }

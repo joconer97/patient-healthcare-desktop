@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lsvMedicineRequest = new MetroFramework.Controls.MetroListView();
+            this.lsvMedicineRequest = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lsvMedicineRequest
             // 
-            this.lsvMedicineRequest.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lsvMedicineRequest.FullRowSelect = true;
-            this.lsvMedicineRequest.Location = new System.Drawing.Point(13, 29);
+            this.lsvMedicineRequest.HideSelection = false;
+            this.lsvMedicineRequest.Location = new System.Drawing.Point(13, 13);
             this.lsvMedicineRequest.Name = "lsvMedicineRequest";
-            this.lsvMedicineRequest.OwnerDraw = true;
-            this.lsvMedicineRequest.Size = new System.Drawing.Size(775, 397);
+            this.lsvMedicineRequest.Size = new System.Drawing.Size(775, 416);
             this.lsvMedicineRequest.TabIndex = 0;
             this.lsvMedicineRequest.UseCompatibleStateImageBehavior = false;
-            this.lsvMedicineRequest.UseSelectable = true;
             // 
             // MedicineRequest
             // 
@@ -57,6 +54,6 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroListView lsvMedicineRequest;
+        private System.Windows.Forms.ListView lsvMedicineRequest;
     }
 }

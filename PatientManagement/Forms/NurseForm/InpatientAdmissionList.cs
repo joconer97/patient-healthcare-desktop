@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.NurseForm
 {
-    public partial class InpatientAdmissionList : Form
+    public partial class InpatientAdmissionList : MetroFramework.Forms.MetroForm
     {
-        public InpatientAdmissionList()
+        Classes.User currentUser = null;
+        public InpatientAdmissionList(Classes.User user)
         {
             InitializeComponent();
+            currentUser = user;
             InitList();
             PopulateListView();
         }
@@ -27,7 +29,6 @@ namespace PatientManagement.Forms.NurseForm
             lsvAdmission.Columns.Add("PIN", 200);
             lsvAdmission.Columns.Add("Fullname", 280);
             lsvAdmission.Columns.Add("Sex", 30);
-            lsvAdmission.Columns.Add("Illness", 200);
             lsvAdmission.Columns.Add("Admission Date", 200);
             lsvAdmission.Columns.Add("Admission Time", 200);
 
@@ -40,7 +41,7 @@ namespace PatientManagement.Forms.NurseForm
         }
         private void PopulateListView()
         {
-            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(), 1);
+            admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.GetAdmittedList(), 1);
             ListViewItem item;
 
             foreach (Classes.Admission admission in admissions)
@@ -51,7 +52,6 @@ namespace PatientManagement.Forms.NurseForm
                 item.SubItems.Add(admission.patient.id);
                 item.SubItems.Add(admission.patient.firstname + " " + admission.patient.middlename + " " + admission.patient.lastname);
                 item.SubItems.Add(admission.patient.gender.ToString());
-                item.SubItems.Add("Dengue");
                 item.SubItems.Add(admission.admittedDate.ToShortDateString());
                 item.SubItems.Add(admission.admittedTime.ToString());
             }
@@ -72,7 +72,7 @@ namespace PatientManagement.Forms.NurseForm
                 throw;
             }
 
-            new Forms.PatientForm.Admission(admissions[index]).ShowDialog();
+            new PatientForm.Admission(admissions[index],currentUser).ShowDialog();
         }
     }
 }

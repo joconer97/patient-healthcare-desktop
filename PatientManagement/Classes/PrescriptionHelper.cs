@@ -56,7 +56,7 @@ namespace PatientManagement.Classes
                     return prescriptions;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;

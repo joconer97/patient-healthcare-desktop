@@ -26,7 +26,10 @@ namespace PatientManagement.Forms.DoctorForm
             json();
             InitListView2();
             InitListView3();
+            InitPopulateList();
+            InitPopulateList2();
         }
+       
 
         public void SettingUp()
         {
@@ -149,6 +152,7 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Firebase.Firebase firebase = new Firebase.Firebase();
             foreach(var p in procedures)
             {
                 Classes.ProcedureHelper.SaveProcedure(p);
@@ -159,7 +163,72 @@ namespace PatientManagement.Forms.DoctorForm
                 Classes.PrescriptionHelper.savePrescription(m,admission.id,"admission");
             }
 
+            this.admission.prescriptions = prescriptions;
+            this.admission.procedures = procedures;
+            firebase.InsertAdmission(this.admission);
             MessageBox.Show("SAVED!");
+        }
+
+        private void btnLabRequest_Click(object sender, EventArgs e)
+        {
+     
+            new Forms.Laboratory.AdmissionLaboratory(admission).ShowDialog();
+        }
+
+
+        private void InitPopulateList()
+        {
+            prescriptions = Classes.PrescriptionHelper.ListPrescription(admission.id, "admission");
+
+            ListViewItem item;
+
+            foreach (var p in prescriptions)
+            {
+                item = lsvMedicine.Items.Add(p.medicine);
+                item.SubItems.Add(p.hrs.ToString());
+            }
+        }
+
+        private void InitPopulateList2()
+        {
+
+            procedures = Classes.ProcedureHelper.ListProcedure(admission.id);
+
+            ListViewItem item;
+
+            foreach (var p in procedures)
+            {
+                item = lsvProcedure.Items.Add(p.procedureNo.ToString());
+                item.SubItems.Add(p.procedureName);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Continue to discharge?","PHC",MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            Classes.RequestHelper.SaveDishargeRequest(new Classes.DischargeRequest()
+            {
+                id = 0,
+                admission = new Classes.Admission()
+                {
+                    id = this.admission.id
+                },
+                philhealthCode = "",
+                philhealthCover = 0,
+                isPaid = 0,
+                status = "In-progress",
+                rate = 0
+                
+            });
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Forms.DoctorForm.AdmissionReportList(this.admission).ShowDialog();
         }
     }
 }

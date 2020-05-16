@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.Laboratory
 {
-    public partial class LaboratoryList : Form
+    public partial class LaboratoryList : MetroFramework.Forms.MetroForm
     {
         public LaboratoryList()
         {
@@ -32,6 +32,7 @@ namespace PatientManagement.Forms.Laboratory
                 item.SubItems.Add(r.user.firstname + " " + r.user.lastname);
                 item.SubItems.Add(r.status);
                 item.SubItems.Add(r.urgency);
+                item.SubItems.Add(r.isPaid);
             }
         }
         private void InitListView()
@@ -39,7 +40,8 @@ namespace PatientManagement.Forms.Laboratory
             lsvLaboratory.Columns.Add("Patient Name", 200);
             lsvLaboratory.Columns.Add("Doctor Name", 200);
             lsvLaboratory.Columns.Add("Status", 280);
-            lsvLaboratory.Columns.Add("Urgency", 30);
+            lsvLaboratory.Columns.Add("Urgency", 100);
+            lsvLaboratory.Columns.Add("Payment", 100);
 
 
             lsvLaboratory.View = View.Details;

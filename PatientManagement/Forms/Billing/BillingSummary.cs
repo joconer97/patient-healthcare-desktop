@@ -12,9 +12,12 @@ namespace PatientManagement.Forms.Billing
 {
     public partial class BillingSummary : MetroFramework.Forms.MetroForm
     {
-        public BillingSummary()
+        Classes.DischargeRequest request = null;
+        decimal totalAmount = 0;
+        public BillingSummary(Classes.DischargeRequest request)
         {
             InitializeComponent();
+            this.request = request;
             InitListView();
             PopulateList();
         }
@@ -42,20 +45,31 @@ namespace PatientManagement.Forms.Billing
         {
             ListViewItem item;
 
-            item = lsvSummary.Items.Add("10532523");
-            item.SubItems.Add("Arnel Joshua Payongayong");
-            item.SubItems.Add("Biogesic");
-            item.SubItems.Add("8");
-            item.SubItems.Add("5");
-            item.SubItems.Add("02/22/2020");
+            var bills = Classes.BillHelper.GetSummaryBills(this.request.admission.id);
+            
+            foreach(var b in bills)
+            {
+                if (b.isPaid != 1) return;
+
+                item = lsvSummary.Items.Add(request.admission.patient.id);
+                item.SubItems.Add(request.admission.patient.firstname + " " + request.admission.patient.lastname);
+                item.SubItems.Add(b.type);
+                item.SubItems.Add(b.status);
+                item.SubItems.Add(b.total.ToString());
+                item.SubItems.Add(b.date.ToShortDateString());
+                totalAmount += b.total;
+            }
 
 
-            item = lsvSummary.Items.Add("10532523");
-            item.SubItems.Add("Arnel Joshua Payongayong");
-            item.SubItems.Add("Radiology");
-            item.SubItems.Add("670");
-            item.SubItems.Add("1");
-            item.SubItems.Add("02/22/2020");
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            new ValidatingBill(totalAmount,request).ShowDialog();
+        }
+
+        private void BillingSummary_Load(object sender, EventArgs e)
+        {
 
         }
     }

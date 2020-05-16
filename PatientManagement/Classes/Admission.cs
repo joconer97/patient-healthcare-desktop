@@ -98,6 +98,8 @@ namespace PatientManagement.Classes
 
         public string cc { get; set; }
 
+        public List<Prescription> prescriptions { get; set; }
+        public List<Procedure> procedures { get; set; }
 
         public static List<Admission> AdmissionRequest(List<Admission> admissions,int type)
         {

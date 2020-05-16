@@ -61,7 +61,7 @@ namespace PatientManagement.Forms.Pharmacy
         private void PopulateListView2()
         {
             request = Classes.BillHelper.BillList();
-
+            
             ListViewItem item;
             int ctr = 0;
             foreach(var p in request)
@@ -79,10 +79,9 @@ namespace PatientManagement.Forms.Pharmacy
         {
             ListViewItem item;
             lsvMedicine.Items.Clear();
+            var medicines = Classes.MedicineHelper.Medicines();
             int counter = 1;
-            List<Classes.Medicine> medicines = Classes.MedicineHelper.Medicines();
 
-            
             foreach(var m in medicines)
             {
                 item = lsvMedicine.Items.Add((counter++).ToString());
@@ -93,55 +92,12 @@ namespace PatientManagement.Forms.Pharmacy
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "excel files (*.xls)|*.xlsx*";
-            if(openFileDialog.ShowDialog() != DialogResult.OK)
+            if(new Forms.Pharmacy.ImportMedicine().ShowDialog() == DialogResult.OK)
             {
-                return;
+                PopulateList();
             }
-
- 
-            string path = openFileDialog.FileName;
-            FileInfo fileInfo = new FileInfo(path);
-
-            ExcelPackage package = new ExcelPackage(fileInfo);
-            ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-
-            // get number of rows and columns in the sheet
-            int rows = worksheet.Dimension.Rows; // 20
-            int columns = worksheet.Dimension.Columns; // 7
-            int counter = 0;
-            // loop through the worksheet rows and columns
-            for (int i = 1; i <= rows; i++)
-            {
-                decimal currentPrice = 0;
-                string currentName = "";
-
-                try
-                {
-                    currentPrice = decimal.Parse(worksheet.Cells["E" + i].Value.ToString());
-                    currentName = worksheet.Cells["C" + i].Value.ToString();
-
-                    Classes.MedicineHelper.SaveMedicine(new Classes.Medicine()
-                    {
-                        price = currentPrice,
-                        quantity = new Random().Next(1, 20),
-                        name = currentName
-
-                    });
-
-                    counter++;
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-
-
-            MessageBox.Show(counter + " medicines have been saved");
-
         }
+
 
         private void lsvMedicineRequest_DoubleClick(object sender, EventArgs e)
         {
@@ -158,6 +114,11 @@ namespace PatientManagement.Forms.Pharmacy
             }
 
             new Forms.Pharmacy.MedicineRequest(request[index].admittedID).ShowDialog();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            //SaveMedicines();
         }
     }
 }

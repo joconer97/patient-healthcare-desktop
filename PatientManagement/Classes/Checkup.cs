@@ -27,5 +27,9 @@ namespace PatientManagement.Classes
 
         public User user { get; set; }
 
+        public string status { get; set; }
+
+        public List<Prescription> prescriptions { get; set; }
+
     }
 }

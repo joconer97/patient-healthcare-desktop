@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.Cashier
 {
-    public partial class CashierMain : Form
+    public partial class CashierMain : MetroFramework.Forms.MetroForm
     {
         public CashierMain()
         {
@@ -25,6 +25,16 @@ namespace PatientManagement.Forms.Cashier
         private void button2_Click(object sender, EventArgs e)
         {
             new Forms.Cashier.Payment().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Forms.Cashier.PatientRegistrationList().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Forms.Cashier.LaboratoryRequest().ShowDialog();
         }
     }
 }

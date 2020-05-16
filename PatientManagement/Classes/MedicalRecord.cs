@@ -8,7 +8,10 @@ namespace PatientManagement.Classes
 {
     public class MedicalRecord
     {
-        public string pin { get; set; }
-        public string details { get; set; }
+        public int id { get; set; }
+        public string type { get; set; }
+        public DateTime date { get; set; }
+        public Patient patient { get; set; }
+        
     }
 }

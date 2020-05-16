@@ -80,10 +80,29 @@ namespace PatientManagement.Forms.PatientForm
 
                 throw;
             }
-
+            if(!ValidatePatient(currentPatients[si].id))
+            {
+                MessageBox.Show("The patient already admitted");
+                return;
+            }
             Form checkup = new Forms.PatientForm.CheckUP(currentPatients[si]);
 
             checkup.ShowDialog();
+        }
+
+        private bool ValidatePatient(string patientID)
+        {
+            List<Classes.Admission> admissions = Classes.AdmissionHelper.Admissions();
+
+            var data = from admission in admissions
+                       where admission.patient.id == patientID && admission.isAdmitted == 1 && admission.isDischarged == 0
+                       select admission;
+
+            foreach(var d in data.AsEnumerable())
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lsvPatient = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // lsvPatient
+            // 
+            this.lsvPatient.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsvPatient.HideSelection = false;
+            this.lsvPatient.Location = new System.Drawing.Point(39, 58);
+            this.lsvPatient.Name = "lsvPatient";
+            this.lsvPatient.Size = new System.Drawing.Size(1068, 542);
+            this.lsvPatient.TabIndex = 0;
+            this.lsvPatient.UseCompatibleStateImageBehavior = false;
+            this.lsvPatient.DoubleClick += new System.EventHandler(this.lsvPatient_DoubleClick);
+            // 
+            // SearchPatient
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1142, 633);
+            this.Controls.Add(this.lsvPatient);
+            this.Name = "SearchPatient";
             this.Text = "SearchPatient";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView lsvPatient;
     }
 }

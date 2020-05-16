@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.CentralSupply
 {
-    public partial class CentralSupply : Form
+    public partial class CentralSupply : MetroFramework.Forms.MetroForm
     {
         public CentralSupply()
         {
@@ -20,6 +20,7 @@ namespace PatientManagement.Forms.CentralSupply
             Init();
             PopulateList();
         }
+
 
         private void Init()
         {
@@ -39,7 +40,7 @@ namespace PatientManagement.Forms.CentralSupply
         private void PopulateList()
         {
             ListViewItem item;
-            List<Classes.MedicalSupply> medicalSupplies = Classes.MedicalSupplyHelper.MedicalSupplies();
+            var medicalSupplies = Classes.MedicalSupplyHelper.MedicalSupplies();
             lsvMedical.Items.Clear();
        
             foreach(var m in medicalSupplies)
@@ -53,53 +54,15 @@ namespace PatientManagement.Forms.CentralSupply
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "excel files (*.xls)|*.xlsx*";
-            if (openFileDialog.ShowDialog() != DialogResult.OK)
+            if(new Forms.CentralSupply.ImportMedicalSupply().ShowDialog() == DialogResult.OK)
             {
-                return;
+                PopulateList();
             }
-
-
-            string path = openFileDialog.FileName;
-            FileInfo fileInfo = new FileInfo(path);
-
-            ExcelPackage package = new ExcelPackage(fileInfo);
-            ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-
-            // get number of rows and columns in the sheet
-            int rows = worksheet.Dimension.Rows; // 20
-            int columns = worksheet.Dimension.Columns; // 7
-            int counter = 0;
-            // loop through the worksheet rows and columns
-            for (int i = 2; i <= rows; i++)
-            {
-                decimal currentPrice = new Random().Next(100,1000);
-                string currentName = "";
-
-                try
-                {
-                    currentName = worksheet.Cells["A" + i].Value.ToString();
-
-                    Classes.MedicalSupplyHelper.SaveMedical(new Classes.MedicalSupply
-                    {
-                        price = currentPrice,
-                        quantity = new Random().Next(1, 20),
-                        name = currentName
-
-                    });
-
-                    counter++;
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-
-
-            MessageBox.Show(counter + " medicines have been saved");
-            PopulateList();
+        }
+       
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            //SaveMedicalSupply();
         }
     }
 }

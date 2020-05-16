@@ -66,7 +66,7 @@ namespace PatientManagement.Classes
                     dal.ExecuteQuery("spSaveAdmission", spParams);
                     return 1;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return 0;
@@ -107,10 +107,101 @@ namespace PatientManagement.Classes
                                 address = dr.Field<string>("address"),
                                 birthplace = dr.Field<string>("birthplace"),
                             },
+                            id = dr.Field<int>("id"),
+                            admittedDate = dr.Field<DateTime>("admittedDate"),
+                            admittedTime = dr.Field<TimeSpan>("admittedTime"),
+                            timesAdmitted = dr.Field<int>("timesAdmitted"),
+                            ward = dr.Field<string>("ward"),
+                            roomNo = dr.Field<int>("roomNo"),
+                            bedNo = dr.Field<int>("bedNo"),
+                            fatherName = dr.Field<string>("fatherName"),
+                            fAddress = dr.Field<string>("fAddress"),
+                            fEmployer = dr.Field<string>("fEmployer"),
+                            fOccupation = dr.Field<string>("fOccupation"),
+                            motherName = dr.Field<string>("motherName"),
+                            mAddress = dr.Field<string>("mAddress"),
+                            mOccupation = dr.Field<string>("mOccupation"),
+                            mEmployer = dr.Field<string>("mEmployer"),
+                            spouseName = dr.Field<string>("spouseName"),
+                            sAddress = dr.Field<string>("sAddress"),
+                            sOccupation = dr.Field<string>("sOccupation"),
+                            sEmployer = dr.Field<string>("sEmployer"),
+                            captainName = dr.Field<string>("captainName"),
+                            companionName = dr.Field<string>("companionName"),
+                            cRelationship = dr.Field<string>("cRelationship"),
+                            cAddress = dr.Field<string>("cAddress"),
+                            eName = dr.Field<string>("eName"),
+                            eRelationship = dr.Field<string>("eRelationship"),
+                            eAddress = dr.Field<string>("eAddress"),
+                            contact = dr.Field<string>("contact"),
+                            isAdmitted = dr.Field<int>("isAdmitted"),
+                            isDischarged = dr.Field<int>("isDischarged"),
+                            dischargedDate = (dr.Field<int>("isDischarged") == 1) ? dr.Field<DateTime>("dischargeDate") : DateTime.Now,
+                            dischargedTime = (dr.Field<int>("isDischarged") == 1) ? dr.Field<TimeSpan>("dischargeTime") : new TimeSpan(0, 0, 0),
+                            blood_pressure = dr.Field<string>("bp"),
+                            cc = dr.Field<string>("cc"),
+                            pulse_rate = dr.Field<string>("pr"),
+                            respiratory_rate = dr.Field<string>("rr"),
+                            temperature = dr.Field<string>("temperature"),
+                            o2sat = dr.Field<string>("o2sat"),
+                            gcs = dr.Field<string>("gcs"),
+                            nurseID = dr.Field<int>("nurseID")
+
+                        });
+
+
+                    }
+
+                    return admissions;
+
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
+            }
+        }
+
+        public static List<Admission> GetAdmittedList()
+        {
+            List<Admission> admissions = new List<Admission>();
+
+            using (DAL dal = new DAL())
+            {
+                SqlParameter[] spParams = {
+                };
+
+                try
+                {
+                    var data = dal.ExecuteQuery("spGetAdmission", spParams).Tables[0];
+
+                    foreach (DataRow dr in data.AsEnumerable())
+                    {
+                        admissions.Add(new Admission()
+                        {
+                            patient = new Patient()
+                            {
+                                id = dr.Field<string>("patientID"),
+                                firstname = dr.Field<string>("firstname"),
+                                middlename = dr.Field<string>("middlename"),
+                                lastname = dr.Field<string>("lastname"),
+                                gender = char.Parse(dr.Field<string>("gender")),
+                                contact = dr.Field<string>(47),
+                                birthdate = dr.Field<DateTime>("birthyear"),
+                                emergency_contact = dr.Field<string>("contact_emergency"),
+                                isRegistered = dr.Field<int>("isRegistered"),
+                                religion = dr.Field<string>("religion"),
+                                citizenship = dr.Field<string>("citizenship"),
+                                occupation = dr.Field<string>("occupation"),
+                                address = dr.Field<string>("address"),
+                                birthplace = dr.Field<string>("birthplace"),
+                            },
                             doctor = new User()
                             {
                                 firstname = dr.Field<string>(59),
-                                lastname = dr.Field<string>(60)
+                                lastname = dr.Field<string>(60),
+                                id = dr.Field<int>(56)
                             },
                             nurse = new User()
                             {
@@ -165,7 +256,7 @@ namespace PatientManagement.Classes
                     return admissions;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;
@@ -189,7 +280,14 @@ namespace PatientManagement.Classes
                 {
                     admission = new Admission()
                     {
-                        id = dr.Field<int>("id")
+                        id = dr.Field<int>(0),
+                        patient = new Patient()
+                        {
+                            id = dr.Field<string>(1),
+                            firstname = dr.Field<string>(2),
+                            middlename = dr.Field<string>(3),
+                            lastname = dr.Field<string>(4),
+                        }
                     };
                 }
                 return admission;

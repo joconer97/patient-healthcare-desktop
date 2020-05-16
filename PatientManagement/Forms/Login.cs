@@ -12,24 +12,13 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms
 {
-    public partial class Login : MetroFramework.Forms.MetroForm
+    public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
         }
         User currentUser = null;
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
-        {
-            if(isValidUser())
-            {
-                SuccessfulLogin();
-                return;
-            }
-
-            MessageBox.Show("Incorrect Credentials");
-        }
 
         private bool isValidUser()
         {
@@ -39,6 +28,7 @@ namespace PatientManagement.Forms
             user.password = txtPassword.Text;
 
             currentUser = UserHelper.login(user.username, user.password);
+
             if (currentUser != null)
             {
                 return true;
@@ -54,41 +44,110 @@ namespace PatientManagement.Forms
             switch (department)
             {
                 case 0:
-                    new Forms.DoctorForm.CheckUpList(currentUser).ShowDialog();
+                    if(currentUser.position != "OPD-DOCTOR")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
+                    new Forms.DoctorForm.OutPatientMain(currentUser).ShowDialog();
                     //OUT-PATIENT DOCTOR
                     break;
                 case 1:
-                    new Forms.DoctorForm.AdmissionList(currentUser).ShowDialog();
+                    if (currentUser.position != "INPATIENT-DOCTOR")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
+                    new Forms.DoctorForm.InPatientMain(currentUser).ShowDialog();
                     //IN-PATIENT DOCTOR
                     break;
                 case 2:
+                    if (currentUser.position != "OPD-NURSE")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.NurseForm.OutNurseMain(currentUser).ShowDialog();
                     //OUT-PATIENT NURSE
                     break;
                 case 3:
+                    if (currentUser.position != "INPATIENT-NURSE")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.NurseForm.InNurseMain(currentUser).ShowDialog();
                     //IN-PATIENT NURSE
                     break;
                 case 4:
+                    if (currentUser.position != "LABORATORY")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.Pharmacy.Pharmacy().ShowDialog();
                     //PHARMACY
                     break;
                 case 5:
+                    if (currentUser.position != "PHARMACY")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.Billing.Billing().ShowDialog();
                     //BILLING
                     break;
                 case 6:
+                    if (currentUser.position != "CASHIER")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.Cashier.CashierMain().ShowDialog();
                     //CASHIER
                     break;
                 case 7:
+                    if (currentUser.position != "CSR-CLERK")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.Laboratory.LaboratoryList().ShowDialog();
                     //LABORATORY
                     break;
                 case 8:
+                    if (currentUser.position != "BILLING")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
                     new Forms.CentralSupply.CentralSupply().ShowDialog();
                     break;
+                case 9:
+                    if (currentUser.position != "RECORDS")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
+                    new Forms.Medical.MenuRecords().ShowDialog();
+                    break;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (isValidUser())
+            {
+                SuccessfulLogin();
+                return;
+            }
+
+            MessageBox.Show("Incorrect Credentials");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

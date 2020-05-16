@@ -41,10 +41,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Location = new System.Drawing.Point(363, 24);
             this.btnSearch.Name = "btnSearch";
@@ -56,10 +56,10 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(12, 24);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(345, 29);
+            this.txtSearch.Size = new System.Drawing.Size(345, 27);
             this.txtSearch.TabIndex = 2;
             // 
             // panel1
@@ -92,19 +92,19 @@
             // lblFound
             // 
             this.lblFound.AutoSize = true;
-            this.lblFound.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFound.Location = new System.Drawing.Point(30, 102);
+            this.lblFound.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFound.Location = new System.Drawing.Point(25, 113);
             this.lblFound.Name = "lblFound";
-            this.lblFound.Size = new System.Drawing.Size(88, 13);
+            this.lblFound.Size = new System.Drawing.Size(117, 19);
             this.lblFound.TabIndex = 6;
             this.lblFound.Text = "0 found patient";
             // 
             // btnSearch2
             // 
-            this.btnSearch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnSearch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.btnSearch2.FlatAppearance.BorderSize = 0;
             this.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch2.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch2.Location = new System.Drawing.Point(542, 24);
             this.btnSearch2.Name = "btnSearch2";
@@ -116,13 +116,17 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(806, 93);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(806, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "View Patient List";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // lsvView
             // 
@@ -144,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(1015, 586);
             this.Controls.Add(this.panel1);
             this.Name = "CheckUPSearch";
-            this.Text = "Patient Healthcare Management (Checkup)";
+            this.Text = "Out Patient Checkup";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

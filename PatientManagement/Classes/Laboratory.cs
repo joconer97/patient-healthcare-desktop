@@ -8,6 +8,7 @@ namespace PatientManagement.Classes
 {
     public class Laboratory
     {
+        public int id { get; set; }
         public string name { get; set; }
         public decimal price { get; set; }
     }

@@ -17,6 +17,8 @@ namespace PatientManagement.Classes
         public string status { get; set; }
         public string urgency { get; set; }
         public string result { get; set; }
+        public string isPaid { get; set; }
+        public decimal price { get; set; }
 
         public List<TestType> testTypes { get; set; }
     }

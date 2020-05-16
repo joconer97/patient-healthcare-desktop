@@ -10,7 +10,7 @@ namespace PatientManagement.Classes
 {
     public class CheckupHelper
     {
-        public static bool SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,int isTreated = 0,string rr = "",string gcs = "",string o2sat = "",int doctorID = 0)
+        public static int SaveCheckUP(string patientID,string bp,string temperature,string pr,string timeArrived,string cc,int id,string assesment,string management,string status,int isTreated = 0,string rr = "",string gcs = "",string o2sat = "",int doctorID = 0)
         {
             using (DAL dal = new DAL())
             {
@@ -29,12 +29,35 @@ namespace PatientManagement.Classes
                     new SqlParameter("@rr", rr),
                     new SqlParameter("@gcs", gcs),
                     new SqlParameter("@o2sat", o2sat),
-                    new SqlParameter("doctorID",doctorID)
+                    new SqlParameter("@doctorID",doctorID),
+                    new SqlParameter("@status",status)
 
                 };
                 try
                 {
-                    dal.ExecuteQuery("spSaveCheckup", spParams);
+                    return (int)dal.ExecuteQueryScalar("spSaveCheckup", spParams);
+
+                }
+                catch (Exception e)
+                {
+
+                    return 0;
+                }
+              
+            }
+        }
+
+        public static bool UpdateStatus(string patientID,string status)
+        {
+            using (DAL dal = new DAL())
+            {
+                SqlParameter[] spParams = {
+                    new SqlParameter("@patientID", patientID),
+                    new SqlParameter("@status",status)
+                };
+                try
+                {
+                    dal.ExecuteQuery("spUpdateCheckUpStatus", spParams);
 
                 }
                 catch (Exception)
@@ -44,9 +67,11 @@ namespace PatientManagement.Classes
                 }
 
                 return true;
-              
+
             }
         }
+
+
 
         public static List<Checkup> ListCheckup()
         {
@@ -72,6 +97,7 @@ namespace PatientManagement.Classes
                             cc = dr.Field<string>("cc"),
                             time_arrived = dr.Field<TimeSpan>(5),
                             isTreated = dr.Field<int>(6),
+                            date = dr.Field<DateTime>("date"),
                             patient = new Patient()
                             {
                                 id = dr.Field<string>("patientID"),

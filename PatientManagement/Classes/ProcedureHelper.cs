@@ -25,7 +25,7 @@ namespace PatientManagement.Classes
                     dal.ExecuteQuery("spSaveProcedure", spParams);
                     return;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return;
@@ -64,7 +64,7 @@ namespace PatientManagement.Classes
                     return procedures;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;

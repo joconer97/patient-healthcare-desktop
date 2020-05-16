@@ -10,7 +10,7 @@ namespace PatientManagement.Classes
     {
         public List<Medicine> medicines;
         public List<MedicalSupply> medicalSupplies;
-        public List<Laboratory> laboratories;
+        public List<LaboratoryRequest> laboratories;
         public int typeID { get; set; }
         public string type { get; set; }
         public string status { get; set; }
@@ -20,7 +20,7 @@ namespace PatientManagement.Classes
         {
             medicines = new List<Medicine>();
             medicalSupplies = new List<MedicalSupply>();
-            laboratories = new List<Laboratory>();
+            laboratories = new List<LaboratoryRequest>();
         }
       
     }

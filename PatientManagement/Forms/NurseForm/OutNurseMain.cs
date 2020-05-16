@@ -40,5 +40,10 @@ namespace PatientManagement.Forms.NurseForm
         {
             new Forms.Laboratory.LaboratoryResultList().ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Forms.PatientForm.SearchPatient().ShowDialog();
+        }
     }
 }

@@ -42,7 +42,7 @@ namespace PatientManagement.Forms.Pharmacy
             int ctr = 0;
             ListViewItem item;
 
-            foreach(var b in bills)
+            foreach (var b in bills)
             {
                 item = lsvMedicineRequest.Items.Add((++ctr).ToString());
                 item.SubItems.Add(b.name);

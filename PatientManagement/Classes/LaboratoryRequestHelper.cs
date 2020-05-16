@@ -22,7 +22,8 @@ namespace PatientManagement.Classes
                     new SqlParameter("@urgency",request.urgency),
                     new SqlParameter("@patientID",request.patient.id),
                     new SqlParameter("@id",(request.id != 0)?request.id:0),
-                    new SqlParameter("@result",request.result)
+                    new SqlParameter("@result",request.result),
+                    new SqlParameter("@isPaid",request.isPaid)
 
                 };
 
@@ -67,23 +68,24 @@ namespace PatientManagement.Classes
                             status = dr.Field<string>("status"),
                             urgency = dr.Field<string>("urgency"),
                             result = dr.Field<string>("result"),
+                            isPaid = dr.Field<string>("isPaid"),
                             patient = new Patient()
                             {
-                                id = dr.Field<string>(14),
-                                firstname = dr.Field<string>(15),
-                                middlename = dr.Field<string>(16),
-                                lastname = dr.Field<string>(17),
-                                gender = char.Parse(dr.Field<string>(18)),
-                                contact = dr.Field<string>(19),
-                                birthdate = dr.Field<DateTime>(20),
-                                address = dr.Field<string>(26)
+                                id = dr.Field<string>(15),
+                                firstname = dr.Field<string>(16),
+                                middlename = dr.Field<string>(17),
+                                lastname = dr.Field<string>(18),
+                                gender = char.Parse(dr.Field<string>(19)),
+                                contact = dr.Field<string>(20),
+                                birthdate = dr.Field<DateTime>(21),
+                                address = dr.Field<string>(27)
                             },
                             user = new User()
                             {
-                                id = dr.Field<int>(8),
-                                firstname = dr.Field<string>(11),
-                                lastname = dr.Field<string>(12),
-                                position = dr.Field<string>(13),
+                                id = dr.Field<int>(9),
+                                firstname = dr.Field<string>(12),
+                                lastname = dr.Field<string>(13),
+                                position = dr.Field<string>(14),
 
                             }
                         });
@@ -92,7 +94,7 @@ namespace PatientManagement.Classes
                     return requests;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;
@@ -127,7 +129,7 @@ namespace PatientManagement.Classes
                     return testTypes;
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     return null;

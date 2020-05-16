@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.PatientForm
 {
-    public partial class AdmissionRequestList : Form
+    public partial class AdmissionRequestList : MetroFramework.Forms.MetroForm
     {
         List<Classes.Admission> admissions = null;
         Classes.User currentUser = null;
@@ -28,7 +28,6 @@ namespace PatientManagement.Forms.PatientForm
             lsvAdmission.Columns.Add("PIN", 200);
             lsvAdmission.Columns.Add("Fullname", 280);
             lsvAdmission.Columns.Add("Sex", 30);
-            lsvAdmission.Columns.Add("Illness", 200);
             lsvAdmission.Columns.Add("Admission Date", 200);
             lsvAdmission.Columns.Add("Admission Time", 200);
 
@@ -54,7 +53,6 @@ namespace PatientManagement.Forms.PatientForm
                     item.SubItems.Add(admission.patient.id);
                     item.SubItems.Add(admission.patient.firstname + " " + admission.patient.middlename + " " + admission.patient.lastname);
                     item.SubItems.Add(admission.patient.gender.ToString());
-                    item.SubItems.Add("Dengue");
                     item.SubItems.Add(admission.admittedDate.ToShortDateString());
                     item.SubItems.Add(admission.admittedTime.ToString());
                 }

@@ -24,6 +24,30 @@ namespace PatientManagement.Classes
             }
         }
 
+        public static void UpdateMedicineQuantity(Medicine medicine)
+        {
+            using (DAL dal = new DAL())
+            {
+                int type = 0;
+
+                SqlParameter[] spParams = {
+                    new SqlParameter("@id", medicine.id),
+                    new SqlParameter("@quantity",medicine.quantity),
+                    new SqlParameter("@type",type),
+                };
+                try
+                {
+                    dal.ExecuteQuery("spUpdateItems", spParams);
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+            }
+        }
+
         public static List<Medicine> Medicines()
         {
             List<Medicine> medicines = new List<Medicine>();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.NurseForm
 {
-    public partial class InNurseMain : Form
+    public partial class InNurseMain : MetroFramework.Forms.MetroForm
     {
         Classes.User currentUser = null;
         public InNurseMain(Classes.User user)
@@ -21,12 +21,22 @@ namespace PatientManagement.Forms.NurseForm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Forms.NurseForm.InpatientAdmissionList().ShowDialog();
+            new InpatientAdmissionList(currentUser).ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             new Forms.PatientForm.AdmissionRequestList(currentUser).ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Forms.Laboratory.LaboratoryResultList().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

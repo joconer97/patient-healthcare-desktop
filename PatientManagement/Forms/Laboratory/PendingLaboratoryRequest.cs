@@ -89,8 +89,16 @@ namespace PatientManagement.Forms.Laboratory
                     Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);
                     File.Delete(path);
                     File.Copy(file.FileName, path);
+                    MessageBox.Show("Result have been uploaded");
                 }
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            request.status = "In-Progress";
+            Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);
+            MessageBox.Show("Status Updated");
         }
     }
 }
