@@ -25,10 +25,29 @@ namespace PatientManagement.Forms.PatientForm
         {
             txtTimeArrived.Text = DateTime.Now.ToShortTimeString();
         }
+        private bool ValidateInput()
+        {
+            var data = Classes.CheckupHelper.ListCheckup();
+
+            if(txtCC.Text == "" | txtBP.Text == "" | txtGCS.Text == "" | txtO2Sat.Text == "")
+            {
+                return false;
+            }
+
+            return true;
+
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+
+            if(!ValidateInput())
+            {
+                MessageBox.Show("Please fill up the box");
+                return;
+            }
             int currentID = Classes.CheckupHelper.SaveCheckUP(txtPatientID.Text, txtBP.Text, txtTemperature.Text, txtPulseRate.Text, txtTimeArrived.Text, txtCC.Text, 0, "", "","Pending for Checkup", 0, txtRespiratoryRate.Text, txtGCS.Text, txtO2Sat.Text);
+
             if (currentID != 0)
             {
 

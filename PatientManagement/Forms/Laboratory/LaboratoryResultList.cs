@@ -26,6 +26,7 @@ namespace PatientManagement.Forms.Laboratory
             lsvLaboratory.Columns.Add("Doctor Name", 200);
             lsvLaboratory.Columns.Add("Status", 280);
             lsvLaboratory.Columns.Add("Urgency", 100);
+            lsvLaboratory.Columns.Add("Date", 200);
 
 
             lsvLaboratory.View = View.Details;
@@ -47,6 +48,7 @@ namespace PatientManagement.Forms.Laboratory
                 item.SubItems.Add(r.user.firstname + " " + r.user.lastname);
                 item.SubItems.Add(r.status);
                 item.SubItems.Add(r.urgency);
+                item.SubItems.Add(r.date.ToShortDateString());
             }
         }
 

@@ -81,6 +81,7 @@
             this.txtAdmissionDate = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.lsvProcedure = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLabRequest = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -93,9 +94,9 @@
             this.cmbMedicine = new System.Windows.Forms.ComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.txtProcedure = new MetroFramework.Controls.MetroTextBox();
-            this.lsvProcedure = new MetroFramework.Controls.MetroListView();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
+            this.button3 = new System.Windows.Forms.Button();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel3.SuspendLayout();
@@ -1173,6 +1174,8 @@
             // metroPanel4
             // 
             this.metroPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel4.Controls.Add(this.button3);
+            this.metroPanel4.Controls.Add(this.lsvProcedure);
             this.metroPanel4.Controls.Add(this.button2);
             this.metroPanel4.Controls.Add(this.btnLabRequest);
             this.metroPanel4.Controls.Add(this.btnSave);
@@ -1185,7 +1188,6 @@
             this.metroPanel4.Controls.Add(this.cmbMedicine);
             this.metroPanel4.Controls.Add(this.metroButton1);
             this.metroPanel4.Controls.Add(this.txtProcedure);
-            this.metroPanel4.Controls.Add(this.lsvProcedure);
             this.metroPanel4.Controls.Add(this.metroLabel29);
             this.metroPanel4.Controls.Add(this.metroLabel38);
             this.metroPanel4.HorizontalScrollbarBarColor = true;
@@ -1199,6 +1201,16 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
+            // lsvProcedure
+            // 
+            this.lsvProcedure.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsvProcedure.HideSelection = false;
+            this.lsvProcedure.Location = new System.Drawing.Point(20, 94);
+            this.lsvProcedure.Name = "lsvProcedure";
+            this.lsvProcedure.Size = new System.Drawing.Size(421, 115);
+            this.lsvProcedure.TabIndex = 27;
+            this.lsvProcedure.UseCompatibleStateImageBehavior = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
@@ -1206,9 +1218,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1013, 33);
+            this.button2.Location = new System.Drawing.Point(1013, 67);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 42);
+            this.button2.Size = new System.Drawing.Size(221, 34);
             this.button2.TabIndex = 26;
             this.button2.Text = "View Daily Report";
             this.button2.UseVisualStyleBackColor = false;
@@ -1221,9 +1233,9 @@
             this.btnLabRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLabRequest.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLabRequest.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLabRequest.Location = new System.Drawing.Point(1013, 82);
+            this.btnLabRequest.Location = new System.Drawing.Point(1013, 107);
             this.btnLabRequest.Name = "btnLabRequest";
-            this.btnLabRequest.Size = new System.Drawing.Size(221, 42);
+            this.btnLabRequest.Size = new System.Drawing.Size(221, 34);
             this.btnLabRequest.TabIndex = 25;
             this.btnLabRequest.Text = "Laboratory Request";
             this.btnLabRequest.UseVisualStyleBackColor = false;
@@ -1236,11 +1248,11 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(1013, 130);
+            this.btnSave.Location = new System.Drawing.Point(1013, 31);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(221, 40);
+            this.btnSave.Size = new System.Drawing.Size(221, 32);
             this.btnSave.TabIndex = 24;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Update";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -1251,9 +1263,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(1013, 175);
+            this.button1.Location = new System.Drawing.Point(1013, 147);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 34);
+            this.button1.Size = new System.Drawing.Size(221, 26);
             this.button1.TabIndex = 23;
             this.button1.Text = "Discharge Request";
             this.button1.UseVisualStyleBackColor = false;
@@ -1329,9 +1341,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Location = new System.Drawing.Point(840, 19);
+            this.btnAdd.Location = new System.Drawing.Point(840, 13);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 50);
+            this.btnAdd.Size = new System.Drawing.Size(150, 56);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Add to Prescription";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -1389,18 +1401,6 @@
             this.txtProcedure.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtProcedure.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // lsvProcedure
-            // 
-            this.lsvProcedure.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lsvProcedure.FullRowSelect = true;
-            this.lsvProcedure.Location = new System.Drawing.Point(20, 94);
-            this.lsvProcedure.Name = "lsvProcedure";
-            this.lsvProcedure.OwnerDraw = true;
-            this.lsvProcedure.Size = new System.Drawing.Size(414, 115);
-            this.lsvProcedure.TabIndex = 5;
-            this.lsvProcedure.UseCompatibleStateImageBehavior = false;
-            this.lsvProcedure.UseSelectable = true;
-            // 
             // metroLabel29
             // 
             this.metroLabel29.AutoSize = true;
@@ -1421,6 +1421,21 @@
             this.metroLabel38.Size = new System.Drawing.Size(156, 25);
             this.metroLabel38.TabIndex = 2;
             this.metroLabel38.Text = "Patient Information";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(1013, 183);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(221, 43);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Deceased Report";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Admission
             // 
@@ -1501,7 +1516,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroTextBox txtProcedure;
-        private MetroFramework.Controls.MetroListView lsvProcedure;
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroLabel metroLabel38;
         private System.Windows.Forms.Label label3;
@@ -1514,5 +1528,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLabRequest;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView lsvProcedure;
+        private System.Windows.Forms.Button button3;
     }
 }

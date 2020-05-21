@@ -43,7 +43,7 @@ namespace PatientManagement.Forms.PatientForm
         {
             admissions = Classes.Admission.AdmissionRequest(Classes.AdmissionHelper.Admissions(),0);
             ListViewItem item;
-
+            lsvAdmission.Items.Clear();
 
             foreach (Classes.Admission admission in admissions)
             {
@@ -75,7 +75,12 @@ namespace PatientManagement.Forms.PatientForm
 
             }
 
-            new Forms.PatientForm.AdmissionRequest(admissions[si],currentUser).ShowDialog();
+            var isSuccess = new Forms.PatientForm.AdmissionRequest(admissions[si],currentUser).ShowDialog();
+
+            if(isSuccess == DialogResult.OK)
+            {
+                PopulateListView();
+            }
         }
     }
 }

@@ -18,6 +18,13 @@ namespace PatientManagement.Forms.PatientForm
             InitializeListView();
         }
         List<Classes.Patient> currentPatients;
+
+        private void CheckUPSearch_Load(object sender, EventArgs e)
+        {
+            currentPatients = Classes.PatientHelper.GetPatients();
+            PopulateList(currentPatients);
+            lblFound.Text = currentPatients.Count.ToString() + " patients found";
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             currentPatients = Classes.PatientHelper.search(txtSearch.Text,"");
@@ -67,6 +74,20 @@ namespace PatientManagement.Forms.PatientForm
             }
         }
 
+        private bool ValidatePatient(int index)
+        {
+            var data = Classes.CheckupHelper.ListCheckup();
+
+            foreach (var d in data)
+            {
+                if (d.patient.id == currentPatients[index].id && d.isTreated == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
         private void lsvView2_DoubleClick(object sender, EventArgs e)
         {
             int si = 0;
@@ -80,7 +101,14 @@ namespace PatientManagement.Forms.PatientForm
 
                 throw;
             }
-            if(!ValidatePatient(currentPatients[si].id))
+
+            if (!ValidatePatient(si))
+            {
+                MessageBox.Show("This patient already on pending list");
+                return;
+            }
+
+            if (!ValidatePatient(currentPatients[si].id))
             {
                 MessageBox.Show("The patient already admitted");
                 return;
@@ -103,6 +131,16 @@ namespace PatientManagement.Forms.PatientForm
                 return false;
             }
             return true;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                currentPatients = Classes.PatientHelper.GetPatients();
+                PopulateList(currentPatients);
+                lblFound.Text = currentPatients.Count.ToString() + " patients found";
+            }
         }
     }
 }

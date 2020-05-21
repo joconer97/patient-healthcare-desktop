@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.Laboratory
 {
-    public partial class LaboratoryResult : Form
+    public partial class LaboratoryResult : MetroFramework.Forms.MetroForm
     {
         Classes.LaboratoryRequest laboratoryRequest = null;
         public LaboratoryResult(Classes.LaboratoryRequest laboratoryRequest)

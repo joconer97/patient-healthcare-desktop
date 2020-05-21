@@ -35,7 +35,8 @@ namespace PatientManagement.Forms.Laboratory
                 patient = new Classes.Patient
                 {
                     id = currentAdmission.patient.id
-                }
+                },
+                date = DateTime.Now
 
             };
 
@@ -43,7 +44,7 @@ namespace PatientManagement.Forms.Laboratory
 
 
             SaveLaboratoryTypes(labID);
-            MessageBox.Show("Request have been sent");
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
         private void SettingUp()
         {

@@ -25,7 +25,12 @@ namespace PatientManagement.Forms.NurseForm
         {
             Form register = new Forms.PatientForm.RegisterPatient();
 
-            register.ShowDialog();
+            var isSuccess = register.ShowDialog();
+
+            if(isSuccess == DialogResult.OK)
+            {
+                MessageBox.Show("Successfully saved");
+            }
            
         }
 

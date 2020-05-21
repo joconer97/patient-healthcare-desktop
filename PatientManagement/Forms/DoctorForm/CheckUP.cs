@@ -41,8 +41,7 @@ namespace PatientManagement.Forms.DoctorForm
             InitListView();
             InitListView2();
             PopulateList(checkup.patientID);
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+
         }
 
         private void CheckUP_Load(object sender, EventArgs e)
@@ -248,32 +247,28 @@ namespace PatientManagement.Forms.DoctorForm
                 return;
             }
 
-            if(txtManagement.Text == "")
-            {
-                MessageBox.Show("Please fill up this management box");
-                return;
-            }
-
             var confirmation = MessageBox.Show("Do you really want to print medical certificate?", "PHC", MessageBoxButtons.OKCancel);
 
             if (confirmation != DialogResult.OK)
                 return;
 
+            (printPreviewDialog1 as Form).WindowState = FormWindowState.Maximized;
+            printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
 
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            //for (int x = 0; x < 1000; x += 50)
-            //{
-            //    e.Graphics.DrawString(x.ToString(), new Font("Times new roman", 11, FontStyle.Bold), Brushes.Black, new Point(x, 10));
-            //}
+            for (int x = 0; x < 1000; x += 50)
+            {
+                e.Graphics.DrawString(x.ToString(), new Font("Times new roman", 11, FontStyle.Bold), Brushes.Black, new Point(x, 10));
+            }
 
-            //for (int y = 0; y < 1000; y += 50)
-            //{
-            //    e.Graphics.DrawString(y.ToString(), new Font("Times new roman", 11, FontStyle.Bold), Brushes.Black, new Point(10, y));
-            //}
+            for (int y = 0; y < 1000; y += 50)
+            {
+                e.Graphics.DrawString(y.ToString(), new Font("Times new roman", 11, FontStyle.Bold), Brushes.Black, new Point(10, y));
+            }
             //header
             e.Graphics.DrawString("Naga City Hospital", new Font("Times new roman", 15, FontStyle.Bold), Brushes.Black, new Point(350, 50));
             e.Graphics.DrawString("Penafrancia Ave, Baranagay Peñafrancia, Naga, 4400 Camarines Sur", new Font("Times new roman", 12, FontStyle.Bold), Brushes.Black, new Point(200, 80));
@@ -287,12 +282,12 @@ namespace PatientManagement.Forms.DoctorForm
             string patientFullName = currentPatient.firstname + " " + currentPatient.middlename.Substring(0, 1) + " " + currentPatient.lastname;
             e.Graphics.DrawString("THIS IS TO CERTIFY that "+ patientFullName + " of " + currentPatient.address, new Font("Times new roman", 12, FontStyle.Regular), Brushes.Black, new Point(100, 350));
 
-            e.Graphics.DrawString("Was examined and treated at the Naga City Hospital on " + DateTime.Now.ToShortDateString() + "with the following diagnosis:", new Font("Times new roman", 12, FontStyle.Regular), Brushes.Black, new Point(100, 380));
+            e.Graphics.DrawString("Was examined and treated at the Naga City Hospital on " + DateTime.Now.ToShortDateString() + "with the following diagnosis:", new Font("Times new roman", 12, FontStyle.Regular), Brushes.Black, new Point(110, 380));
 
             int counter = 440;
-            int counter2 = 100;
+            int counter2 = 95;
 
-            string assesment = "Sed placerat lectus vel dui pulvinar, eget pretium augue molestie. Phasellus imperdiet neque ut orci semper semper. Nullam dapibus bibendum ipsum ac dictum. Nunc interdum metus a ex suscipit, vel lobortis ex posuere. Quisque vel sem placerat, consectetur risus in, mattis mauris. Suspendisse potenti. Morbi maximus mollis enim quis tempor. Suspendisse luctus velit nulla, eu feugiat turpis dapibus vel. Aenean sit amet feugiat turpis. Vivamus eu odio sit amet nunc ultricies placerat sed ut quam. Suspendisse eget posuere magna, tempus consectetur justo. Nulla varius, mi non aliquet mattis, leo nisi molestie elit, ac commodo lacus neque in metus. Maecenas semper tincidunt ex et gravida. Etiam a interdum velit, eget gravida lectus.";
+            string assesment = txtAssesment.Text;
 
 
             for (int i = 0; i <= assesment.Length - 1;i+=counter2)
@@ -300,13 +295,14 @@ namespace PatientManagement.Forms.DoctorForm
                
                 try
                 {
-                    e.Graphics.DrawString(assesment.Substring(i, counter2), new Font("Times new roman", 12, FontStyle.Underline), Brushes.Black, new Point(90, counter));
+                    e.Graphics.DrawString(assesment.Substring(i, counter2), new Font("Times new roman", 12, FontStyle.Regular), Brushes.Black, new Point(110, counter));
                 }
                 catch (Exception)
                 {
-                    e.Graphics.DrawString(assesment.Substring(i,(assesment.Length - i)), new Font("Times new roman", 12, FontStyle.Underline), Brushes.Black, new Point(90, counter));
+                    e.Graphics.DrawString(assesment.Substring(i,(assesment.Length - i)), new Font("Times new roman", 12, FontStyle.Regular), Brushes.Black, new Point(110, counter));
                 }
 
+                e.Graphics.DrawLine(new Pen(Brushes.Black, 2), new Point(110, counter + 20), new Point(800, counter + 20));
                 counter += 40;
             }
 

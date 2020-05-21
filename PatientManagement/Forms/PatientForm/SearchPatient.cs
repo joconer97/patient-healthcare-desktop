@@ -27,6 +27,7 @@ namespace PatientManagement.Forms.PatientForm
             lsvPatient.Columns.Add("Middlename", 200);
             lsvPatient.Columns.Add("Lastname", 200);
             lsvPatient.Columns.Add("Gender", 140);
+            lsvPatient.Columns.Add("Membership Status", 200);
 
             lsvPatient.View = View.Details;
             lsvPatient.GridLines = true;
@@ -48,6 +49,7 @@ namespace PatientManagement.Forms.PatientForm
                 item.SubItems.Add(p.middlename);
                 item.SubItems.Add(p.lastname);
                 item.SubItems.Add(p.gender.ToString());
+                item.SubItems.Add((p.isRegistered == 0) ? "Pending" : "Member");
             }
         }
 

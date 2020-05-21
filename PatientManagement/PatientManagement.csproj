@@ -97,6 +97,8 @@
     <Compile Include="Classes\Checkup.cs" />
     <Compile Include="Classes\CheckupHelper.cs" />
     <Compile Include="Classes\DAL.cs" />
+    <Compile Include="Classes\Deceased.cs" />
+    <Compile Include="Classes\DeceasedHelper.cs" />
     <Compile Include="Classes\DischargeRequest.cs" />
     <Compile Include="Classes\Laboratory.cs" />
     <Compile Include="Classes\LaboratoryHelper.cs" />
@@ -236,6 +238,12 @@
     <Compile Include="Forms\DoctorForm\CheckUpList.Designer.cs">
       <DependentUpon>CheckUpList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DoctorForm\DeceasedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorForm\DeceasedReport.Designer.cs">
+      <DependentUpon>DeceasedReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DoctorForm\InPatientMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +309,18 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Medical\DeathCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Medical\DeathCertificate.Designer.cs">
+      <DependentUpon>DeathCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Medical\MedicalRecordSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Medical\MedicalRecordSummary.Designer.cs">
+      <DependentUpon>MedicalRecordSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Medical\MenuRecords.cs">
       <SubType>Form</SubType>
@@ -493,6 +513,9 @@
     <EmbeddedResource Include="Forms\DoctorForm\CheckUpList.resx">
       <DependentUpon>CheckUpList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorForm\DeceasedReport.resx">
+      <DependentUpon>DeceasedReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DoctorForm\InPatientMain.resx">
       <DependentUpon>InPatientMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +545,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Medical\DeathCertificate.resx">
+      <DependentUpon>DeathCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Medical\MedicalRecordSummary.resx">
+      <DependentUpon>MedicalRecordSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Medical\MenuRecords.resx">
       <DependentUpon>MenuRecords.cs</DependentUpon>
@@ -610,7 +639,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">

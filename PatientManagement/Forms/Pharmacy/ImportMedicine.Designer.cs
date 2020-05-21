@@ -35,6 +35,7 @@
             // 
             // lsvMedicine
             // 
+            this.lsvMedicine.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvMedicine.HideSelection = false;
             this.lsvMedicine.Location = new System.Drawing.Point(12, 12);
             this.lsvMedicine.Name = "lsvMedicine";

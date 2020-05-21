@@ -90,6 +90,8 @@ namespace PatientManagement.Forms.Laboratory
                     File.Delete(path);
                     File.Copy(file.FileName, path);
                     MessageBox.Show("Result have been uploaded");
+
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 }
             }
         }

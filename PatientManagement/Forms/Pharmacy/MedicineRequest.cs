@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PatientManagement.Forms.Pharmacy
 {
-    public partial class MedicineRequest : Form
+    public partial class MedicineRequest : MetroFramework.Forms.MetroForm
     {
         int admissionID = 0;
         public MedicineRequest(int admissionID)

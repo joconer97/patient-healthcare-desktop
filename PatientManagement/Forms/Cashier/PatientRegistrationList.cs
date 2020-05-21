@@ -106,6 +106,7 @@ namespace PatientManagement.Forms.Cashier
             if(new Forms.Cashier.PatientRegistrationPayment(patients[index]).ShowDialog() == DialogResult.OK)
             {
                 GetPendingPatients();
+                PopulateListView();
             }
         }
     }

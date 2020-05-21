@@ -65,7 +65,12 @@ namespace PatientManagement.Forms.Laboratory
                 throw;
             }
 
-            new Forms.Laboratory.PendingLaboratoryRequest(requests[index]).ShowDialog();
+            var isSuccess = new Forms.Laboratory.PendingLaboratoryRequest(requests[index]).ShowDialog();
+
+            if(isSuccess == DialogResult.OK)
+            {
+                MessageBox.Show("Sucessfully upload the file");
+            }
         }
     }
 }

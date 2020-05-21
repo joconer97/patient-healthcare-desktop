@@ -36,20 +36,20 @@
             // axAcroPDF1
             // 
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(0, 1);
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 63);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(1139, 648);
+            this.axAcroPDF1.Size = new System.Drawing.Size(1094, 999);
             this.axAcroPDF1.TabIndex = 0;
             // 
             // LaboratoryResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 649);
+            this.ClientSize = new System.Drawing.Size(1094, 1061);
             this.Controls.Add(this.axAcroPDF1);
             this.Name = "LaboratoryResult";
-            this.Text = "LaboratoryResult";
+            this.Text = "Laboratory Result";
             this.Load += new System.EventHandler(this.LaboratoryResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);

@@ -49,7 +49,9 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.DoctorForm.OutPatientMain(currentUser).ShowDialog();
+                    new Login().ShowDialog();
                     //OUT-PATIENT DOCTOR
                     break;
                 case 1:
@@ -58,7 +60,9 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.DoctorForm.InPatientMain(currentUser).ShowDialog();
+                    new Login().ShowDialog();
                     //IN-PATIENT DOCTOR
                     break;
                 case 2:
@@ -67,7 +71,9 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.NurseForm.OutNurseMain(currentUser).ShowDialog();
+                    new Login().ShowDialog();
                     //OUT-PATIENT NURSE
                     break;
                 case 3:
@@ -76,25 +82,31 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.NurseForm.InNurseMain(currentUser).ShowDialog();
+                    new Login().ShowDialog();
                     //IN-PATIENT NURSE
                     break;
                 case 4:
-                    if (currentUser.position != "LABORATORY")
-                    {
-                        MessageBox.Show("Incorrect Credentials");
-                        return;
-                    }
-                    new Forms.Pharmacy.Pharmacy().ShowDialog();
-                    //PHARMACY
-                    break;
-                case 5:
                     if (currentUser.position != "PHARMACY")
                     {
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
+                    new Forms.Pharmacy.Pharmacy().ShowDialog();
+                    new Login().ShowDialog();
+                    //PHARMACY
+                    break;
+                case 5:
+                    if (currentUser.position != "BILLING")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
+                    this.Hide();
                     new Forms.Billing.Billing().ShowDialog();
+                    new Login().ShowDialog();
                     //BILLING
                     break;
                 case 6:
@@ -103,25 +115,31 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.Cashier.CashierMain().ShowDialog();
+                    new Login().ShowDialog();
                     //CASHIER
                     break;
                 case 7:
+                    if (currentUser.position != "LABORATORY")
+                    {
+                        MessageBox.Show("Incorrect Credentials");
+                        return;
+                    }
+                    this.Hide();
+                    new Forms.Laboratory.LaboratoryList().ShowDialog();
+                    new Login().ShowDialog();
+                    //LABORATORY
+                    break;
+                case 8:
                     if (currentUser.position != "CSR-CLERK")
                     {
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
-                    new Forms.Laboratory.LaboratoryList().ShowDialog();
-                    //LABORATORY
-                    break;
-                case 8:
-                    if (currentUser.position != "BILLING")
-                    {
-                        MessageBox.Show("Incorrect Credentials");
-                        return;
-                    }
+                    this.Hide();
                     new Forms.CentralSupply.CentralSupply().ShowDialog();
+                    new Login().ShowDialog();
                     break;
                 case 9:
                     if (currentUser.position != "RECORDS")
@@ -129,7 +147,9 @@ namespace PatientManagement.Forms
                         MessageBox.Show("Incorrect Credentials");
                         return;
                     }
+                    this.Hide();
                     new Forms.Medical.MenuRecords().ShowDialog();
+                    new Login().ShowDialog();
                     break;
             }
         }

@@ -60,8 +60,8 @@ namespace PatientManagement.Forms.Laboratory
                 patient = new Patient()
                 {
                     id = currentCheckup.patient.id
-                }
-
+                },
+                date = DateTime.Now
             };
 
            int labID = Classes.LaboratoryRequestHelper.SaveLaboratoryRequest(request);

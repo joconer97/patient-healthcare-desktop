@@ -41,6 +41,7 @@ namespace PatientManagement.Forms.Cashier
         private void PopulateLaboratoryRequest()
         {
             laboratoryRequests = GetPendingRequest();
+            lsvRequest.Items.Clear();
 
             ListViewItem item;
             int index = 0;
@@ -109,7 +110,12 @@ namespace PatientManagement.Forms.Cashier
                 throw;
             }
 
-            new Forms.Cashier.PaymentModal(laboratoryRequests[index]).ShowDialog();
+            var isPaid = new Forms.Cashier.PaymentModal(laboratoryRequests[index]).ShowDialog();
+
+            if(isPaid == DialogResult.OK)
+            {
+                PopulateLaboratoryRequest();
+            }
         }
     }
 }

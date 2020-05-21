@@ -10,8 +10,9 @@ namespace PatientManagement.Classes
     {
         public int id { get; set; }
         public string type { get; set; }
+        public int typeID { get; set; }
         public DateTime date { get; set; }
         public Patient patient { get; set; }
-        
+
     }
 }

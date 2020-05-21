@@ -127,8 +127,9 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void InitListView3()
         {
-            lsvProcedure.Columns.Add("#", 200);
-            lsvProcedure.Columns.Add("Procedure Name", 200);
+            lsvProcedure.Columns.Add("#", 50);
+            lsvProcedure.Columns.Add("Procedure Name", 250);
+            lsvProcedure.Columns.Add("Status",100);
 
             lsvProcedure.View = View.Details;
             lsvProcedure.GridLines = true;
@@ -171,8 +172,12 @@ namespace PatientManagement.Forms.DoctorForm
 
         private void btnLabRequest_Click(object sender, EventArgs e)
         {
-     
-            new Forms.Laboratory.AdmissionLaboratory(admission).ShowDialog();
+            var isSuccess = new Forms.Laboratory.AdmissionLaboratory(admission).ShowDialog();
+
+            if(isSuccess == DialogResult.OK)
+            {
+                MessageBox.Show("Successfully sent the laboratory request");
+            }
         }
 
 
@@ -229,6 +234,32 @@ namespace PatientManagement.Forms.DoctorForm
         private void button2_Click(object sender, EventArgs e)
         {
             new Forms.DoctorForm.AdmissionReportList(this.admission).ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var isSuccess = new Forms.DoctorForm.DeceasedReport(this.admission.id).ShowDialog();
+
+            if (isSuccess != DialogResult.OK)
+                return;
+
+            MessageBox.Show("Executing for discharge request");
+
+            Classes.RequestHelper.SaveDishargeRequest(new Classes.DischargeRequest()
+            {
+                id = 0,
+                admission = new Classes.Admission()
+                {
+                    id = this.admission.id
+                },
+                philhealthCode = "",
+                philhealthCover = 0,
+                isPaid = 0,
+                status = "In-progress",
+                rate = 0
+
+            });
+
         }
     }
 }

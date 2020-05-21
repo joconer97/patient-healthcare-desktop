@@ -28,31 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lsvView2 = new MetroFramework.Controls.MetroListView();
             this.lblFound = new System.Windows.Forms.Label();
             this.btnSearch2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.lsvView = new MetroFramework.Controls.MetroListView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(363, 24);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(173, 29);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search by ID";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -61,15 +44,14 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(345, 27);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lsvView2);
             this.panel1.Controls.Add(this.lblFound);
             this.panel1.Controls.Add(this.btnSearch2);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 106);
             this.panel1.Name = "panel1";
@@ -106,27 +88,13 @@
             this.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch2.Location = new System.Drawing.Point(542, 24);
+            this.btnSearch2.Location = new System.Drawing.Point(363, 22);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(171, 29);
             this.btnSearch2.TabIndex = 4;
             this.btnSearch2.Text = "Search by Lastname";
             this.btnSearch2.UseVisualStyleBackColor = false;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(806, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "View Patient List";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // lsvView
             // 
@@ -149,6 +117,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CheckUPSearch";
             this.Text = "Out Patient Checkup";
+            this.Load += new System.EventHandler(this.CheckUPSearch_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -156,10 +125,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.Label lblFound;
         private MetroFramework.Controls.MetroListView lsvView;

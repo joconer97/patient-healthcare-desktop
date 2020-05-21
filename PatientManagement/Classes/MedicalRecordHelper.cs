@@ -55,5 +55,33 @@ namespace PatientManagement.Classes
                 }
             }
         }
+
+        public static List<MedicalRecord> GetSummaryMedicalRecords()
+        {
+            List<MedicalRecord> medicalRecords = null;
+
+            using (DAL dal = new DAL())
+            {
+                var data = dal.ExecuteQuery("spGetSummaryReport").Tables[0];
+
+                medicalRecords = new List<MedicalRecord>();
+
+                foreach(DataRow dr in data.AsEnumerable())
+                {
+                    medicalRecords.Add(new MedicalRecord()
+                    {
+                        id = dr.Field<int>(0),
+                        typeID = dr.Field<int>(1),
+                        type = dr.Field<string>(2),
+                        date = dr.Field<DateTime>(3)
+                    });
+                }
+
+                return medicalRecords;
+
+            }
+                
+        }
+
     }
 }
