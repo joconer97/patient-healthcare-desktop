@@ -65,6 +65,7 @@
             this.txtCover.Name = "txtCover";
             this.txtCover.Size = new System.Drawing.Size(202, 30);
             this.txtCover.TabIndex = 2;
+            this.txtCover.Text = "0";
             this.txtCover.TextChanged += new System.EventHandler(this.txtCover_TextChanged);
             this.txtCover.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCover_KeyPress);
             // 

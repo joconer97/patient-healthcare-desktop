@@ -49,7 +49,7 @@ namespace PatientManagement.Forms.Billing
             
             foreach(var b in bills)
             {
-                if (b.isPaid != 1) return;
+                if (b.isPaid != 0)return;
 
                 item = lsvSummary.Items.Add(request.admission.patient.id);
                 item.SubItems.Add(request.admission.patient.firstname + " " + request.admission.patient.lastname);
